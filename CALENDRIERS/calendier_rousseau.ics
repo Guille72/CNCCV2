@@ -4,115 +4,11 @@ PRODID:-//ZContent.net//ZapCalLib 1.0//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-DTSTART:20171103
-DTEND:20171202
+DTSTART:20171003
+DTEND:20171006
 UID:jk@hu.fr
-DESCRIPTION:Arrivée : 03/11/2017\nDépart : 02/12/2017\nNombre de nuits: 2
- 9\nTéléphone : 0258595321\nEmail : jk@hu.fr\nCommentaire : 
+DESCRIPTION:Arrivée : 03/10/2017\nDépart : 06/10/2017\nNombre de nuits: 3
+ \nTéléphone : 0258595321\nEmail : jk@hu.fr\nCommentaire : prout
 SUMMARY:Jerome FINICKEL
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20170819
-DTEND:20170827
-UID:jk@hu.fr
-DESCRIPTION:Arrivée : 19/08/2017\nDépart : 27/08/2017\nNombre de nuits: 8
- \nTéléphone : 0258595321\nEmail : jk@hu.fr\nCommentaire : 
-SUMMARY:Jerome FINICKEL
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20170814
-DTEND:20170820
-UID:
-DESCRIPTION:Arrivée : 14/08/2017\nDépart : 20/08/2017\nNombre de nuits: \
- nTéléphone : \nEmail : \nCommentaire : CHECKIN: 14/08/2017\nCHECKOUT: 20
- /08/2017\nNIGHTS: 6\nPHONE: +31 6 54 99 47 41\nEMAIL: hans-zp3ww3wnlzyh20a
- p@guest.airbnb.com\nPROPERTY: Proche circuit et parc expo : idéal motard\
- n
-SUMMARY: Hans Visser (HMNFWZJYPF)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20170828
-DTEND:20170831
-UID:jk@hu.fr
-DESCRIPTION:Arrivée : 28/08/2017\nDépart : 31/08/2017\nNombre de nuits: 3
- \nTéléphone : 0258595321\nEmail : jk@hu.fr\nCommentaire : génial
-SUMMARY:Jerome FINICKEL
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20170913
-DTEND:20170918
-UID:
-DESCRIPTION:Arrivée : 13/09/2017\nDépart : 18/09/2017\nNombre de nuits: \
- nTéléphone : \nEmail : \nCommentaire : CHECKIN: 13/09/2017\nCHECKOUT: 18
- /09/2017\nNIGHTS: 5\nPHONE: +33 6 14 25 27 16\nEMAIL: thierry-bl7z2udf041t
- zzod@guest.airbnb.com\nPROPERTY: Proche circuit et parc expo : idéal mota
- rd\n
-SUMMARY: Thierry Lebret (HMZ8DS8TJX)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20170922
-DTEND:20170924
-UID:
-DESCRIPTION:Arrivée : 22/09/2017\nDépart : 24/09/2017\nNombre de nuits: \
- nTéléphone : \nEmail : \nCommentaire : CHECKIN: 22/09/2017\nCHECKOUT: 24
- /09/2017\nNIGHTS: 2\nPHONE: +33 6 98 83 68 94\nEMAIL: jeremy-73yaq287moj9z
- zhf@guest.airbnb.com\nPROPERTY: Proche circuit et parc expo : idéal motar
- d\n
-SUMMARY: Jeremy Gauthe (B88SDA)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20171212
-DTEND:20171214
-UID:
-DESCRIPTION:Arrivée : 12/12/2017\nDépart : 14/12/2017\nNombre de nuits: \
- nTéléphone : \nEmail : \nCommentaire : CHECKIN: 12/12/2017\nCHECKOUT: 14
- /12/2017\nNIGHTS: 2\nPHONE: +33 6 12 11 27 78\nEMAIL: pascal-uoezk8vj7q5m5
- j5v@guest.airbnb.com\nPROPERTY: Proche circuit et parc expo : idéal motar
- d\n
-SUMMARY: Pascal D'Aquilante (34SJ9H)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20180706
-DTEND:20180708
-UID:
-DESCRIPTION:Arrivée : 06/07/2018\nDépart : 08/07/2018\nNombre de nuits: \
- nTéléphone : \nEmail : \nCommentaire : CHECKIN: 06/07/2018\nCHECKOUT: 08
- /07/2018\nNIGHTS: 2\nPHONE: +33 6 17 28 56 03\nEMAIL: sonia-pikw14aba8yvo4
- tw@guest.airbnb.com\nPROPERTY: Proche circuit et parc expo : idéal motard
- \n
-SUMMARY: Sonia Mansuy (HM8QXHXHYJ)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20170812
-DTEND:20170813
-UID:
-DESCRIPTION:Arrivée : 12/08/2017\nDépart : 13/08/2017\nNombre de nuits: \
- nTéléphone : \nEmail : \nCommentaire : CHECKIN: 12/08/2017\nCHECKOUT: 13
- /08/2017\nNIGHTS: 1\nPHONE: +44 7931 423893\nEMAIL: bethan-csce3alnplc9rrn
- 2@guest.airbnb.com\nPROPERTY: Proche circuit et parc expo : idéal motard\
- n
-SUMMARY: Bethan Tomlinson (HMHZJWYDB2)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20170824
-DTEND:20170825
-UID:
-DESCRIPTION:Arrivée : 24/08/2017\nDépart : 25/08/2017\nNombre de nuits: \
- nTéléphone : \nEmail : \nCommentaire : CHECKIN: 24/08/2017\nCHECKOUT: 25
- /08/2017\nNIGHTS: 1\nPHONE: +33 7 82 57 47 64\nEMAIL: massinissa-q4i1hy6hs
- 39rl997@guest.airbnb.com\nPROPERTY: Proche circuit et parc expo : idéal m
- otard\n
-SUMMARY: Massinissa Nezari (HMSPJP9MBJ)
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20170911
-DTEND:20170913
-UID:
-DESCRIPTION:Arrivée : 11/09/2017\nDépart : 13/09/2017\nNombre de nuits: \
- nTéléphone : \nEmail : \nCommentaire : CHECKIN: 11/09/2017\nCHECKOUT: 13
- /09/2017\nNIGHTS: 2\nPHONE: +33 2 32 72 77 77\nEMAIL: celine-5wtol9w2aad82
- 6e0@guest.airbnb.com\nPROPERTY: Proche circuit et parc expo : idéal motar
- d\n
-SUMMARY: Céline Raby (HMMKF35JPS)
 END:VEVENT
 END:VCALENDAR

@@ -16,6 +16,7 @@ if ($logement==1)
 		$capacite="4 personnes";
 		$max_nbre_personne=4;
 		$icalfile = 'https://www.airbnb.fr/calendar/ical/11164515.ics?s=796849290a83d0f4bd6b5238d65eb4b4';
+		$coef_prix= 1;
 	}
 
 else if ($logement==2) 
@@ -34,6 +35,7 @@ else if ($logement==2)
 		$capacite="6 personnes";
 		$max_nbre_personne=6;
 		$icalfile = 'https://www.airbnb.fr/calendar/ical/11164515.ics?s=796849290a83d0f4bd6b5238d65eb4b4';
+		$coef_prix= 1.2;
 	}
 
 else if ($logement==3) 
@@ -52,6 +54,7 @@ else if ($logement==3)
 		$capacite="6 personnes";
 		$max_nbre_personne=6;
 		$icalfile = 'https://www.airbnb.fr/calendar/ical/11164515.ics?s=796849290a83d0f4bd6b5238d65eb4b4';
+		$coef_prix= 1.1;
 	}
 
 else if ($logement==4) 
@@ -69,6 +72,8 @@ else if ($logement==4)
 		$capacite="6 personnes";
 		$max_nbre_personne=6;
 		$icalfile = 'https://www.airbnb.fr/calendar/ical/11164515.ics?s=796849290a83d0f4bd6b5238d65eb4b4';
+		$coef_prix= 1.3;
+
 	}
 
 
@@ -87,6 +92,7 @@ else if ($logement==5)
 		$capacite="6 personnes";
 		$max_nbre_personne=6;
 		$icalfile = 'https://www.airbnb.fr/calendar/ical/11164515.ics?s=796849290a83d0f4bd6b5238d65eb4b4';
+		$coef_prix= 1.25;
 	}
 
 else if ($logement==6) 
@@ -104,6 +110,7 @@ else if ($logement==6)
 		$capacite="6 personnes";
 		$max_nbre_personne=6;
 		$icalfile = 'https://www.airbnb.fr/calendar/ical/11164515.ics?s=796849290a83d0f4bd6b5238d65eb4b4';
+		$coef_prix= 1.35;
 	}
 
 else if ($logement==7) 
@@ -121,6 +128,7 @@ else if ($logement==7)
 		$capacite="6 personnes";
 		$max_nbre_personne=6;
 		$icalfile = 'https://www.airbnb.fr/calendar/ical/11164515.ics?s=796849290a83d0f4bd6b5238d65eb4b4';
+		$coef_prix= 1.45;
 	}
 
 
@@ -139,6 +147,7 @@ else if ($logement==8)
 		$capacite="6 personnes";
 		$max_nbre_personne=6;
 		$icalfile = 'https://www.airbnb.fr/calendar/ical/11164515.ics?s=796849290a83d0f4bd6b5238d65eb4b4';
+		$coef_prix= 1.5;
 	}
 
 

@@ -40,14 +40,14 @@ $reponse = new xajaxResponse();
     $_SESSION['page_de_demarrage']=1;
 
     $reponse->assign('page_de_demarrage','innerHTML',$content);
-    $reponse->call('xajax_afficher_dispo_prix('.$date_arrivee.','.$date_depart.','.$nbre_personne.')');
+    $reponse->script('xajax_afficher_dispo_prix('.$date_arrivee.','.$date_depart.','.$nbre_personne.')');
 return $reponse;
 }
 
 
 function afficher_dispo_prix($date_arrivee,$date_depart,$nbre_personne)
 {
- $reponse = new xajaxResponse();        
+  $reponse = new xajaxResponse();        
 
     //permet de supprimer la phrase de démarrage si l'utilisateur a mis lui même ses données d'arrivée et départ
       if ($_SESSION['page_de_demarrage']==0) {$reponse->assign('page_de_demarrage','innerHTML','');}
@@ -58,13 +58,13 @@ function afficher_dispo_prix($date_arrivee,$date_depart,$nbre_personne)
       //vérification des données d'entrée
       $verif = preg_match("#/#", $date_arrivee); //vérifie si le format de date arrivée est dd/mm/yyyy
 
-        if ($verif==false) //si faux c'est que les variables $date_arrivee et $date_depart sont données en strtotime
-        {
+        if ($verif==false) { //si faux c'est que les variables $date_arrivee et $date_depart sont données en strtotime
+        
             $date_arrivee_sql = date("Y-m-d",$date_arrivee);
             $date_depart_sql = date("Y-m-d",$date_depart);
         }
-        else //si vrai on transforme au format yyyy-mm-dd puis on récupère aussi le format strtotime
-        {
+        else {//si vrai on transforme au format yyyy-mm-dd puis on récupère aussi le format strtotime
+        
             $date_arrivee_sql = preg_replace('#^([0-3][0-9])/([0|1][0-9])/([1-2][09][0-9][0-9])$#','$3-$2-$1',$date_arrivee);
             $date_depart_sql = preg_replace('#^([0-3][0-9])/([0|1][0-9])/([1-2][09][0-9][0-9])$#','$3-$2-$1',$date_depart);
             $date_arrivee=strtotime($date_arrivee_sql);
@@ -76,8 +76,8 @@ function afficher_dispo_prix($date_arrivee,$date_depart,$nbre_personne)
             
             include("bdd_connect.php");
 
-            for ($logement=1 ; $logement <=$_SESSION['nombre_de_logement'];$logement++)
-                {
+            for ($logement=1 ; $logement <=$_SESSION['nombre_de_logement'];$logement++) {
+                
                 
                 include("logements_presentation.php");
 
@@ -1327,12 +1327,11 @@ $reponse = new xajaxResponse();
                        
                     
               include("logements_presentation.php");
-              $table="prix_".$lieu;
               
               include("bdd_connect.php");
 
 
-              $req_prix = $bdd->prepare('SELECT SUM(prix) AS prix_base FROM '.$table.' WHERE date_reservation BETWEEN :date_arrivee AND date_sub(:date_depart,interval 1 day)');
+              $req_prix = $bdd->prepare('SELECT SUM(prix) AS prix_base FROM base_prix WHERE date_reservation BETWEEN :date_arrivee AND date_sub(:date_depart,interval 1 day)');
               $req_prix->execute(array(
                   'date_arrivee' => $date_arrivee,
                   'date_depart' => $date_depart));
@@ -1340,6 +1339,8 @@ $reponse = new xajaxResponse();
 
               $prix_base= intval($base_prix['prix_base']);
               
+              $prix_base = $coef_prix*$prix_base;
+
               $req_prix->closeCursor();
 
               $date_arrivee_duree = new datetime($date_arrivee);
@@ -2066,6 +2067,7 @@ $reponse = new xajaxResponse();
       include("logements_presentation.php");
       $table='reservation_'.$lieu;
 
+      // $updated='';
       $today=date('Y-m-d');
 
       $rep = $bdd->prepare('SELECT * FROM '.$table.' WHERE annule_le IS NULL AND calendrier_externe=? AND updated IS NULL');
