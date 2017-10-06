@@ -1,0 +1,36 @@
+{% extends 'CnccvHouseBundle::base.html.twig' %}
+
+{% block section %}
+    <div class="row">
+        <form action="" class="menuliste2">
+            <div class="input-field col s2"></div>
+            <div class="input-field col s2">
+                <input type="text" class="datepicker" id="from" name="from">
+                <label for="from">Arrivée</label>
+            </div>
+            <div class="input-field col s2">
+                <input id="to" name="to" type="text" class="datepicker">
+                <label for="to">Départ</label>
+            </div>
+            <div class="input-field col s2">
+                <input id="voyageur" type="number" class="validate" min="1" max="6" step="1"
+                       id="nombre_personne" name="nombre_personne">
+                <label for="nombre_personne">Voyageurs</label>
+            </div>
+            <div class="col s2 btn-align">
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="verifier"
+                        onclick="xajax_afficher_dispo_prix(document.getElementById('from')
+                                .value,document.getElementById('to')
+                                .value,document.getElementById('nombre_personne')
+                                .value);return false;">
+                    Vérifier
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="p1"><p><b>Entrez vos dates de séjour, le nombre de voyageurs, Réservez ...</b></p></div>
+        <div class="p2"><p><b>... Et bon séjour dans nos maisons au Mans !</b></p></div>
+    </div>
+{% endblock %}

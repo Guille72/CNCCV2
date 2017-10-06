@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div class="degrade">
+        {% include('CnccvHouseBundle:widgets:_header.html.twig') %}
+        <section>
+            <div class="container">
+                {% block section %}{% endblock %}
+            </div>
+        </section>
+        {% include('CnccvHouseBundle:widgets:_footer.html.twig') %}
+    </div>
+{% endblock %}

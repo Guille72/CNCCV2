@@ -1,0 +1,6 @@
+cnccv_house:
+    resource: "@CnccvHouseBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+

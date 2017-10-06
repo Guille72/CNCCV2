@@ -1,0 +1,71 @@
+body {
+    font-family: arial, serif;
+}
+
+li {
+    list-style: none;
+}
+
+#libelle {
+    width: 220px;
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    font-weight: bold;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+}
+
+.ligne {
+    width: 220px;
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+#libelle li {
+    float: left;
+    width: 30px;
+}
+
+.ligne li {
+    color: $color-black;
+    float: left;
+    width: 30px;
+}
+
+/*.ligne li a:hover{ list-style: none;
+    text-decoration: none;
+    background-color:#ff6959; } */
+
+li.itemCurrentItem {
+    font-weight: bold;
+    font-style: italic;
+    background-color: $color-blue;
+}
+
+li.itemSelectedItem {
+    /* A vous de configurer l'apparence du jour sélectionné */
+}
+
+li.itemExistingItem {
+    background-color: $color-pink;
+    text-decoration: line-through;
+}
+
+li.itemPastItem {
+    color: $color-grey;
+    background-color: $color-white;
+}
+
+li.itemPickableItem {
+    cursor: pointer;
+    font-style: normal;
+    color: $color-black;
+}
+
+li.itemPickableItem:hover {
+    background-color: $color-orange;
+}

@@ -1,0 +1,49 @@
+<div class="row">
+    <div id="menu" class="menuliste">
+        <!--Logo-->
+        <div class="logo1 col s4">
+            <a href="{{ path('homePage') }}">
+                <img src="{{ asset('img/logoSansCNCCV.svg') }}" width="55px" height="55px"/>
+                <span class="phrase1">
+                    <b>C</b>hez <b>N</b>ous <b>c</b>omme <b>C</b>hez <b>V</b>ous
+                </span>
+                </br>
+                <div class="phrase2">Location de maisons meublées au Mans</div>
+            </a>
+        </div>
+        <!--En face du logo-->
+        <div class="menudroite">
+            <ul>
+                <li class="col s6"></li>
+                <li>
+                    <a href="{{ path('homePage') }}" class="btn-menu waves-effect waves-light btn col s2 blue">Accueil</a>
+                </li>
+                <li>
+                    <a href="" class="waves-effect waves-light btn col s2 amber darken-1">Qui sommes-nous ?</a>
+                </li>
+                <!--Appel du nom-->
+                {# <?php if (!isset($_SESSION['prenom'])) { ?> #}
+                <li>
+                    <a onclick="xajax_connect_first()" style="cursor:pointer;"
+                       class="waves-effect waves-light btn col s2 green">Se connecter</a>
+                </li>
+                {# <?php } else { ?>
+
+                <!--Menu déroulant-->
+                <a class='dropdown-button btn input-field col s2 waves-effect waves-light purple'
+                   href='#' data-activates='dropdown1'>
+                    Profil de  <?php echo $_SESSION['prenom']; ?>
+                </a>
+                <!--Structure-->
+                <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="mes_reservation.php">Mes réservations</a></li>
+                    <li><a href="mes_parametres.php">Mes paramètres</a></li>
+                    <li><a href="mes_documents.php">Mes documents</a></li>
+                    <li class="divider"></li>
+                    <li><a href="end.php" class="red darken-2">Déconnection</a></li>
+                </ul>
+                <?php } ?> #}
+            </ul>
+        </div>
+    </div>
+</div>
