@@ -5,12 +5,15 @@ namespace Cnccv\HouseBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * User
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="Cnccv\HouseBundle\Repository\UserRepository")
+ * @Vich\Uploadable
  */
 class User extends BaseUser
 {
@@ -36,8 +39,8 @@ class User extends BaseUser
     private $lastname;
 
     /**
-     * @var \DateTime
-     * @ORM\Column(type="datetime")
+     * @var \Date
+     * @ORM\Column(type="date")
      */
     private $birthdate;
 
@@ -92,6 +95,18 @@ class User extends BaseUser
      * @ORM\Column(type="datetime")
      */
     private $updated;
+
+    /**
+     * @var File
+     * @Vich\UploadableField(mapping="cni_image", fileNameProperty="imageName")
+     */
+    private $imageFile;
+
+    /**
+     * @var string
+     * @ORM\Column(type="string")
+     */
+    private $imageName;
 
     public function __construct()
     {
@@ -160,7 +175,7 @@ class User extends BaseUser
     /**
      * Set birthdate
      *
-     * @param \DateTime $birthdate
+     * @param \Date $birthdate
      *
      * @return User
      */
@@ -174,7 +189,7 @@ class User extends BaseUser
     /**
      * Get birthdate
      *
-     * @return \DateTime
+     * @return \Date
      */
     public function getBirthdate()
     {
@@ -371,5 +386,43 @@ class User extends BaseUser
     public function getUpdated()
     {
         return $this->updated;
+    }
+
+    /**
+     * Set imageName
+     *
+     * @param string $imageName
+     *
+     * @return User
+     */
+    public function setImageName($imageName)
+    {
+        $this->imageName = $imageName;
+
+        return $this;
+    }
+
+    /**
+     * Get imageName
+     *
+     * @return string
+     */
+    public function getImageName()
+    {
+        return $this->imageName;
+    }
+
+    public function setImageFile(File $image=null)
+    {
+        $this->imageFile = $image;
+        if ($image) {
+            $this->updated = new \DateTimeImmutable('now');
+        }
+        return $this;
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
     }
 }

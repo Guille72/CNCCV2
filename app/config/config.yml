@@ -85,4 +85,12 @@ stof_doctrine_extensions:
             uploadable: true
 
 vich_uploader:
-    db_driver: orm # or mongodb or propel or phpcr
+    db_driver: %vich_uploader_bundle_db_driver%
+    mappings:
+        product_image:
+            uri_prefix: '%uploader.cni.uri_prefix%'
+            upload_destination: '%uploader.cni.upload_destination%'
+            inject_on_load: '%uploader.cni.inject_on_load%'
+            delete_on_update: '%uploader.cni.delete_on_update%'
+            delete_on_remove: '%uploader.cni.delete_on_remove%'
+            namer: vich_uploader.namer_origname

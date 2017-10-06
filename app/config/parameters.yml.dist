@@ -21,3 +21,12 @@ parameters:
     # FOSUser
     fos_user.from_email.address: contact@cnccv.fr
     fos_user.from_email.sender_name: cnccv.fr
+
+    # VichUploaderBundle
+    vich_uploader_bundle_db_driver: orm
+    # Uploader CNI
+    uploader.cni.uri_prefix: /uploads/cni
+    uploader.cni.upload_destination: '%kernel.root_dir%/../web/uploads/cni'
+    uploader.cni.inject_on_load: false
+    uploader.cni.delete_on_update: true
+    uploader.cni.delete_on_remove: true
