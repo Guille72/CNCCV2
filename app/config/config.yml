@@ -67,3 +67,19 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: Cnccv\HouseBundle\Entity\User
+    from_email:
+        address: "%fos_user.from_email.address%"
+        sender_name: "%fos_user.from_email.sender_name%"
+
+# stof_doctrine_extensions_bundle
+stof_doctrine_extensions:
+    orm:
+        default:
+            sluggable: true
+            timestampable: true
+            uploadable: true

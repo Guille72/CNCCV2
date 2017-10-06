@@ -10,3 +10,5 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: ThisTokenIsNotSoSecretChangeIt
+    fos_user.from_email.address: contact@cnccv.fr
+    fos_user.from_email.sender_name: cnccv.fr
