@@ -18,6 +18,8 @@ class AppKernel extends Kernel
             new Cnccv\HouseBundle\CnccvHouseBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
+
 
         ];
 

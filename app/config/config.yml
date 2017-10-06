@@ -83,3 +83,6 @@ stof_doctrine_extensions:
             sluggable: true
             timestampable: true
             uploadable: true
+
+vich_uploader:
+    db_driver: orm # or mongodb or propel or phpcr
