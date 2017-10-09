@@ -1,5 +1,23 @@
 <div class="row">
-    <div class="col s4">Connection</div>
-    <div class="col s4">Inscription</div>
-    <div class="col s4">Partenaires</div>
+    <div class="col s4">
+        <h5>Connection</h5>
+        <input id="email" type="email" class="validate">
+        <label for="email" data-error="wrong" data-success="right">Adresse Mail</label>
+        <input id="password" type="password" class="validate">
+        <label for="password">Mot de passe</label>
+        <a class="waves-effect waves-light btn">Se connecter</a>
+    </div>
+    <div class="col s4">
+        <h5>Inscription</h5>
+        <p>Venez réserver votre séjour dans nos logements !</p>
+        <a class="waves-effect waves-light btn">S'inscrire</a>
+        {% include 'CnccvHouseBundle:widgets:_modal.html.twig' with {
+        vue: 'CnccvHouseBundle:Default:inscription.html.twig',
+        modalFooter: false
+        } %}
+    </div>
+    <div class="col s4">
+        <h5>Partenaires</h5>
+
+    </div>
 </div>
