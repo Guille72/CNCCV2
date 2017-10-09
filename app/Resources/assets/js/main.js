@@ -2,6 +2,11 @@ const $ = require('jquery');
 global.$ = global.jQuery = $;
 
 (function ($) {
+
+    $(document).ready(function(){
+        $('.modal').modal();
+    });
+
     // normalize
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
@@ -21,3 +26,4 @@ global.$ = global.jQuery = $;
         closeOnSelect: true // Close upon selecting a date,
     });
 })(window.jQuery);
+

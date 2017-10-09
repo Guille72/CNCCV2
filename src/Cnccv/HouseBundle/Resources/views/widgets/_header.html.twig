@@ -24,9 +24,16 @@
                 <!--Appel du nom-->
                 {# <?php if (!isset($_SESSION['prenom'])) { ?> #}
                 <li>
-                    <a onclick="xajax_connect_first()" style="cursor:pointer;"class="waves-effect waves-light btn col s2 green">Se connecter</a>
+                    <a class="waves-effect waves-light btn green modal-trigger" href="#modal1">Se connecter</a>
+                    {# Désactiver le bouton par false#}
+                    {% include 'CnccvHouseBundle:widgets:_modal.html.twig' with {
+                        vue: 'CnccvHouseBundle:Default:connexion.html.twig',
+                        modalFooter: false
+                    } %}
                 </li>
-                
+
+
+
                 {# <?php } else { ?>
 
                 <!--Menu déroulant-->
