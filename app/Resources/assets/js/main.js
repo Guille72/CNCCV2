@@ -4,7 +4,7 @@ global.$ = global.jQuery = $;
 (function ($) {
 
     $(document).ready(function(){
-        $('.modal').modal();
+       $('#'+$('.modal').data('id')).modal();
     });
 
     // normalize
