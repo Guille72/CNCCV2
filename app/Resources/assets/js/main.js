@@ -4,6 +4,7 @@ global.$ = global.jQuery = $;
 (function ($) {
 
     $(document).ready(function(){
+        // Modal
        $('#'+$('.modal').data('id')).modal();
     });
 

@@ -8,8 +8,8 @@
         <a class="waves-effect waves-light btn">Se connecter</a>
     </div>
     <div class="col s4">
-        <h5>Inscription</h5>
-        <p>Venez réserver votre séjour dans nos logements !</p>
+        <h5>{{ 'modalConnexion.inscription.title'|trans }}</h5>
+        <p>{{ 'modalConnexion.inscription.text'|trans }}</p>
         <a class="waves-effect waves-light btn">S'inscrire</a>
         {% include 'CnccvHouseBundle:widgets:_modal.html.twig' with {
         vue: 'CnccvHouseBundle:Default:inscription.html.twig',
