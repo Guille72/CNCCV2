@@ -75,4 +75,11 @@ Créer des fichiers source-map en cas de débuggage.
 
 ##Framework PHP : Symfony
 
-*     
+* Lancer le seveur :
+    * `php bin/console server:run`
+
+* Lancer WebPack :
+    * `yarn run encore dev --watch`
+
+* Adresse du site une fois le serveur lancé :
+    * `http://127.0.0.1:8000/`

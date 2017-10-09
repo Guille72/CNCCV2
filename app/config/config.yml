@@ -75,6 +75,9 @@ fos_user:
     from_email:
         address: "%fos_user.from_email.address%"
         sender_name: "%fos_user.from_email.sender_name%"
+    registration:
+        form:
+            type: Cnccv\HouseBundle\Form\RegistrationType
 
 # stof_doctrine_extensions_bundle
 stof_doctrine_extensions:
