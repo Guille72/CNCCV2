@@ -83,3 +83,12 @@ Créer des fichiers source-map en cas de débuggage.
 
 * Adresse du site une fois le serveur lancé :
     * `http://127.0.0.1:8000/`
+
+* Mettre les Modèles dans :
+    * src -> Nom du projet -> Le Bundle qui va réunir le tout -> Entity -> Fichier au singulier
+
+* Mettre les vues dans :
+    * src -> Nom du projet -> Le Bundle qui va réunir le tout -> Resources -> views
+
+* Mettre les Controleurs dans :
+    * src -> Nom du projet -> Le Bundle qui va réunir le tout -> Controller -> NomController
