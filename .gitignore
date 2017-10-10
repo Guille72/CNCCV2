@@ -16,4 +16,5 @@
 /vendor/
 /node_modules/
 /web/bundles/
+/web/uploads/
 *.*~
