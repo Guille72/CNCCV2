@@ -16,41 +16,38 @@
             <ul>
                 <li class="col s6"></li>
                 <li>
-                    <a href="{{ path('homePage') }}" class="btn-menu waves-effect waves-light btn col s2 blue">Accueil</a>
+                    <a href="{{ path('homePage') }}"
+                       class="btn-menu waves-effect waves-light btn col s2 blue">Accueil</a>
                 </li>
                 <li>
                     <a href="" class="waves-effect waves-light btn col s2 amber darken-1">Qui sommes-nous ?</a>
                 </li>
-                <!--Appel du nom-->
-                {# <?php if (!isset($_SESSION['prenom'])) { ?> #}
-                <li>
-                    <a id="btn-connexion" class="waves-effect waves-light btn green modal-trigger" href="#connexion">Se connecter</a>
-                    {# Désactiver le bouton par false#}
-                    {% include 'CnccvHouseBundle:widgets:_modal.html.twig' with {
+                {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+                    <!--Menu déroulant-->
+                    <a class='dropdown-button btn input-field col s2 waves-effect waves-light purple'
+                       href='#' data-activates='dropdown1'>
+                        Profil de {{ app.user.firstname }}
+                    </a>
+                    <!--Structure-->
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="mes_reservation.php">Mes réservations</a></li>
+                        <li><a href="mes_parametres.php">Mes paramètres</a></li>
+                        <li><a href="mes_documents.php">Mes documents</a></li>
+                        <li class="divider"></li>
+                        <li><a href="{{ path('logout') }}" class="red darken-2">Déconnection</a></li>
+                    </ul>
+                {% else %}
+                    <li>
+                        <a id="btn-connexion" class="waves-effect waves-light btn green modal-trigger"
+                           href="#connexion">Se connecter</a>
+                        {# Désactiver le bouton agree par false#}
+                        {% include 'CnccvHouseBundle:widgets:_modal.html.twig' with {
                         dataId: 'connexion',
                         vue: 'CnccvHouseBundle:Default:connexion.html.twig',
                         modalFooter: false
-                    } %}
-                </li>
-
-
-
-                {# <?php } else { ?>
-
-                <!--Menu déroulant-->
-                <a class='dropdown-button btn input-field col s2 waves-effect waves-light purple'
-                   href='#' data-activates='dropdown1'>
-                    Profil de  <?php echo $_SESSION['prenom']; ?>
-                </a>
-                <!--Structure-->
-                <ul id='dropdown1' class='dropdown-content'>
-                    <li><a href="mes_reservation.php">Mes réservations</a></li>
-                    <li><a href="mes_parametres.php">Mes paramètres</a></li>
-                    <li><a href="mes_documents.php">Mes documents</a></li>
-                    <li class="divider"></li>
-                    <li><a href="end.php" class="red darken-2">Déconnection</a></li>
-                </ul>
-                <?php } ?> #}
+                        } %}
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </div>
