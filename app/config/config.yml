@@ -90,7 +90,7 @@ stof_doctrine_extensions:
 vich_uploader:
     db_driver: %vich_uploader_bundle_db_driver%
     mappings:
-        product_image:
+        cni:
             uri_prefix: '%uploader.cni.uri_prefix%'
             upload_destination: '%uploader.cni.upload_destination%'
             inject_on_load: '%uploader.cni.inject_on_load%'

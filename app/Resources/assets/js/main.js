@@ -3,15 +3,19 @@ global.$ = global.jQuery = $;
 
 (function ($) {
 
+    // Menu déroulant
+    $(".dropdown-button").dropdown();
+
     $(document).ready(function(){
-        // Modal
+
+       // Modal
        $('#'+$('.modal').data('id')).modal();
     });
 
-    // normalize
+    // materialize
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
-        selectYears: 15, // Creates a dropdown of 15 years to control year,
+        selectYears: 30, // Creates a dropdown of 15 years to control year,
         labelMonthNext: 'Mois suivant',
         labelMonthPrev: 'Mois précédent',
         labelMonthSelect: 'Selectionnez un mois',

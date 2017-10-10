@@ -1,23 +1,25 @@
 <div class="row">
     <div class="col s4">
-        <h5>Connection</h5>
+        <h5>{{ 'modalConnexion.connexion.title'|trans }}</h5>
         <input id="email" type="email" class="validate">
-        <label for="email" data-error="wrong" data-success="right">Adresse Mail</label>
+        <label for="email" data-error="wrong"
+               data-success="right">{{ 'modalConnexion.connexion.address'|trans }}</label>
         <input id="password" type="password" class="validate">
-        <label for="password">Mot de passe</label>
-        <a class="waves-effect waves-light btn">Se connecter</a>
+        <label for="password">{{ 'modalConnexion.connexion.psw'|trans }}</label>
+        <div class="center">
+            <a class="waves-effect waves-light btn">{{ 'modalConnexion.connexion.button'|trans }}</a>
+        </div>
     </div>
     <div class="col s4">
         <h5>{{ 'modalConnexion.inscription.title'|trans }}</h5>
         <p>{{ 'modalConnexion.inscription.text'|trans }}</p>
-        <a class="waves-effect waves-light btn">S'inscrire</a>
-        {% include 'CnccvHouseBundle:widgets:_modal.html.twig' with {
-        vue: 'CnccvHouseBundle:Default:inscription.html.twig',
-        modalFooter: false
-        } %}
+        <div class="center">
+            <a class="waves-effect waves-light btn" href="{{ path('fos_user_registration_register') }}">
+                {{ 'modalConnexion.inscription.button'|trans }}
+            </a>
+        </div>
     </div>
     <div class="col s4">
-        <h5>Partenaires</h5>
-
+        <h5>{{ 'modalConnexion.partners.title'|trans }}</h5>
     </div>
 </div>

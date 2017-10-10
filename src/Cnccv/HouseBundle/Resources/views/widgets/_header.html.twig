@@ -24,7 +24,7 @@
                 <!--Appel du nom-->
                 {# <?php if (!isset($_SESSION['prenom'])) { ?> #}
                 <li>
-                    <a class="waves-effect waves-light btn green modal-trigger" href="#connexion">Se connecter</a>
+                    <a id="btn-connexion" class="waves-effect waves-light btn green modal-trigger" href="#connexion">Se connecter</a>
                     {# Désactiver le bouton par false#}
                     {% include 'CnccvHouseBundle:widgets:_modal.html.twig' with {
                         dataId: 'connexion',

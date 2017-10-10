@@ -33,12 +33,6 @@ class User extends BaseUser
     private $firstname;
 
     /**
-     * @var string
-     * @ORM\Column(type="string")
-     */
-    private $lastname;
-
-    /**
      * @var \Date
      * @ORM\Column(type="date")
      */
@@ -70,13 +64,13 @@ class User extends BaseUser
 
     /**
      * @var string
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      */
     private $company;
 
     /**
      * @var string
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      */
     private $siren;
 
@@ -98,7 +92,7 @@ class User extends BaseUser
 
     /**
      * @var File
-     * @Vich\UploadableField(mapping="cni_image", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="cni", fileNameProperty="imageName")
      */
     private $imageFile;
 
@@ -111,7 +105,6 @@ class User extends BaseUser
     public function __construct()
     {
         parent::__construct();
-        // your own logic
     }
 
     /**
@@ -146,30 +139,6 @@ class User extends BaseUser
     public function getFirstname()
     {
         return $this->firstname;
-    }
-
-    /**
-     * Set lastname
-     *
-     * @param string $lastname
-     *
-     * @return User
-     */
-    public function setLastname($lastname)
-    {
-        $this->lastname = $lastname;
-
-        return $this;
-    }
-
-    /**
-     * Get lastname
-     *
-     * @return string
-     */
-    public function getLastname()
-    {
-        return $this->lastname;
     }
 
     /**
@@ -412,7 +381,7 @@ class User extends BaseUser
         return $this->imageName;
     }
 
-    public function setImageFile(File $image=null)
+    public function setImageFile(File $image = null)
     {
         $this->imageFile = $image;
         if ($image) {

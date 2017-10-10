@@ -84,6 +84,12 @@ Créer des fichiers source-map en cas de débuggage.
 * Adresse du site une fois le serveur lancé :
     * `http://127.0.0.1:8000/`
 
+* Vider le cache :
+    * `php bin/console cache:clear --env=dev`
+
+* Mettre à jour les tables :
+    * `php bin/console doctrine:schema:update --force`
+
 * Mettre les Modèles dans :
     * src -> Nom du projet -> Le Bundle qui va réunir le tout -> Entity -> Fichier au singulier
 
