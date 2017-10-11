@@ -1,5 +1,4 @@
 <?php
-
 namespace Cnccv\HouseBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
