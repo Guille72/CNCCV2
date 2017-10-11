@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a587d87e-04ab-4991-8de8-95e276fa3506" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_footer.html.twig" afterPath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_footer.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/SecurityController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/2af43cfc-35a8-422b-89d2-f308dacbb240.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/2af43cfc-35a8-422b-89d2-f308dacbb240.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/assets/scss/style.scss" afterPath="$PROJECT_DIR$/app/Resources/assets/scss/style.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/connexion.html.twig" afterPath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/connexion.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/build/app.css" afterPath="$PROJECT_DIR$/web/build/app.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,17 +37,6 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="@localhost" type="e3449647:DbNodeDescriptor" />
       </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="cnccv_symfony" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="cnccv_symfony" type="e3449647:DbNodeDescriptor" />
-        <item name="user" type="e3449647:DbNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
@@ -46,18 +45,8 @@
       <file leaf-file-name="connexion.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/connexion.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_header.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_header.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="53" column="6" lean-forward="false" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
+            <state relative-caret-position="289">
+              <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -66,9 +55,21 @@
       <file leaf-file-name="security.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/security.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+            <state relative-caret-position="374">
+              <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecurityController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/SecurityController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding>
+                <element signature="e#48#105#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,38 +77,8 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_footer.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_footer.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="houses.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/houses.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,8 +87,8 @@
       <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="289">
+              <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -140,6 +111,9 @@
       <find>.validate</find>
       <find>.autocomplete</find>
       <find>serBu</find>
+      <find>csrf_token</find>
+      <find>dispo_logeme</find>
+      <find>dispo_logement</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -154,7 +128,6 @@
         <option value="$PROJECT_DIR$/app/Resources/assets/scss/partials/_mixins.scss" />
         <option value="$PROJECT_DIR$/src/CnccvBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/../cnccv/menu.php" />
-        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/app/Resources/assets/js/app.js" />
@@ -166,9 +139,7 @@
         <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/CnccvHouseBundle.php" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_modale.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/assets/scss/style.scss" />
         <option value="$PROJECT_DIR$/var/logs/dev.log" />
-        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_modal.html.twig" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/Resources/translations/messages.fr_FR.yml" />
         <option value="$PROJECT_DIR$/composer.json" />
@@ -187,14 +158,21 @@
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" />
-        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/connexion.html.twig" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/houses.html.twig" />
-        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_header.html.twig" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_footer.html.twig" />
+        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/assets/scss/style.scss" />
+        <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/Security/login_content.html.twig" />
+        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/DefaultController.php" />
+        <option value="$USER_HOME$/Desktop/GPP-Laravel/data/app/Http/Controllers/Admin/UserController.php" />
+        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_modal.html.twig" />
+        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_header.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/security/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/connexion.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/SecurityController.php" />
       </list>
     </option>
   </component>
@@ -209,7 +187,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="428" />
+    <option name="x" value="430" />
     <option name="width" value="1170" />
     <option name="height" value="860" />
   </component>
@@ -231,8 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,6 +226,26 @@
               <item name="projet_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projet_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projet_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FOSUserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projet_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
@@ -283,40 +279,7 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Cnccv" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="HouseBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DependencyInjection" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cnccv" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HouseBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cnccv" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HouseBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cnccv" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HouseBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cnccv" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HouseBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="translations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
@@ -337,60 +300,17 @@
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Default" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Cnccv" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HouseBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="widgets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="friendsofsymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="friendsofsymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="user-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="friendsofsymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="user-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="projet_symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="friendsofsymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="user-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Type" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cnccv/fonction.php" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="SearchEverywhereHistoryKey" value="homepage&#9;null&#9;null&#10;confirmed&#9;FILE&#9;file://C:/wamp64/www/projet_symfony/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig&#10;constraintv&#9;FILE&#9;file://C:/wamp64/www/projet_symfony/vendor/symfony/symfony/src/Symfony/Component/Validator/ConstraintViolation.php&#10;Registrat&#9;FILE&#9;file://C:/wamp64/www/projet_symfony/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php&#10;.validate&#9;null&#9;null&#10;re&#9;FILE&#9;file://C:/wamp64/www/projet_symfony/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register_content.html.twig&#10;registration&#9;null&#9;null&#10;register&#9;FILE&#9;file://C:/wamp64/www/projet_symfony/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register_content.html.twig" />
@@ -441,25 +361,26 @@
       <workItem from="1507291359250" duration="12670000" />
       <workItem from="1507532940145" duration="27776000" />
       <workItem from="1507619175776" duration="19679000" />
+      <workItem from="1507705182905" duration="11439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71708000" />
+    <option name="totallyTimeSpent" value="83147000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="428" y="0" width="1170" height="860" extended-state="0" />
+    <frame x="430" y="0" width="1170" height="860" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3117117" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31261262" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25434583" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35495496" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2957359" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28936744" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -483,79 +404,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/common.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/assets/scss/plugins/materialize/sass/components/forms/_input-fields.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="206" column="25" lean-forward="false" selection-start-line="206" selection-start-column="12" selection-end-line="206" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/inscription.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/translations/validators.ar.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/all.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2af43cfc-35a8-422b-89d2-f308dacbb240/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -564,19 +412,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/registration.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -592,7 +431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -616,18 +454,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3927">
           <caret line="241" column="36" lean-forward="false" selection-start-line="241" selection-start-column="36" selection-end-line="241" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Form/Handler/RegistrationFormHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="27" lean-forward="true" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Form/Handler/RegistrationFormHandler.php" />
     <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="443">
@@ -640,7 +470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -648,7 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -656,7 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,7 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3349">
           <caret line="204" column="30" lean-forward="true" selection-start-line="204" selection-start-column="30" selection-end-line="204" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,23 +506,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="35" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/RegistrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/RegistrationController.php" />
     <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -704,32 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/6960fad9/2af43cfc-35a8-422b-89d2-f308dacbb240/cnccv_symfony.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="72" column="47" lean-forward="false" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
-          <folding>
-            <element signature="e#44#76#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Form/RegistrationType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="57" column="42" lean-forward="true" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -741,35 +532,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/dashboard.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="51" column="10" lean-forward="false" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/translations/messages.fr_FR.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="48" lean-forward="false" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/dashboard.html.twig" />
     <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -777,22 +544,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
           <caret line="55" column="6" lean-forward="false" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/DependencyInjection/CnccvHouseExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_modal.html.twig">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/Functional/Bundle/FormLoginBundle/Controller/LocalizedController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+        <state relative-caret-position="448">
+          <caret line="59" column="20" lean-forward="false" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/assets/scss/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="79" column="21" lean-forward="false" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/Security/login_content.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_footer.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -805,34 +586,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/DependencyInjection/CnccvHouseExtension.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/Security/login_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/SecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="58" column="39" lean-forward="false" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/translations/messages.fr_FR.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/6960fad9/2af43cfc-35a8-422b-89d2-f308dacbb240/cnccv_symfony.user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/GPP-Laravel/data/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/GPP-Laravel/data/app/Http/Controllers/Admin/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-122">
+          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/inscription.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/connexion.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/Functional/Bundle/FormLoginBundle/Controller/LocalizedController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="59" column="20" lean-forward="false" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -845,43 +657,281 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#47#104#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        <state relative-caret-position="160">
+          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_header.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
+        <state relative-caret-position="590">
           <caret line="53" column="6" lean-forward="false" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_footer.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Manager/MailerManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Form/RegistrationType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="79" column="41" lean-forward="false" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_modal.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../cnccv/fonction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="1343" column="14" lean-forward="false" selection-start-line="1343" selection-start-column="14" selection-end-line="1343" selection-end-column="14" />
+          <folding>
+            <marker date="1507125290273" expanded="true" signature="3909:3995" ph="SELECT COUNT... ${$table}" />
+            <marker date="1507125290273" expanded="true" signature="4289:4375" ph="SELECT ROUND... ${$table}" />
+            <marker date="1507125290273" expanded="true" signature="4831:5009" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="4897:5009" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="6282:6372" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="6765:6785" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="7080:7096" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="7275:7357" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="7485:7552" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="7596:7619" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="7738:9388" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="8308:8674" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="8416:8431" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="8517:8540" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="8728:9043" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="8843:8858" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="9099:9340" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="9164:9254" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="9443:9505" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="9506:9579" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="10613:10944" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="10718:10763" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="11171:11242" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="11243:13810" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="11470:11592" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="11627:11715" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="11870:11975" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="12047:12090" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="12091:13771" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="12262:12273" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="12483:12494" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="12719:12730" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="12957:12968" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="13197:13208" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="13410:13421" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="13628:13639" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="15045:15115" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="15116:15294" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="15167:15185" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="15395:15475" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="15476:15522" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="16956:17026" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="17027:17147" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="17078:17096" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="17248:17328" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="17329:17375" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="17921:17991" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="18179:18249" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="18250:18387" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="18308:18326" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="18471:18551" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="18552:18615" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="18888:19043" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="23172:23222" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="23820:25063" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="23900:23929" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="24530:24556" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="24954:24980" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="25281:25297" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="25362:25372" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="25555:25867" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="25609:25836" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="25702:25717" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="25804:25822" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="30755:30993" ph="INSERT INTO ${$table}... " />
+            <marker date="1507125290273" expanded="true" signature="31340:31417" ph="SELECT num_r... ${$table}" />
+            <marker date="1507125290273" expanded="true" signature="40020:40070" ph="SELECT * FRO... ${$table}" />
+            <marker date="1507125290273" expanded="false" signature="40798:40848" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="41031:41049" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="41210:41236" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="41460:41510" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="41849:41899" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="42125:42143" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="42305:42331" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="42945:42993" ph="SELECT * FRO... ${$table}" />
+            <marker date="1507125290273" expanded="false" signature="47972:48022" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="48301:49930" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="48425:48965" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="49034:49375" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="49850:49894" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="50911:51483" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="51448:51474" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="51799:52396" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="52361:52387" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="52636:53282" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="53247:53273" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="53729:54300" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="54265:54291" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="54617:55238" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="55203:55229" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="56026:56597" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="56562:56588" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="56914:57535" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="57500:57526" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="57837:58476" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="58441:58467" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="58659:59596" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="58675:59584" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="58852:59577" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="59286:59369" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="63999:64047" ph="SELECT * FRO... ${$table}" />
+            <marker date="1507125290273" expanded="true" signature="67468:67516" ph="SELECT * FRO... ${$table}" />
+            <marker date="1507125290273" expanded="true" signature="70446:70563" ph="SELECT * FRO... ${$table}" />
+            <marker date="1507125290273" expanded="true" signature="70859:70975" ph="SELECT * FRO... ${$table}" />
+            <marker date="1507125290273" expanded="true" signature="71266:71405" ph="SELECT * FRO... ${$table}" />
+            <marker date="1507125290273" expanded="true" signature="72367:72499" ph="SELECT SUM(p... ${$table}" />
+            <marker date="1507125290273" expanded="true" signature="74556:74636" ph="SELECT * FRO... ${$table}" />
+            <marker date="1507125290273" expanded="true" signature="75472:75488" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="78348:78418" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="78536:83537" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="78550:78569" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="78605:78629" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="79583:79607" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="80563:80587" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="81545:81569" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="82529:82553" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="83681:87192" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="83695:83714" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="83745:83769" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="84426:84450" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="85109:85133" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="85794:85818" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="86481:86505" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="87316:90791" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="87330:87349" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="87379:87403" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="88053:88077" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="88729:88753" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="89407:89431" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="90087:90111" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="90934:94409" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="90948:90967" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="90997:91021" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="91671:91695" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="92347:92371" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="93025:93049" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="93705:93729" ph="..." />
+            <marker date="1507125290273" expanded="false" signature="95515:95543" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="97039:97119" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="97188:97214" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="97272:97298" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="97751:97840" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="97893:97908" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="98958:99022" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="99177:99335" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="100375:100492" ph="SELECT * FRO... ${$table}" />
+            <marker date="1507125290273" expanded="true" signature="101993:102032" ph="..." />
+            <marker date="1507125290273" expanded="true" signature="102210:102216" ph=" " />
+            <marker date="1507125290273" expanded="true" signature="102518:102524" ph=" " />
+            <marker date="1507125290273" expanded="true" signature="105859:105971" ph="SELECT * FRO... ${$table}" />
+            <marker date="1507125290273" expanded="true" signature="109652:109737" ph="SELECT * FRO... ${$table}" />
+            <marker date="1507125290273" expanded="true" signature="110686:110863" ph="INSERT INTO ${$table}... " />
+            <marker date="1507125290273" expanded="true" signature="111372:111465" ph="SELECT * FRO... ${$table}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/security/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/connexion.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/SecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#48#105#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

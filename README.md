@@ -63,13 +63,13 @@ Créer des fichiers source-map en cas de débuggage.
 
 * Du type JavaScript : 
     * Pour ajouter notre propre JavaScript, il faut l'insérer dans le fichier main.js, dans le dossier assets puis le
-    dossier js : `assets/js/main.js`
+    dossier js : `app/Resource/assets/js/main.js`
     
     * Dans ces mêmes dossiers, le JS des dépendances installées se situe dans le fichier app.js : `assets/js/app.js` (Ne pas y toucher)
 
 * Du type CSS/SCSS :
     * Pour ajouter notre propre CSS/SCSS, il faut l'insérer dans le fichier style.scss, dans le dossier assets puis le
-    dossier scss : `assets/scss/style.scss`
+    dossier scss : `app/Resource/assets/scss/style.scss`
     
     * Dans ces mêmes dossiers, le CSS/SCSS des dépendances installées se situe dans le fichier app.scss : `assets/scss/app.scss` (Ne pas y toucher)
 
