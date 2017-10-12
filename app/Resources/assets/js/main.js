@@ -4,22 +4,22 @@ global.$ = global.jQuery = $;
 (function ($) {
 
     // Zoom Image
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.materialboxed').materialbox();
     });
 
     // Slider cards
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.slider').slider();
     });
 
     // Menu déroulant
     $(".dropdown-button").dropdown();
 
-    $(document).ready(function(){
+    $(document).ready(function () {
 
-       // Modal
-       $('#'+$('.modal').data('id')).modal();
+        // Modal
+        $('#' + $('.modal').data('id')).modal();
     });
 
     // materialize
@@ -30,11 +30,11 @@ global.$ = global.jQuery = $;
         labelMonthPrev: 'Mois précédent',
         labelMonthSelect: 'Selectionnez un mois',
         labelYearSelect: 'Selectionnez une année',
-        monthsFull: [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Decembre' ],
-        monthsShort: [ 'Jan', 'Fev', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Dec' ],
-        weekdaysFull: [ 'Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi' ],
-        weekdaysShort: [ 'Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam' ],
-        weekdaysLetter: [ 'D', 'L', 'Ma', 'Me', 'J', 'V', 'S' ],
+        monthsFull: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Decembre'],
+        monthsShort: ['Jan', 'Fev', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Dec'],
+        weekdaysFull: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+        weekdaysShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+        weekdaysLetter: ['D', 'L', 'Ma', 'Me', 'J', 'V', 'S'],
         today: 'Aujourd\'hui',
         clear: 'Effacer',
         close: 'Ok',
