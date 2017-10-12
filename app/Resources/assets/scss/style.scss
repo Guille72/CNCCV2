@@ -47,6 +47,10 @@ logo1 {
   font-family: ms gothic, serif;
 }
 
+.card-padding {
+  padding-top: 25px;
+}
+
 .menudroite {
   margin-bottom: -20px;
 }
@@ -62,7 +66,7 @@ logo1 {
 }
 
 .menuliste2 {
-  padding-top: 80px;
+  padding-top: 30px;
   ul {
     list-style-type: none;
     @include border-radius(10px);
