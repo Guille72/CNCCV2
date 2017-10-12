@@ -22,7 +22,6 @@ security:
             logout:
                 path:   /logout
                 target: /
-
             logout:       true
             anonymous:    true
 

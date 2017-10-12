@@ -1,14 +1,7 @@
 <div class="row">
     <div class="col s4">
         <h5>{{ 'modalConnexion.connexion.title'|trans }}</h5>
-        <input id="email" type="email" class="validate">
-        <label for="email" data-error="wrong"
-               data-success="right">{{ 'modalConnexion.connexion.address'|trans }}</label>
-        <input id="password" type="password" class="validate">
-        <label for="password">{{ 'modalConnexion.connexion.psw'|trans }}</label>
-        <div class="center">
-            <a class="waves-effect waves-light btn">{{ 'modalConnexion.connexion.button'|trans }}</a>
-        </div>
+        {{ render(controller('FOSUserBundle:Security:login')) }}
     </div>
     <div class="col s4">
         <h5>{{ 'modalConnexion.inscription.title'|trans }}</h5>

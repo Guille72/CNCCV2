@@ -11,10 +11,10 @@ group:
         deleted: 'Le groupe a été supprimé.'
 security:
     login:
-        username: 'Nom d''utilisateur'
+        username: 'Adresse Mail'
         password: 'Mot de passe'
         remember_me: 'Se souvenir de moi'
-        submit: Connexion
+        submit: 'Connexion'
 profile:
     show:
         username: 'Nom d''utilisateur'
