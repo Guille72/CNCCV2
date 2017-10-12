@@ -3,6 +3,11 @@ global.$ = global.jQuery = $;
 
 (function ($) {
 
+    // Slider cards
+    $(document).ready(function(){
+        $('.slider').slider();
+    });
+
     // Menu déroulant
     $(".dropdown-button").dropdown();
 
