@@ -3,6 +3,11 @@ global.$ = global.jQuery = $;
 
 (function ($) {
 
+    // Zoom Image
+    $(document).ready(function(){
+        $('.materialboxed').materialbox();
+    });
+
     // Slider cards
     $(document).ready(function(){
         $('.slider').slider();
