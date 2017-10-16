@@ -1,6 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
+    <!--Contenu de l'index et dégradé de couleurs-->
     <div class="degrade">
         {% include('CnccvHouseBundle:widgets:_header.html.twig') %}
         <section>
@@ -10,10 +11,9 @@
         </section>
     </div>
 
+    <!--Cartes des maisons-->
     <div class="container card-padding">
         {% block cards %}{% endblock %}
     </div>
-
     {% include('CnccvHouseBundle:widgets:_footer.html.twig') %}
 {% endblock %}
-

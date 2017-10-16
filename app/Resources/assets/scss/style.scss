@@ -5,74 +5,38 @@ body {
   background-color: #ebebf2;
 }
 
-.phrase1 {
-  color: $color-red;
-  font-size: 25px;
-  vertical-align: top;
-  font-style: normal;
+// Texte du menu fixé
+.gt {
+  font-size: 125%;
 }
 
-.phrase1 b {
-  color: $color-red;
-  font-size: 25px;
-  vertical-align: top;
-  font-style: normal;
-}
-
-.phrase2 {
-  text-align: left;
-  font-size: 15px;
-  margin-left: 69px;
-  color: $color-red;
-  font-weight: normal;
-  margin-top: -25px;
-  margin-bottom: 5px;
-  background-color: #F8F8FF;
-  font-style: normal;
-}
-
+// Slogan
 .p1 {
   color: #5d5d5d;
   padding-left: 50px;
 }
 
 .p2 {
- color: #ffbb00;
+  color: #ffbb00;
   text-align: center;
   padding-left: 150px;
 }
 
-logo1 {
-  padding-top: 25px;
-  font-family: ms gothic, serif;
+
+// Menu dates/voyageurs
+.menuliste2 {
+  padding-top: 80px;
+  ul {
+    list-style-type: none;
+    @include border-radius(10px);
+    display: flex;
+    @include btn-menu();
+  }
 }
 
+// Ajustement des cartes des mai
 .card-padding {
   padding-top: 25px;
-}
-
-.menudroite {
-  margin-bottom: -20px;
-}
-
-.menuliste {
-  background-color: #F8F8FF;
-  ul {
-    list-style-type: none;
-    @include border-radius(10px);
-    display: flex;
-    @include btn-menu();
-  }
-}
-
-.menuliste2 {
-  padding-top: 30px;
-  ul {
-    list-style-type: none;
-    @include border-radius(10px);
-    display: flex;
-    @include btn-menu();
-  }
 }
 
 .degrade {

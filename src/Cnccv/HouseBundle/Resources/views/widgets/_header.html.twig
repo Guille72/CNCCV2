@@ -1,54 +1,54 @@
-<div class="row">
-    <div id="menu" class="menuliste">
-        <!--Logo-->
-        <div class="logo1 col s4">
-            <a href="{{ path('homePage') }}">
-                <img src="{{ asset('img/logoSansCNCCV.svg') }}" width="55px" height="55px"/>
-                <span class="phrase1">
-                    <b>C</b>hez <b>N</b>ous <b>c</b>omme <b>C</b>hez <b>V</b>ous
-                </span>
-                </br>
-                <div class="phrase2">Location de maisons meublées au Mans</div>
+{% if is_granted("IS_AUTHENTICATED_FULLY") %}
+    <!--Menu fixé si connecté-->
+    <div class="navbar-fixed">
+        <nav>
+            <a class="brand-logo red-text" href="{{ path('homePage') }}">Chez Nous comme Chez Vous</a>
+            <a class="brand-logo center red-text">
+                <img src="{{ asset('img/logoSansCNCCV.svg') }}" width="60" height="60">
             </a>
-        </div>
-        <!--En face du logo-->
-        <div class="menudroite">
-            <ul>
-                <li class="col s6"></li>
-                <li>
-                    <a href="{{ path('homePage') }}"
-                       class="btn-menu waves-effect waves-light btn col s2 blue">Accueil</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{{ path('homePage') }}" class="red-text gt">Accueil</a></li>
+                <li><a href="" class="red-text gt">Qui sommes-nous ?</a></li>
+                <!-- Profil si connecté -->
+                <li><a class="dropdown-button red-text gt" href="#!" data-activates="dropdown1"> Votre profil
+                        <i class="material-icons right">arrow_drop_down</i></a>
                 </li>
-                <li>
-                    <a href="" class="waves-effect waves-light btn col s2 amber darken-1">Qui sommes-nous ?</a>
-                </li>
-                {% if is_granted("IS_AUTHENTICATED_FULLY") %}
-                    <!--Menu déroulant-->
-                    <a class='dropdown-button btn input-field col s2 waves-effect waves-light purple'
-                       href='#' data-activates='dropdown1'>
-                        Profil de {{ app.user.firstname }}
-                    </a>
-                    <!--Structure-->
-                    <ul id='dropdown1' class='dropdown-content'>
-                        <li><a href="mes_reservation.php">Mes réservations</a></li>
-                        <li><a href="mes_parametres.php">Mes paramètres</a></li>
-                        <li><a href="mes_documents.php">Mes documents</a></li>
-                        <li class="divider"></li>
-                        <li><a href="{{ path('logout') }}" class="red darken-2">Déconnection</a></li>
-                    </ul>
-                {% else %}
-                    <li>
-                        <a id="btn-connexion" class="waves-effect waves-light btn green modal-trigger"
-                           href="#connexion">Se connecter</a>
-                        {# Désactiver le bouton agree par false#}
-                        {% include 'CnccvHouseBundle:widgets:_modal.html.twig' with {
-                        dataId: 'connexion',
-                        vue: 'CnccvHouseBundle:Default:connexion.html.twig',
-                        modalFooter: false
-                        } %}
-                    </li>
-                {% endif %}
             </ul>
-        </div>
+            <!--Structure-->
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a class="red-text gt" href="#!">Réservations</a></li>
+                <li><a class="red-text gt" href="#!">Documents</a></li>
+                <li><a class="red-text gt" href="#!">Paramètres</a></li>
+                <li class="divider"></li>
+                <li><a class="red-text gt" href="{{ path('logout') }}">Deconnexion</a></li>
+            </ul>
+        </nav>
     </div>
-</div>
+
+{% else %}
+    <!--Menu fixé si non connecté-->
+    <div class="navbar-fixed">
+        <nav>
+            <a class="brand-logo red-text" href="{{ path('homePage') }}">Chez Nous comme Chez Vous</a>
+            <a class="brand-logo center red-text">
+                <img src="{{ asset('img/logoSansCNCCV.svg') }}" width="60" height="60">
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{{ path('homePage') }}" class="red-text gt">Accueil</a></li>
+                <li><a href="" class="red-text gt">Qui sommes-nous ?</a></li>
+            </ul>
+        </nav>
+    </div>
+    <li>
+        <div class="center">
+            <a id="btn-connexion" class="waves-effect waves-light btn green modal-trigger"
+               href="#connexion">Se connecter</a>
+        </div>
+        {# Désactiver le bouton agree par false#}
+        {% include 'CnccvHouseBundle:widgets:_modal.html.twig' with {
+        dataId: 'connexion',
+        vue: 'CnccvHouseBundle:Default:connexion.html.twig',
+        modalFooter: false
+        } %}
+    </li>
+{% endif %}

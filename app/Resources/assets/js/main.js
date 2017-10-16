@@ -3,22 +3,11 @@ global.$ = global.jQuery = $;
 
 (function ($) {
 
-    // Zoom Image
-    $(document).ready(function () {
-        $('.materialboxed').materialbox();
-    });
-
-    // Slider cards
-    $(document).ready(function () {
-        $('.slider').slider();
-    });
-
     // Menu déroulant
     $(".dropdown-button").dropdown();
 
+    // Popup connexion
     $(document).ready(function () {
-
-        // Modal
         $('#' + $('.modal').data('id')).modal();
     });
 
