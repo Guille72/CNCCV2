@@ -3,6 +3,11 @@ global.$ = global.jQuery = $;
 
 (function ($) {
 
+    // Menu mobile
+    $( document ).ready(function() {
+        $(".button-collapse").sideNav();
+    });
+
     // Menu déroulant
     $(".dropdown-button").dropdown();
 

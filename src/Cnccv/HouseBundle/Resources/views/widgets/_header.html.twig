@@ -52,3 +52,50 @@
         } %}
     </li>
 {% endif %}
+
+{% if is_granted("IS_AUTHENTICATED_FULLY") %}
+    <div class="navbar-fixed">
+        <!--Menu compressé-->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo red-text gt">Logo</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i
+                            class="material-icons red-text">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="red-text gt" href="sass.html">Sass</a></li>
+                    <li><a class="red-text gt" href="badges.html">Components</a></li>
+                    <li><a class="red-text gt" href="collapsible.html">Javascript</a></li>
+                    <li><a class="red-text gt" href="mobile.html">Mobile</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a class="red-text gt" href="sass.html">Sass</a></li>
+                    <li><a class="red-text gt" href="badges.html">Components</a></li>
+                    <li><a class="red-text gt" href="collapsible.html">Javascript</a></li>
+                    <li><a class="red-text gt" href="mobile.html">Mobile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+{% else %}
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo red-text gt">Logo</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i
+                            class="material-icons red-text">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="red-text gt" href="sass.html">Sass</a></li>
+                    <li><a class="red-text gt" href="badges.html">Components</a></li>
+                    <li><a class="red-text gt" href="collapsible.html">Javascript</a></li>
+                    <li><a class="red-text gt" href="mobile.html">Mobile</a></li>
+                </ul>
+                <ul class="side-nav" id="nav-mobile">
+                    <li><a class="red-text gt" href="sass.html">Sass</a></li>
+                    <li><a class="red-text gt" href="badges.html">Components</a></li>
+                    <li><a class="red-text gt" href="collapsible.html">Javascript</a></li>
+                    <li><a class="red-text gt" href="mobile.html">Mobile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+{% endif %}
