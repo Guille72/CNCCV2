@@ -3,8 +3,6 @@ global.$ = global.jQuery = $;
 
 (function ($) {
 
-
-
     // Menu déroulant
     $(".dropdown-button").dropdown();
 

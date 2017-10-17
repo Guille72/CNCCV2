@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a587d87e-04ab-4991-8de8-95e276fa3506" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/cards.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_map.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/assets/js/main.js" afterPath="$PROJECT_DIR$/app/Resources/assets/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/assets/scss/style.scss" afterPath="$PROJECT_DIR$/app/Resources/assets/scss/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/build/app.css" afterPath="$PROJECT_DIR$/web/build/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/build/app.js" afterPath="$PROJECT_DIR$/web/build/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/build/manifest.js" afterPath="$PROJECT_DIR$/web/build/manifest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_map.html.twig" afterPath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_map.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,74 +46,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/dashboard.html.twig">
+      <file leaf-file-name="_header.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_header.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="17">
+              <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/index.html.twig">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+            <state relative-caret-position="51">
+              <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_map.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_map.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/assets/scss/style.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cards.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/cards.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="32" column="6" lean-forward="false" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="24" />
-              <folding>
-                <marker date="1508248010065" expanded="true" signature="1272:1278" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -208,16 +147,16 @@
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/decription.html.twig" />
         <option value="$USER_HOME$/Desktop/projet_symfony/src/Cnccv/HouseBundle/Resources/views/widgets/_header.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/assets/scss/plugins/materialize/sass/components/_navbar.scss" />
-        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_header.html.twig" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/dashboard.html.twig" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/cards.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/assets/js/plugins/googlemap/map.js" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/assets/scss/style.scss" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_map.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/assets/js/main.js" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/assets/scss/style.scss" />
+        <option value="$PROJECT_DIR$/app/Resources/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_header.html.twig" />
       </list>
     </option>
   </component>
@@ -438,12 +377,12 @@
       <workItem from="1507705182905" duration="13763000" />
       <workItem from="1507797224654" duration="3897000" />
       <workItem from="1508142988080" duration="10051000" />
-      <workItem from="1508231030861" duration="7307000" />
+      <workItem from="1508231030861" duration="8046000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106726000" />
+    <option name="totallyTimeSpent" value="107465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="455" y="0" width="1145" height="860" extended-state="0" />
@@ -747,34 +686,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_header.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_modal.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/dashboard.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -787,26 +702,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_map.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/assets/scss/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_map.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -819,10 +726,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/assets/js/main.js">
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/dashboard.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/assets/scss/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -830,10 +753,26 @@
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="24" />
+          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding>
-            <marker date="1508248010065" expanded="true" signature="1272:1278" ph="..." />
+            <marker date="1508248261918" expanded="true" signature="1272:1278" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
