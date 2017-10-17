@@ -12,8 +12,11 @@
     </div>
 
     <!--Cartes des maisons-->
-    <div class="container card-padding">
-        {% block cards %}{% endblock %}
-    </div>
+    {% include('CnccvHouseBundle:Default:cards.html.twig') %}
+
+    <!--Google Map-->
+    {% include('CnccvHouseBundle:widgets:_map.html.twig') %}
+
+    <!--Footer-->
     {% include('CnccvHouseBundle:widgets:_footer.html.twig') %}
 {% endblock %}
