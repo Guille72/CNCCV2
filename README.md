@@ -87,6 +87,9 @@ Créer des fichiers source-map en cas de débuggage.
 * Vider le cache :
     * `php bin/console cache:clear --env=dev`
 
+* Créer une entity:
+    * `php bin/console generate:doctrine:entity`
+
 * Mettre à jour les tables :
     * `php bin/console doctrine:schema:update --force`
 
