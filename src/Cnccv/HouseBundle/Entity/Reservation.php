@@ -7,7 +7,7 @@ use FOS\UserBundle\Model\User as BaseUser;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
-use Cnccv\HouseBundle\Entity\User;
+
 /**
  * Reservation
  *
@@ -26,12 +26,6 @@ class Reservation
     private $id;
 
     /**
-     * @ManyToOne(targetEntity="User")
-     * @JoinColumn(name="user_id", referencedColumnName="id")
-     **/
-    private $user;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="lieu", type="string", length=255)
@@ -41,14 +35,14 @@ class Reservation
     /**
      * @var \DatePeriod
      *
-     * @ORM\Column(name="arrivee", type="DatePeriod", unique=true)
+     * @ORM\Column(name="arrivee", type="date", unique=true)
      */
     private $arrivee;
 
     /**
      * @var \DatePeriod
      *
-     * @ORM\Column(name="depart", type="DatePeriod", unique=true)
+     * @ORM\Column(name="depart", type="date", unique=true)
      */
     private $depart;
 
@@ -166,15 +160,6 @@ class Reservation
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Get id
-     * @return int
-     */
-    public function Id($user)
-    {
-        return $user->id;
     }
 
     /**
