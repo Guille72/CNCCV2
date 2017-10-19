@@ -3,6 +3,7 @@
 namespace Cnccv\HouseBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * Base_prix

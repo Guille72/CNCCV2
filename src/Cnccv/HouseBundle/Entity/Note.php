@@ -3,14 +3,15 @@
 namespace Cnccv\HouseBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
- * note
+ * Note
  *
  * @ORM\Table(name="note")
- * @ORM\Entity(repositoryClass="Cnccv\HouseBundle\Repository\noteRepository")
+ * @ORM\Entity(repositoryClass="Cnccv\HouseBundle\Repository\NoteRepository")
  */
-class note
+class Note
 {
     /**
      * @var int
@@ -22,7 +23,7 @@ class note
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="CnccvHouseBundle\Entity\logement")
+     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Logement")
      * @ORM\JoinColumn(nullable=false)
      */
     private $logement;
@@ -78,7 +79,7 @@ class note
      *
      * @param string $comm
      *
-     * @return note
+     * @return Note
      */
     public function setComm($comm)
     {
@@ -102,7 +103,7 @@ class note
      *
      * @param integer $proprete
      *
-     * @return note
+     * @return Note
      */
     public function setProprete($proprete)
     {
@@ -126,7 +127,7 @@ class note
      *
      * @param integer $accueil
      *
-     * @return note
+     * @return Note
      */
     public function setAccueil($accueil)
     {
@@ -150,7 +151,7 @@ class note
      *
      * @param integer $confort
      *
-     * @return note
+     * @return Note
      */
     public function setConfort($confort)
     {
@@ -174,7 +175,7 @@ class note
      *
      * @param integer $etoile
      *
-     * @return note
+     * @return Note
      */
     public function setEtoile($etoile)
     {
@@ -196,11 +197,11 @@ class note
     /**
      * Set logement
      *
-     * @param \CnccvHouseBundle\Entity\logement $logement
+     * @param \Cnccv\HouseBundle\Entity\Logement $logement
      *
-     * @return note
+     * @return Note
      */
-    public function setLogement(\CnccvHouseBundle\Entity\logement $logement)
+    public function setLogement(\Cnccv\HouseBundle\Entity\Logement $logement)
     {
         $this->logement = $logement;
 
@@ -210,7 +211,7 @@ class note
     /**
      * Get logement
      *
-     * @return \CnccvHouseBundle\Entity\logement
+     * @return \Cnccv\HouseBundle\Entity\Logement
      */
     public function getLogement()
     {

@@ -27,7 +27,7 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="CnccvHouseBundle\Entity\note")
+     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Note")
      * @ORM\JoinColumn(nullable=false)
      */
     private $note;
@@ -404,11 +404,11 @@ class User extends BaseUser
     /**
      * Set note
      *
-     * @param \CnccvHouseBundle\Entity\note $note
+     * @param \Cnccv\HouseBundle\Entity\Note $note
      *
      * @return User
      */
-    public function setNote(\CnccvHouseBundle\Entity\note $note)
+    public function setNote(\Cnccv\HouseBundle\Entity\Note $note)
     {
         $this->note = $note;
 
@@ -418,7 +418,7 @@ class User extends BaseUser
     /**
      * Get note
      *
-     * @return \CnccvHouseBundle\Entity\note
+     * @return \Cnccv\HouseBundle\Entity\note
      */
     public function getNote()
     {

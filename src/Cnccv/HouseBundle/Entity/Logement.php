@@ -3,14 +3,15 @@
 namespace Cnccv\HouseBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
- * logement
+ * Logement
  *
  * @ORM\Table(name="logement")
- * @ORM\Entity(repositoryClass="Cnccv\HouseBundle\Repository\logementRepository")
+ * @ORM\Entity(repositoryClass="Cnccv\HouseBundle\Repository\LogementRepository")
  */
-class logement
+class Logement
 {
     /**
      * @var int
@@ -22,7 +23,7 @@ class logement
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="CnccvHouseBundle\Entity\Base_prix")
+     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Base_prix")
      * @ORM\JoinColumn(nullable=false)
      */
     private $base_prix;
@@ -71,7 +72,7 @@ class logement
      *
      * @param integer $personneMax
      *
-     * @return logement
+     * @return Logement
      */
     public function setPersonneMax($personneMax)
     {
@@ -95,7 +96,7 @@ class logement
      *
      * @param float $prix
      *
-     * @return logement
+     * @return Logement
      */
     public function setPrix($prix)
     {
@@ -119,7 +120,7 @@ class logement
      *
      * @param float $taxe
      *
-     * @return logement
+     * @return Logement
      */
     public function setTaxe($taxe)
     {
@@ -143,7 +144,7 @@ class logement
      *
      * @param string $description
      *
-     * @return logement
+     * @return Logement
      */
     public function setDescription($description)
     {
@@ -165,11 +166,11 @@ class logement
     /**
      * Set basePrix
      *
-     * @param \CnccvHouseBundle\Entity\Base_prix $basePrix
+     * @param \Cnccv\HouseBundle\Entity\Base_prix $basePrix
      *
-     * @return logement
+     * @return Logement
      */
-    public function setBasePrix(\CnccvHouseBundle\Entity\Base_prix $basePrix)
+    public function setBasePrix(\Cnccv\HouseBundle\Entity\Base_prix $basePrix)
     {
         $this->base_prix = $basePrix;
 
@@ -179,7 +180,7 @@ class logement
     /**
      * Get basePrix
      *
-     * @return \CnccvHouseBundle\Entity\Base_prix
+     * @return \Cnccv\HouseBundle\Entity\Base_prix
      */
     public function getBasePrix()
     {

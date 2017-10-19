@@ -3,14 +3,15 @@
 namespace Cnccv\HouseBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
- * reservation
+ * Reservation
  *
  * @ORM\Table(name="reservation")
- * @ORM\Entity(repositoryClass="Cnccv\HouseBundle\Repository\reservationRepository")
+ * @ORM\Entity(repositoryClass="Cnccv\HouseBundle\Repository\ReservationRepository")
  */
-class reservation
+class Reservation
 {
     /**
      * @var int
@@ -22,13 +23,13 @@ class reservation
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="CnccvHouseBundle\Entity\logement")
+     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Logement")
      * @ORM\JoinColumn(nullable=false)
      */
     private $logement;
 
     /**
-     * @ORM\ManyToOne(targetEntity="CnccvHouseBundle\Entity\User")
+     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\User")
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
@@ -112,7 +113,7 @@ class reservation
      *
      * @param \DateTime $arrivee
      *
-     * @return reservation
+     * @return Reservation
      */
     public function setArrivee($arrivee)
     {
@@ -136,7 +137,7 @@ class reservation
      *
      * @param \DateTime $depart
      *
-     * @return reservation
+     * @return Reservation
      */
     public function setDepart($depart)
     {
@@ -160,7 +161,7 @@ class reservation
      *
      * @param integer $nbPersonne
      *
-     * @return reservation
+     * @return Reservation
      */
     public function setNbPersonne($nbPersonne)
     {
@@ -184,7 +185,7 @@ class reservation
      *
      * @param integer $nbNuit
      *
-     * @return reservation
+     * @return Reservation
      */
     public function setNbNuit($nbNuit)
     {
@@ -208,7 +209,7 @@ class reservation
      *
      * @param \DateTime $annulation
      *
-     * @return reservation
+     * @return Reservation
      */
     public function setAnnulation($annulation)
     {
@@ -232,7 +233,7 @@ class reservation
      *
      * @param float $supplement
      *
-     * @return reservation
+     * @return Reservation
      */
     public function setSupplement($supplement)
     {
@@ -256,7 +257,7 @@ class reservation
      *
      * @param float $avoir
      *
-     * @return reservation
+     * @return Reservation
      */
     public function setAvoir($avoir)
     {
@@ -280,7 +281,7 @@ class reservation
      *
      * @param string $calendrierExt
      *
-     * @return reservation
+     * @return Reservation
      */
     public function setCalendrierExt($calendrierExt)
     {
@@ -304,7 +305,7 @@ class reservation
      *
      * @param integer $numReservation
      *
-     * @return reservation
+     * @return Reservation
      */
     public function setNumReservation($numReservation)
     {
@@ -326,11 +327,11 @@ class reservation
     /**
      * Set logement
      *
-     * @param \CnccvHouseBundle\Entity\logement $logement
+     * @param \Cnccv\HouseBundle\Entity\Logement $logement
      *
-     * @return reservation
+     * @return Reservation
      */
-    public function setLogement(\CnccvHouseBundle\Entity\logement $logement)
+    public function setLogement(\Cnccv\HouseBundle\Entity\Logement $logement)
     {
         $this->logement = $logement;
 
@@ -340,7 +341,7 @@ class reservation
     /**
      * Get logement
      *
-     * @return \CnccvHouseBundle\Entity\logement
+     * @return \Cnccv\HouseBundle\Entity\Logement
      */
     public function getLogement()
     {
@@ -350,11 +351,11 @@ class reservation
     /**
      * Set user
      *
-     * @param \CnccvHouseBundle\Entity\User $user
+     * @param \Cnccv\HouseBundle\Entity\User $user
      *
-     * @return reservation
+     * @return Reservation
      */
-    public function setUser(\CnccvHouseBundle\Entity\User $user)
+    public function setUser(\Cnccv\HouseBundle\Entity\User $user)
     {
         $this->user = $user;
 
@@ -364,7 +365,7 @@ class reservation
     /**
      * Get user
      *
-     * @return \CnccvHouseBundle\Entity\User
+     * @return \Cnccv\HouseBundle\Entity\User
      */
     public function getUser()
     {
