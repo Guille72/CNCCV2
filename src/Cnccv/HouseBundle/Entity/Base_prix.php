@@ -159,4 +159,3 @@ class Base_prix
         return $this->lieu;
     }
 }
-

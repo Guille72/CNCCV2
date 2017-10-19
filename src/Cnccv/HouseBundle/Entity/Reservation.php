@@ -75,6 +75,13 @@ class Reservation
     private $annulations;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=255)
+     */
+    private $description;
+
+    /**
      * @var float
      *
      * @ORM\Column(name="supplement", type="float", nullable=true)
@@ -593,5 +600,28 @@ class Reservation
     {
         return $this->calendrierExt;
     }
-}
 
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Reservation
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+}
