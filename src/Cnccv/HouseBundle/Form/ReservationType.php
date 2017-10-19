@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class reservationType extends AbstractType
+class ReservationType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -15,14 +15,14 @@ class reservationType extends AbstractType
     {
         $builder->add('arrivee')->add('depart')->add('nbPersonne')->add('nbNuit')->add('annulation')->add('supplement')->add('avoir')->add('calendrierExt')->add('numReservation');
     }
-    
+
     /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Cnccv\HouseBundle\Entity\reservation'
+            'data_class' => 'Cnccv\HouseBundle\Entity\Reservation'
         ));
     }
 

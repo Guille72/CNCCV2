@@ -15,7 +15,7 @@ class UserType extends AbstractType
     {
         $builder->add('firstname')->add('birthdate')->add('comm_prive')->add('address')->add('zip')->add('city')->add('tel')->add('company')->add('siren')->add('created')->add('updated')->add('imageName');
     }
-    
+
     /**
      * {@inheritdoc}
      */

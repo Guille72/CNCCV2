@@ -5,7 +5,8 @@ namespace Cnccv\HouseBundle\Controller;
 use Cnccv\HouseBundle\Entity\Base_prix;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Base_prix controller.
@@ -130,7 +131,6 @@ class Base_prixController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('base_prix_delete', array('id' => $base_prix->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
 }

@@ -15,7 +15,7 @@ class Base_prixType extends AbstractType
     {
         $builder->add('prix')->add('dateDebut')->add('dateFin');
     }
-    
+
     /**
      * {@inheritdoc}
      */

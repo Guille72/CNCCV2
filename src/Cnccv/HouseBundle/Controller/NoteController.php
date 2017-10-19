@@ -2,17 +2,18 @@
 
 namespace Cnccv\HouseBundle\Controller;
 
-use Cnccv\HouseBundle\Entity\note;
+use Cnccv\HouseBundle\Entity\Note;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Note controller.
  *
- * @Route("note")
+ * @Route("Note")
  */
-class noteController extends Controller
+class NoteController extends Controller
 {
     /**
      * Lists all note entities.
@@ -24,7 +25,7 @@ class noteController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $notes = $em->getRepository('CnccvHouseBundle:note')->findAll();
+        $notes = $em->getRepository('CnccvHouseBundle:Note')->findAll();
 
         return $this->render('note/index.html.twig', array(
             'notes' => $notes,
@@ -40,7 +41,7 @@ class noteController extends Controller
     public function newAction(Request $request)
     {
         $note = new Note();
-        $form = $this->createForm('Cnccv\HouseBundle\Form\noteType', $note);
+        $form = $this->createForm('Cnccv\HouseBundle\Form\NoteType', $note);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -63,7 +64,7 @@ class noteController extends Controller
      * @Route("/{id}", name="note_show")
      * @Method("GET")
      */
-    public function showAction(note $note)
+    public function showAction(Note $note)
     {
         $deleteForm = $this->createDeleteForm($note);
 
@@ -79,10 +80,10 @@ class noteController extends Controller
      * @Route("/{id}/edit", name="note_edit")
      * @Method({"GET", "POST"})
      */
-    public function editAction(Request $request, note $note)
+    public function editAction(Request $request, Note $note)
     {
         $deleteForm = $this->createDeleteForm($note);
-        $editForm = $this->createForm('Cnccv\HouseBundle\Form\noteType', $note);
+        $editForm = $this->createForm('Cnccv\HouseBundle\Form\NoteType', $note);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -104,7 +105,7 @@ class noteController extends Controller
      * @Route("/{id}", name="note_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, note $note)
+    public function deleteAction(Request $request, Note $note)
     {
         $form = $this->createDeleteForm($note);
         $form->handleRequest($request);
@@ -125,12 +126,11 @@ class noteController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm(note $note)
+    private function createDeleteForm(Note $note)
     {
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('note_delete', array('id' => $note->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
 }

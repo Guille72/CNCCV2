@@ -2,17 +2,18 @@
 
 namespace Cnccv\HouseBundle\Controller;
 
-use Cnccv\HouseBundle\Entity\logement;
+use Cnccv\HouseBundle\Entity\Logement;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Logement controller.
  *
  * @Route("logement")
  */
-class logementController extends Controller
+class LogementController extends Controller
 {
     /**
      * Lists all logement entities.
@@ -24,7 +25,7 @@ class logementController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $logements = $em->getRepository('CnccvHouseBundle:logement')->findAll();
+        $logements = $em->getRepository('CnccvHouseBundle:Logement')->findAll();
 
         return $this->render('logement/index.html.twig', array(
             'logements' => $logements,
@@ -40,7 +41,7 @@ class logementController extends Controller
     public function newAction(Request $request)
     {
         $logement = new Logement();
-        $form = $this->createForm('Cnccv\HouseBundle\Form\logementType', $logement);
+        $form = $this->createForm('Cnccv\HouseBundle\Form\LogementType', $logement);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -63,7 +64,7 @@ class logementController extends Controller
      * @Route("/{id}", name="logement_show")
      * @Method("GET")
      */
-    public function showAction(logement $logement)
+    public function showAction(Logement $logement)
     {
         $deleteForm = $this->createDeleteForm($logement);
 
@@ -79,10 +80,10 @@ class logementController extends Controller
      * @Route("/{id}/edit", name="logement_edit")
      * @Method({"GET", "POST"})
      */
-    public function editAction(Request $request, logement $logement)
+    public function editAction(Request $request, Logement $logement)
     {
         $deleteForm = $this->createDeleteForm($logement);
-        $editForm = $this->createForm('Cnccv\HouseBundle\Form\logementType', $logement);
+        $editForm = $this->createForm('Cnccv\HouseBundle\Form\LogementType', $logement);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -104,7 +105,7 @@ class logementController extends Controller
      * @Route("/{id}", name="logement_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, logement $logement)
+    public function deleteAction(Request $request, Logement $logement)
     {
         $form = $this->createDeleteForm($logement);
         $form->handleRequest($request);
@@ -125,12 +126,11 @@ class logementController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm(logement $logement)
+    private function createDeleteForm(Logement $logement)
     {
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('logement_delete', array('id' => $logement->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
 }
