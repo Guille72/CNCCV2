@@ -89,7 +89,8 @@ class RegistrationType extends AbstractType
             ->add('imageFile', VichFileType::class, array(
                 'required' => true,
                 'allow_delete' => true,
-            ));
+            ))
+;
     }
 
     public function getParent()
