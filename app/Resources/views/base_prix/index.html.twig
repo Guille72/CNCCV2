@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Base_prixes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Prix</th>
+                <th>Datedebut</th>
+                <th>Datefin</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for base_prix in base_prixes %}
+            <tr>
+                <td><a href="{{ path('base_prix_show', { 'id': base_prix.id }) }}">{{ base_prix.id }}</a></td>
+                <td>{{ base_prix.prix }}</td>
+                <td>{% if base_prix.dateDebut %}{{ base_prix.dateDebut|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if base_prix.dateFin %}{{ base_prix.dateFin|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('base_prix_show', { 'id': base_prix.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('base_prix_edit', { 'id': base_prix.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('base_prix_new') }}">Create a new base_prix</a>
+        </li>
+    </ul>
+{% endblock %}
