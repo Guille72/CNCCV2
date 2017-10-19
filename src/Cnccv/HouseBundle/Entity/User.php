@@ -27,6 +27,12 @@ class User extends BaseUser
     protected $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity="CnccvHouseBundle\Entity\note")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $note;
+
+    /**
      * @var string
      * @ORM\Column(type="string")
      */
@@ -393,5 +399,29 @@ class User extends BaseUser
     public function getImageFile()
     {
         return $this->imageFile;
+    }
+
+    /**
+     * Set note
+     *
+     * @param \CnccvHouseBundle\Entity\note $note
+     *
+     * @return User
+     */
+    public function setNote(\CnccvHouseBundle\Entity\note $note)
+    {
+        $this->note = $note;
+
+        return $this;
+    }
+
+    /**
+     * Get note
+     *
+     * @return \CnccvHouseBundle\Entity\note
+     */
+    public function getNote()
+    {
+        return $this->note;
     }
 }

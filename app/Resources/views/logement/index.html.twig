@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Logements list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Personnemax</th>
+                <th>Prix</th>
+                <th>Taxe</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for logement in logements %}
+            <tr>
+                <td><a href="{{ path('logement_show', { 'id': logement.id }) }}">{{ logement.id }}</a></td>
+                <td>{{ logement.personneMax }}</td>
+                <td>{{ logement.prix }}</td>
+                <td>{{ logement.taxe }}</td>
+                <td>{{ logement.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('logement_show', { 'id': logement.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('logement_edit', { 'id': logement.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('logement_new') }}">Create a new logement</a>
+        </li>
+    </ul>
+{% endblock %}

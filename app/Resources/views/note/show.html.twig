@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Note</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ note.id }}</td>
+            </tr>
+            <tr>
+                <th>Comm</th>
+                <td>{{ note.comm }}</td>
+            </tr>
+            <tr>
+                <th>Proprete</th>
+                <td>{{ note.proprete }}</td>
+            </tr>
+            <tr>
+                <th>Accueil</th>
+                <td>{{ note.accueil }}</td>
+            </tr>
+            <tr>
+                <th>Confort</th>
+                <td>{{ note.confort }}</td>
+            </tr>
+            <tr>
+                <th>Etoile</th>
+                <td>{{ note.etoile }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('note_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('note_edit', { 'id': note.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

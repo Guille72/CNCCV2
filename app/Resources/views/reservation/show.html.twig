@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Reservation</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ reservation.id }}</td>
+            </tr>
+            <tr>
+                <th>Arrivee</th>
+                <td>{% if reservation.arrivee %}{{ reservation.arrivee|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Depart</th>
+                <td>{% if reservation.depart %}{{ reservation.depart|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Nbpersonne</th>
+                <td>{{ reservation.nbPersonne }}</td>
+            </tr>
+            <tr>
+                <th>Nbnuit</th>
+                <td>{{ reservation.nbNuit }}</td>
+            </tr>
+            <tr>
+                <th>Annulation</th>
+                <td>{% if reservation.annulation %}{{ reservation.annulation|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Supplement</th>
+                <td>{{ reservation.supplement }}</td>
+            </tr>
+            <tr>
+                <th>Avoir</th>
+                <td>{{ reservation.avoir }}</td>
+            </tr>
+            <tr>
+                <th>Calendrierext</th>
+                <td>{{ reservation.calendrierExt }}</td>
+            </tr>
+            <tr>
+                <th>Numreservation</th>
+                <td>{{ reservation.numReservation }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('reservation_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('reservation_edit', { 'id': reservation.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
