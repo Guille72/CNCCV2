@@ -90,6 +90,12 @@ Créer des fichiers source-map en cas de débuggage.
 * Créer une entity:
     * `php bin/console generate:doctrine:entity`
 
+* Générer un CRUD :
+    * `php bin/console generate:doctrine:crud`
+    
+* Mettre à jour l'entité :
+    * `php bin/console generate:doctrine:entities CnccvHouseBundle:NomEntité`
+
 * Mettre à jour les tables :
     * `php bin/console doctrine:schema:update --force`
 
