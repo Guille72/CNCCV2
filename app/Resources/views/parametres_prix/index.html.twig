@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Parametres_prixes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Jourannulable</th>
+                <th>Journonannulable</th>
+                <th>Penaliteannulationtardive</th>
+                <th>Remisesemaine</th>
+                <th>Remisemois</th>
+                <th>Minimumfacture</th>
+                <th>Coefpersosupp</th>
+                <th>Forfaitmenagettc</th>
+                <th>Joursmenage</th>
+                <th>Taxesejour</th>
+                <th>Tva</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for parametres_prix in parametres_prixes %}
+            <tr>
+                <td><a href="{{ path('parametres_prix_show', { 'id': parametres_prix.id }) }}">{{ parametres_prix.id }}</a></td>
+                <td>{{ parametres_prix.jourAnnulable }}</td>
+                <td>{{ parametres_prix.jourNonAnnulable }}</td>
+                <td>{{ parametres_prix.penaliteAnnulationTardive }}</td>
+                <td>{{ parametres_prix.remiseSemaine }}</td>
+                <td>{{ parametres_prix.remiseMois }}</td>
+                <td>{{ parametres_prix.minimumFacture }}</td>
+                <td>{{ parametres_prix.coefPersoSupp }}</td>
+                <td>{{ parametres_prix.forfaitMenageTtc }}</td>
+                <td>{{ parametres_prix.joursMenage }}</td>
+                <td>{{ parametres_prix.taxeSejour }}</td>
+                <td>{{ parametres_prix.tva }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('parametres_prix_show', { 'id': parametres_prix.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('parametres_prix_edit', { 'id': parametres_prix.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('parametres_prix_new') }}">Create a new parametres_prix</a>
+        </li>
+    </ul>
+{% endblock %}

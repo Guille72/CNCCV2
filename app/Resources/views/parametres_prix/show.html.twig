@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Parametres_prix</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ parametres_prix.id }}</td>
+            </tr>
+            <tr>
+                <th>Jourannulable</th>
+                <td>{{ parametres_prix.jourAnnulable }}</td>
+            </tr>
+            <tr>
+                <th>Journonannulable</th>
+                <td>{{ parametres_prix.jourNonAnnulable }}</td>
+            </tr>
+            <tr>
+                <th>Penaliteannulationtardive</th>
+                <td>{{ parametres_prix.penaliteAnnulationTardive }}</td>
+            </tr>
+            <tr>
+                <th>Remisesemaine</th>
+                <td>{{ parametres_prix.remiseSemaine }}</td>
+            </tr>
+            <tr>
+                <th>Remisemois</th>
+                <td>{{ parametres_prix.remiseMois }}</td>
+            </tr>
+            <tr>
+                <th>Minimumfacture</th>
+                <td>{{ parametres_prix.minimumFacture }}</td>
+            </tr>
+            <tr>
+                <th>Coefpersosupp</th>
+                <td>{{ parametres_prix.coefPersoSupp }}</td>
+            </tr>
+            <tr>
+                <th>Forfaitmenagettc</th>
+                <td>{{ parametres_prix.forfaitMenageTtc }}</td>
+            </tr>
+            <tr>
+                <th>Joursmenage</th>
+                <td>{{ parametres_prix.joursMenage }}</td>
+            </tr>
+            <tr>
+                <th>Taxesejour</th>
+                <td>{{ parametres_prix.taxeSejour }}</td>
+            </tr>
+            <tr>
+                <th>Tva</th>
+                <td>{{ parametres_prix.tva }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('parametres_prix_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('parametres_prix_edit', { 'id': parametres_prix.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

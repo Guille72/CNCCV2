@@ -40,7 +40,43 @@ class Logement
      *
      * @ORM\Column(name="prix", type="float")
      */
-    private $prix;
+    private $coefPrix;
+
+    /**
+     * @var string
+     * @ORM\Column(name="adresse", type="string")
+     */
+    private $adresse;
+
+    /**
+     * @var boolean
+     * @ORM\Column(name="poele", type="boolean")
+     */
+    private $poele;
+
+    /**
+     * @var string
+     * @ORM\Column(name="localisation", type="string")
+     */
+    private $localisation;
+
+    /**
+     * @var string
+     * @ORM\Column(name="surface", type="string")
+     */
+    private $surface;
+
+    /**
+     * @var string
+     * @ORM\Column(name="type", type="string")
+     */
+    private $type;
+
+    /**
+     * @var string
+     * @ORM\Column(name="chambres", type="string")
+     */
+    private $chambres;
 
     /**
      * @var float
@@ -185,5 +221,173 @@ class Logement
     public function getBasePrix()
     {
         return $this->base_prix;
+    }
+
+    /**
+     * Set coefPrix
+     *
+     * @param float $coefPrix
+     *
+     * @return Logement
+     */
+    public function setCoefPrix($coefPrix)
+    {
+        $this->coefPrix = $coefPrix;
+
+        return $this;
+    }
+
+    /**
+     * Get coefPrix
+     *
+     * @return float
+     */
+    public function getCoefPrix()
+    {
+        return $this->coefPrix;
+    }
+
+    /**
+     * Set adresse
+     *
+     * @param string $adresse
+     *
+     * @return Logement
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    /**
+     * Get adresse
+     *
+     * @return string
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     * Set poele
+     *
+     * @param boolean $poele
+     *
+     * @return Logement
+     */
+    public function setPoele($poele)
+    {
+        $this->poele = $poele;
+
+        return $this;
+    }
+
+    /**
+     * Get poele
+     *
+     * @return boolean
+     */
+    public function getPoele()
+    {
+        return $this->poele;
+    }
+
+    /**
+     * Set localisation
+     *
+     * @param string $localisation
+     *
+     * @return Logement
+     */
+    public function setLocalisation($localisation)
+    {
+        $this->localisation = $localisation;
+
+        return $this;
+    }
+
+    /**
+     * Get localisation
+     *
+     * @return string
+     */
+    public function getLocalisation()
+    {
+        return $this->localisation;
+    }
+
+    /**
+     * Set surface
+     *
+     * @param string $surface
+     *
+     * @return Logement
+     */
+    public function setSurface($surface)
+    {
+        $this->surface = $surface;
+
+        return $this;
+    }
+
+    /**
+     * Get surface
+     *
+     * @return string
+     */
+    public function getSurface()
+    {
+        return $this->surface;
+    }
+
+    /**
+     * Set type
+     *
+     * @param string $type
+     *
+     * @return Logement
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set chambres
+     *
+     * @param string $chambres
+     *
+     * @return Logement
+     */
+    public function setChambres($chambres)
+    {
+        $this->chambres = $chambres;
+
+        return $this;
+    }
+
+    /**
+     * Get chambres
+     *
+     * @return string
+     */
+    public function getChambres()
+    {
+        return $this->chambres;
     }
 }

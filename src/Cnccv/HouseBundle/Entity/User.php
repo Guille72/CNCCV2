@@ -28,7 +28,7 @@ class User extends BaseUser
 
     /**
      * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Note")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn ()
      */
     private $note;
 
