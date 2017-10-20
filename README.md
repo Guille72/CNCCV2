@@ -46,7 +46,6 @@ https://nodejs.org/en/
 * `$ npm install`<br/>
     Installe les dépendances du projet.
     
-
 * `$ npm update` <br/>
 Pour mettre à jour les dépendances du projet.
 
