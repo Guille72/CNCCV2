@@ -36,9 +36,9 @@ class Logement
     private $personneMax;
 
     /**
-     * @var float
+     * @var string
      *
-     * @ORM\Column(name="prix", type="float")
+     * @ORM\Column(name="coefPrix", type="decimal")
      */
     private $coefPrix;
 
@@ -79,9 +79,9 @@ class Logement
     private $chambres;
 
     /**
-     * @var float
+     * @var string
      *
-     * @ORM\Column(name="taxe", type="float")
+     * @ORM\Column(name="taxe", type="decimal")
      */
     private $taxe;
 

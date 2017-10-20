@@ -6,15 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a587d87e-04ab-4991-8de8-95e276fa3506" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/2de9d3b6-e21d-4415-8e55-2f3185293ce8.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/2de9d3b6-e21d-4415-8e55-2f3185293ce8.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/assets/scss/style.scss" afterPath="$PROJECT_DIR$/app/Resources/assets/scss/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Base_prix.php" afterPath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Base_prix.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Logement.php" afterPath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Logement.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Reservation.php" afterPath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Reservation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_header.html.twig" afterPath="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_header.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/build/app.css" afterPath="$PROJECT_DIR$/web/build/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/build/manifest.js" afterPath="$PROJECT_DIR$/web/build/manifest.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,22 +48,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Reservation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="31" column="61" lean-forward="false" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parametres_prix.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Parametres_prix.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="307">
+              <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <folding>
+                <element signature="e#44#76#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,8 +151,6 @@
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Form/NoteType.php" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Form/LogementType.php" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Form/Base_prixType.php" />
-        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Base_prix.php" />
-        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Reservation.php" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Note.php" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Form/UserType.php" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Form/RegistrationType.php" />
@@ -173,9 +159,11 @@
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/cards.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/translations/FOSUserBundle.fr.yml" />
+        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Base_prix.php" />
+        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Parametres_prix.php" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Logement.php" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Parametres_prix.php" />
+        <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Reservation.php" />
       </list>
     </option>
   </component>
@@ -416,21 +404,21 @@
       <workItem from="1508310083834" duration="14080000" />
       <workItem from="1508398472581" duration="12945000" />
       <workItem from="1508483218858" duration="10680000" />
-      <workItem from="1508496178879" duration="2240000" />
+      <workItem from="1508496178879" duration="2731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150955000" />
+    <option name="totallyTimeSpent" value="151446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="429" y="0" width="1171" height="860" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28622863" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21692169" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5049505" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2709271" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2349235" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.4950495" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -582,13 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Note.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -766,16 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding>
-            <element signature="e#44#76#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../projet/parametre_general_tarif.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -800,35 +771,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Parametres_prix.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-681">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Base_prix.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1315">
-          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        <state relative-caret-position="307">
+          <caret line="75" column="29" lean-forward="true" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Logement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state relative-caret-position="426">
+          <caret line="116" column="21" lean-forward="true" selection-start-line="116" selection-start-column="21" selection-end-line="116" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="115" column="7" lean-forward="true" selection-start-line="115" selection-start-column="7" selection-end-line="115" selection-end-column="7" />
+          <folding>
+            <element signature="e#44#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Note.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Reservation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="31" column="61" lean-forward="false" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Parametres_prix.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="307">
+          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding>
+            <element signature="e#44#76#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

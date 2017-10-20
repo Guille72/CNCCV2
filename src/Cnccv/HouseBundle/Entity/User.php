@@ -52,7 +52,7 @@ class User extends BaseUser
 
     /**
      * @var string
-     * @ORM\Column(type="string", length=5)
+     * @ORM\Column(type="string", length=8)
      */
     private $zip;
 

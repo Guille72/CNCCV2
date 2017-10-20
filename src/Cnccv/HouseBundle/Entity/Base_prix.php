@@ -23,9 +23,9 @@ class Base_prix
     private $id;
 
     /**
-     * @var float
+     * @var string
      *
-     * @ORM\Column(name="prix", type="float")
+     * @ORM\Column(name="prix", type="decimal")
      */
     private $prix;
 

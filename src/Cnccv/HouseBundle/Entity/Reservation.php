@@ -70,16 +70,16 @@ class Reservation
     private $annulation;
 
     /**
-     * @var float
+     * @var string
      *
-     * @ORM\Column(name="supplement", type="float", nullable=true)
+     * @ORM\Column(name="supplement", type="decimal", nullable=true)
      */
     private $supplement;
 
     /**
-     * @var float
+     * @var string
      *
-     * @ORM\Column(name="avoir", type="float", nullable=true)
+     * @ORM\Column(name="avoir", type="decimal", nullable=true)
      */
     private $avoir;
 
