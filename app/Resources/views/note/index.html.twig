@@ -1,10 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block body %}
-    <h1>Liste des notes</h1>
+    <div class="container">
+        <h1>Liste des notes</h1>
 
-    <table>
-        <thead>
+        <table>
+            <thead>
             <tr>
                 <th>Id</th>
                 <th>Commentaire</th>
@@ -14,34 +15,35 @@
                 <th>Etoile</th>
                 <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for note in notes %}
-            <tr>
-                <td><a href="{{ path('note_show', { 'id': note.id }) }}">{{ note.id }}</a></td>
-                <td>{{ note.comm }}</td>
-                <td>{{ note.proprete }}</td>
-                <td>{{ note.accueil }}</td>
-                <td>{{ note.confort }}</td>
-                <td>{{ note.etoile }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('note_show', { 'id': note.id }) }}">Afficher</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('note_edit', { 'id': note.id }) }}">Modifier</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {% for note in notes %}
+                <tr>
+                    <td><a href="{{ path('note_show', { 'id': note.id }) }}">{{ note.id }}</a></td>
+                    <td>{{ note.comm }}</td>
+                    <td>{{ note.proprete }}</td>
+                    <td>{{ note.accueil }}</td>
+                    <td>{{ note.confort }}</td>
+                    <td>{{ note.etoile }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('note_show', { 'id': note.id }) }}">Afficher</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('note_edit', { 'id': note.id }) }}">Modifier</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('note_new') }}">Créer une note</a>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <a href="{{ path('note_new') }}">Créer une note</a>
+            </li>
+        </ul>
+    </div>
 {% endblock %}

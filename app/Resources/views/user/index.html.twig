@@ -1,10 +1,10 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block body %}
-    <h1>Liste des utilisateurs</h1>
-
-    <table>
-        <thead>
+    <div class="container">
+        <h1>Liste des utilisateurs</h1>
+        <table>
+            <thead>
             <tr>
                 <th>Id</th>
                 <th>Prénom</th>
@@ -21,41 +21,42 @@
                 <th>CNI</th>
                 <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for user in users %}
-            <tr>
-                <td><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
-                <td>{{ user.firstname }}</td>
-                <td>{{ user.username }}</td>
-                <td>{% if user.birthdate %}{{ user.birthdate|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ user.address }}</td>
-                <td>{{ user.zip }}</td>
-                <td>{{ user.city }}</td>
-                <td>{{ user.tel }}</td>
-                <td>{{ user.company }}</td>
-                <td>{{ user.siren }}</td>
-                <td>{% if user.created %}{{ user.created|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{% if user.updated %}{{ user.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ user.imageName }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('user_show', { 'id': user.id }) }}">Afficher</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('user_edit', { 'id': user.id }) }}">Modifier</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+                    <td>{{ user.firstname }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{% if user.birthdate %}{{ user.birthdate|date('Y-m-d') }}{% endif %}</td>
+                    <td>{{ user.address }}</td>
+                    <td>{{ user.zip }}</td>
+                    <td>{{ user.city }}</td>
+                    <td>{{ user.tel }}</td>
+                    <td>{{ user.company }}</td>
+                    <td>{{ user.siren }}</td>
+                    <td>{% if user.created %}{{ user.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    <td>{% if user.updated %}{{ user.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    <td>{{ user.imageName }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('user_show', { 'id': user.id }) }}">Afficher</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('user_edit', { 'id': user.id }) }}">Modifier</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('user_new') }}">Création d'un utilisateur</a>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <a href="{{ path('user_new') }}">Création d'un utilisateur</a>
+            </li>
+        </ul>
+    </div>
 {% endblock %}

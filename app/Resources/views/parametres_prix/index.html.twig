@@ -1,10 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block body %}
-    <h1>Liste des paramètres de prix</h1>
+    <div class="container">
+        <h1>Liste des paramètres de prix</h1>
 
-    <table>
-        <thead>
+        <table>
+            <thead>
             <tr>
                 <th>Id</th>
                 <th>Jours annulables</th>
@@ -20,40 +21,43 @@
                 <th>TVA</th>
                 <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for parametres_prix in parametres_prixes %}
-            <tr>
-                <td><a href="{{ path('parametres_prix_show', { 'id': parametres_prix.id }) }}">{{ parametres_prix.id }}</a></td>
-                <td>{{ parametres_prix.jourAnnulable }}</td>
-                <td>{{ parametres_prix.jourNonAnnulable }}</td>
-                <td>{{ parametres_prix.penaliteAnnulationTardive }}</td>
-                <td>{{ parametres_prix.remiseSemaine }}</td>
-                <td>{{ parametres_prix.remiseMois }}</td>
-                <td>{{ parametres_prix.minimumFacture }}</td>
-                <td>{{ parametres_prix.coefPersoSupp }}</td>
-                <td>{{ parametres_prix.forfaitMenageTtc }}</td>
-                <td>{{ parametres_prix.joursMenage }}</td>
-                <td>{{ parametres_prix.taxeSejour }}</td>
-                <td>{{ parametres_prix.tva }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('parametres_prix_show', { 'id': parametres_prix.id }) }}">Afficher</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('parametres_prix_edit', { 'id': parametres_prix.id }) }}">Modifier</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {% for parametres_prix in parametres_prixes %}
+                <tr>
+                    <td>
+                        <a href="{{ path('parametres_prix_show', { 'id': parametres_prix.id }) }}">{{ parametres_prix.id }}</a>
+                    </td>
+                    <td>{{ parametres_prix.jourAnnulable }}</td>
+                    <td>{{ parametres_prix.jourNonAnnulable }}</td>
+                    <td>{{ parametres_prix.penaliteAnnulationTardive }}</td>
+                    <td>{{ parametres_prix.remiseSemaine }}</td>
+                    <td>{{ parametres_prix.remiseMois }}</td>
+                    <td>{{ parametres_prix.minimumFacture }}</td>
+                    <td>{{ parametres_prix.coefPersoSupp }}</td>
+                    <td>{{ parametres_prix.forfaitMenageTtc }}</td>
+                    <td>{{ parametres_prix.joursMenage }}</td>
+                    <td>{{ parametres_prix.taxeSejour }}</td>
+                    <td>{{ parametres_prix.tva }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('parametres_prix_show', { 'id': parametres_prix.id }) }}">Afficher</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('parametres_prix_edit', { 'id': parametres_prix.id }) }}">Modifier</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('parametres_prix_new') }}">Créer un nouveau paramètre</a>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <a href="{{ path('parametres_prix_new') }}">Créer un nouveau paramètre</a>
+            </li>
+        </ul>
+    </div>
 {% endblock %}

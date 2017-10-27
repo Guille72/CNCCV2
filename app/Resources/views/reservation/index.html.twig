@@ -1,10 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block body %}
-    <h1>Réservations</h1>
+    <div class="container">
+        <h1>Réservations</h1>
 
-    <table>
-        <thead>
+        <table>
+            <thead>
             <tr>
                 <th>Id</th>
                 <th>Arrivée</th>
@@ -18,38 +19,39 @@
                 <th>Numéro de réservation</th>
                 <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for reservation in reservations %}
-            <tr>
-                <td><a href="{{ path('reservation_show', { 'id': reservation.id }) }}">{{ reservation.id }}</a></td>
-                <td>{% if reservation.arrivee %}{{ reservation.arrivee|date('Y-m-d') }}{% endif %}</td>
-                <td>{% if reservation.depart %}{{ reservation.depart|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ reservation.nbPersonne }}</td>
-                <td>{{ reservation.nbNuit }}</td>
-                <td>{% if reservation.annulation %}{{ reservation.annulation|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ reservation.supplement }}</td>
-                <td>{{ reservation.avoir }}</td>
-                <td>{{ reservation.calendrierExt }}</td>
-                <td>{{ reservation.numReservation }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('reservation_show', { 'id': reservation.id }) }}">Afficher</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('reservation_edit', { 'id': reservation.id }) }}">Modifier</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {% for reservation in reservations %}
+                <tr>
+                    <td><a href="{{ path('reservation_show', { 'id': reservation.id }) }}">{{ reservation.id }}</a></td>
+                    <td>{% if reservation.arrivee %}{{ reservation.arrivee|date('Y-m-d') }}{% endif %}</td>
+                    <td>{% if reservation.depart %}{{ reservation.depart|date('Y-m-d') }}{% endif %}</td>
+                    <td>{{ reservation.nbPersonne }}</td>
+                    <td>{{ reservation.nbNuit }}</td>
+                    <td>{% if reservation.annulation %}{{ reservation.annulation|date('Y-m-d') }}{% endif %}</td>
+                    <td>{{ reservation.supplement }}</td>
+                    <td>{{ reservation.avoir }}</td>
+                    <td>{{ reservation.calendrierExt }}</td>
+                    <td>{{ reservation.numReservation }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('reservation_show', { 'id': reservation.id }) }}">Afficher</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('reservation_edit', { 'id': reservation.id }) }}">Modifier</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('reservation_new') }}">Créer une nouvelle réservation</a>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <a href="{{ path('reservation_new') }}">Créer une nouvelle réservation</a>
+            </li>
+        </ul>
+    </div>
 {% endblock %}

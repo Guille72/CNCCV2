@@ -1,16 +1,18 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block body %}
-    <h1>Création d'un utilisateur</h1>
+    <div class="container">
+        <h1>Création d'un utilisateur</h1>
 
-    {{ form_start(form) }}
+        {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
+        <input type="submit" value="Create"/>
+        {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('user_index') }}">Retour à la liste</a>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <a href="{{ path('user_index') }}">Retour à la liste</a>
+            </li>
+        </ul>
+    </div>
 {% endblock %}

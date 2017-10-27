@@ -1,10 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block body %}
-    <h1>Liste des logements</h1>
+    <div class="container">
+        <h1>Liste des logements</h1>
 
-    <table>
-        <thead>
+        <table>
+            <thead>
             <tr>
                 <th>Id</th>
                 <th>Personnes maximum</th>
@@ -20,40 +21,41 @@
                 <th>Coefficient prix</th>
                 <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for logement in logements %}
-            <tr>
-                <td><a href="{{ path('logement_show', { 'id': logement.id }) }}">{{ logement.id }}</a></td>
-                <td>{{ logement.personneMax }}</td>
-                <td>{{ logement.prix }}</td>
-                <td>{{ logement.taxe }}</td>
-                <td>{{ logement.description }}</td>
-                <td>{{ logement.adresse }}</td>
-                <td>{{ logement.poele }}</td>
-                <td>{{ logement.localisation }}</td>
-                <td>{{ logement.surface }}</td>
-                <td>{{ logement.type }}</td>
-                <td>{{ logement.chambres }}</td>
-                <td>{{ logement.coefPrix }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('logement_show', { 'id': logement.id }) }}">Afficher</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('logement_edit', { 'id': logement.id }) }}">Modifier</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {% for logement in logements %}
+                <tr>
+                    <td><a href="{{ path('logement_show', { 'id': logement.id }) }}">{{ logement.id }}</a></td>
+                    <td>{{ logement.personneMax }}</td>
+                    <td>{{ logement.prix }}</td>
+                    <td>{{ logement.taxe }}</td>
+                    <td>{{ logement.description }}</td>
+                    <td>{{ logement.adresse }}</td>
+                    <td>{{ logement.poele }}</td>
+                    <td>{{ logement.localisation }}</td>
+                    <td>{{ logement.surface }}</td>
+                    <td>{{ logement.type }}</td>
+                    <td>{{ logement.chambres }}</td>
+                    <td>{{ logement.coefPrix }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('logement_show', { 'id': logement.id }) }}">Afficher</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('logement_edit', { 'id': logement.id }) }}">Modifier</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('logement_new') }}">Créer un nouveau logement</a>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <a href="{{ path('logement_new') }}">Créer un nouveau logement</a>
+            </li>
+        </ul>
+    </div>
 {% endblock %}
