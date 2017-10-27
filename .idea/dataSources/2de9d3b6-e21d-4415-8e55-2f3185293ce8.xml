@@ -72,7 +72,7 @@
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="29" parent="9" name="base_prix_id">
+    <column id="29" parent="9" name="base_prix_id_id">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
@@ -112,16 +112,16 @@
       <DataType>decimal(10)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="37" parent="9" name="IDX_F0FD4457A0419B96">
-      <ColNames>base_prix_id</ColNames>
+    <index id="37" parent="9" name="IDX_F0FD4457CB12305">
+      <ColNames>base_prix_id_id</ColNames>
     </index>
     <key id="38" parent="9" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="39" parent="9" name="FK_F0FD4457A0419B96">
-      <ColNames>base_prix_id</ColNames>
+    <foreign-key id="39" parent="9" name="FK_F0FD4457CB12305">
+      <ColNames>base_prix_id_id</ColNames>
       <RefSchemaName>cnccv_symfony</RefSchemaName>
       <RefTableName>base_prix</RefTableName>
       <RefColNames>id</RefColNames>

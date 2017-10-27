@@ -98,6 +98,12 @@ Créer des fichiers source-map en cas de débuggage.
 * Mettre à jour les tables :
     * `php bin/console doctrine:schema:update --force`
 
+* Mettre un utilisateur en ADMIN :
+    * `php bin/console fos:user:promote ROLE_ADMIN`
+
+* Mettre un utilisateur en SUPER_ADMIN :
+    * `php bin/console fos:user:promote --super`
+
 * Mettre les Modèles dans :
     * src -> Nom du projet -> Le Bundle qui va réunir le tout -> Entity -> Fichier au singulier
 
