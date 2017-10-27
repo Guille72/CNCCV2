@@ -1,16 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Logements list</h1>
+    <h1>Liste des logements</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Personnemax</th>
+                <th>Personnes maximum</th>
                 <th>Prix</th>
                 <th>Taxe</th>
                 <th>Description</th>
+                <th>Adresse</th>
+                <th>Poele</th>
+                <th>Localisation</th>
+                <th>Surface</th>
+                <th>Type</th>
+                <th>Chambres</th>
+                <th>Coefficient prix</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -22,13 +29,20 @@
                 <td>{{ logement.prix }}</td>
                 <td>{{ logement.taxe }}</td>
                 <td>{{ logement.description }}</td>
+                <td>{{ logement.adresse }}</td>
+                <td>{{ logement.poele }}</td>
+                <td>{{ logement.localisation }}</td>
+                <td>{{ logement.surface }}</td>
+                <td>{{ logement.type }}</td>
+                <td>{{ logement.chambres }}</td>
+                <td>{{ logement.coefPrix }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('logement_show', { 'id': logement.id }) }}">show</a>
+                            <a href="{{ path('logement_show', { 'id': logement.id }) }}">Afficher</a>
                         </li>
                         <li>
-                            <a href="{{ path('logement_edit', { 'id': logement.id }) }}">edit</a>
+                            <a href="{{ path('logement_edit', { 'id': logement.id }) }}">Modifier</a>
                         </li>
                     </ul>
                 </td>
@@ -39,7 +53,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('logement_new') }}">Create a new logement</a>
+            <a href="{{ path('logement_new') }}">Créer un nouveau logement</a>
         </li>
     </ul>
 {% endblock %}

@@ -18,7 +18,7 @@ class Base_prixController extends Controller
     /**
      * Lists all base_prix entities.
      *
-     * @Route("/", name="base_prix_index")
+     * @Route("/base_prix", name="base_prix_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -35,7 +35,7 @@ class Base_prixController extends Controller
     /**
      * Creates a new base_prix entity.
      *
-     * @Route("/new", name="base_prix_new")
+     * @Route("/base_prix/new", name="base_prix_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -61,7 +61,7 @@ class Base_prixController extends Controller
     /**
      * Finds and displays a base_prix entity.
      *
-     * @Route("/{id}", name="base_prix_show")
+     * @Route("/base_prix/{id}", name="base_prix_show")
      * @Method("GET")
      */
     public function showAction(Base_prix $base_prix)
@@ -77,7 +77,7 @@ class Base_prixController extends Controller
     /**
      * Displays a form to edit an existing base_prix entity.
      *
-     * @Route("/{id}/edit", name="base_prix_edit")
+     * @Route("/base_prix/edit/{id}", name="base_prix_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Base_prix $base_prix)
@@ -102,7 +102,7 @@ class Base_prixController extends Controller
     /**
      * Deletes a base_prix entity.
      *
-     * @Route("/{id}", name="base_prix_delete")
+     * @Route("/base_prix/delete/{id}", name="base_prix_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Base_prix $base_prix)

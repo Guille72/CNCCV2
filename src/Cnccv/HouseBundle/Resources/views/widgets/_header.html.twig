@@ -10,7 +10,7 @@
                 <li><a href="{{ path('homePage') }}" class="red-text gt">Accueil</a></li>
                 <li><a href="" class="red-text gt">Qui sommes-nous ?</a></li>
                 <!-- Profil si connecté -->
-                <li><a class="dropdown-button red-text gt" href="#!" data-activates="dropdown1"> Votre profil
+                <li><a class="dropdown-button red-text gt" href="#!" data-activates="dropdown1"> Votre profil {{ app.user.firstname }}
                         <i class="material-icons right">arrow_drop_down</i></a>
                 </li>
             </ul>
@@ -41,7 +41,7 @@
     </div>
     <li>
         <div class="center fix sidebar">
-            <a id="btn-connexion" class="waves-effect waves-light btn green modal-trigger"
+            <a id="btn-connexion" class="waves-effect waves-light btn red darken-4 modal-trigger"
                href="#connexion">Se connecter</a>
         </div>
         {# Désactiver le bouton agree par false#}
@@ -104,7 +104,7 @@
     </div>
     <li>
         <div class="center fix appear">
-            <a id="btn-connexion" class="waves-effect waves-light btn green modal-trigger"
+            <a id="btn-connexion" class="waves-effect waves-light btn red darken-4 modal-trigger"
                href="#connexion">Se connecter</a>
         </div>
         {# Désactiver le bouton agree par false#}

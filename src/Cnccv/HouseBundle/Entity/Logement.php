@@ -26,7 +26,7 @@ class Logement
      * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Base_prix")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $base_prix;
+    private $base_prix_id;
 
     /**
      * @var int
@@ -128,30 +128,6 @@ class Logement
     }
 
     /**
-     * Set prix
-     *
-     * @param float $prix
-     *
-     * @return Logement
-     */
-    public function setPrix($prix)
-    {
-        $this->prix = $prix;
-
-        return $this;
-    }
-
-    /**
-     * Get prix
-     *
-     * @return float
-     */
-    public function getPrix()
-    {
-        return $this->prix;
-    }
-
-    /**
      * Set taxe
      *
      * @param float $taxe
@@ -198,31 +174,7 @@ class Logement
     {
         return $this->description;
     }
-
-    /**
-     * Set basePrix
-     *
-     * @param \Cnccv\HouseBundle\Entity\Base_prix $basePrix
-     *
-     * @return Logement
-     */
-    public function setBasePrix(\Cnccv\HouseBundle\Entity\Base_prix $basePrix)
-    {
-        $this->base_prix = $basePrix;
-
-        return $this;
-    }
-
-    /**
-     * Get basePrix
-     *
-     * @return \Cnccv\HouseBundle\Entity\Base_prix
-     */
-    public function getBasePrix()
-    {
-        return $this->base_prix;
-    }
-
+    
     /**
      * Set coefPrix
      *
@@ -389,5 +341,29 @@ class Logement
     public function getChambres()
     {
         return $this->chambres;
+    }
+
+    /**
+     * Set basePrixId
+     *
+     * @param \Cnccv\HouseBundle\Entity\Base_prix $basePrixId
+     *
+     * @return Logement
+     */
+    public function setBasePrixId(\Cnccv\HouseBundle\Entity\Base_prix $basePrixId)
+    {
+        $this->base_prix_id = $basePrixId;
+
+        return $this;
+    }
+
+    /**
+     * Get basePrixId
+     *
+     * @return \Cnccv\HouseBundle\Entity\Base_prix
+     */
+    public function getBasePrixId()
+    {
+        return $this->base_prix_id;
     }
 }

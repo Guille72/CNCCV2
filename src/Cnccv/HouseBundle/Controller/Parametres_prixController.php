@@ -17,7 +17,7 @@ class Parametres_prixController extends Controller
     /**
      * Lists all parametres_prix entities.
      *
-     * @Route("/", name="parametres_prix_index")
+     * @Route("/parametres_prix", name="parametres_prix_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -34,7 +34,7 @@ class Parametres_prixController extends Controller
     /**
      * Creates a new parametres_prix entity.
      *
-     * @Route("/new", name="parametres_prix_new")
+     * @Route("/parametres_prix/new", name="parametres_prix_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -60,7 +60,7 @@ class Parametres_prixController extends Controller
     /**
      * Finds and displays a parametres_prix entity.
      *
-     * @Route("/{id}", name="parametres_prix_show")
+     * @Route("/parametres_prix/{id}", name="parametres_prix_show")
      * @Method("GET")
      */
     public function showAction(Parametres_prix $parametres_prix)
@@ -76,7 +76,7 @@ class Parametres_prixController extends Controller
     /**
      * Displays a form to edit an existing parametres_prix entity.
      *
-     * @Route("/{id}/edit", name="parametres_prix_edit")
+     * @Route("/parametres_prix/edit/{id}", name="parametres_prix_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Parametres_prix $parametres_prix)
@@ -101,7 +101,7 @@ class Parametres_prixController extends Controller
     /**
      * Deletes a parametres_prix entity.
      *
-     * @Route("/{id}", name="parametres_prix_delete")
+     * @Route("/parametres_prix/delete/{id}", name="parametres_prix_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Parametres_prix $parametres_prix)

@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Base_prix</h1>
+    <h1>Base prix</h1>
 
     <table>
         <tbody>
@@ -14,11 +14,11 @@
                 <td>{{ base_prix.prix }}</td>
             </tr>
             <tr>
-                <th>Datedebut</th>
+                <th>Date de début</th>
                 <td>{% if base_prix.dateDebut %}{{ base_prix.dateDebut|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Datefin</th>
+                <th>Date de fin</th>
                 <td>{% if base_prix.dateFin %}{{ base_prix.dateFin|date('Y-m-d') }}{% endif %}</td>
             </tr>
         </tbody>
@@ -26,10 +26,10 @@
 
     <ul>
         <li>
-            <a href="{{ path('base_prix_index') }}">Back to the list</a>
+            <a href="{{ path('base_prix_index') }}">Retour à la liste</a>
         </li>
         <li>
-            <a href="{{ path('base_prix_edit', { 'id': base_prix.id }) }}">Edit</a>
+            <a href="{{ path('base_prix_edit', { 'id': base_prix.id }) }}">Modifier</a>
         </li>
         <li>
             {{ form_start(delete_form) }}

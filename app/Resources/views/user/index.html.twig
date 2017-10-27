@@ -1,23 +1,24 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Users list</h1>
+    <h1>Liste des utilisateurs</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Firstname</th>
-                <th>Birthdate</th>
-                <th>Address</th>
-                <th>Zip</th>
-                <th>City</th>
-                <th>Tel</th>
-                <th>Company</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Date de naissance</th>
+                <th>Adresse</th>
+                <th>Code postal</th>
+                <th>Ville</th>
+                <th>Téléphone</th>
+                <th>Companie</th>
                 <th>Siren</th>
-                <th>Created</th>
-                <th>Updated</th>
-                <th>Imagename</th>
+                <th>Créé le</th>
+                <th>Modifié le</th>
+                <th>CNI</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -26,6 +27,7 @@
             <tr>
                 <td><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
                 <td>{{ user.firstname }}</td>
+                <td>{{ user.username }}</td>
                 <td>{% if user.birthdate %}{{ user.birthdate|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ user.address }}</td>
                 <td>{{ user.zip }}</td>
@@ -39,10 +41,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('user_show', { 'id': user.id }) }}">show</a>
+                            <a href="{{ path('user_show', { 'id': user.id }) }}">Afficher</a>
                         </li>
                         <li>
-                            <a href="{{ path('user_edit', { 'id': user.id }) }}">edit</a>
+                            <a href="{{ path('user_edit', { 'id': user.id }) }}">Modifier</a>
                         </li>
                     </ul>
                 </td>
@@ -53,7 +55,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('user_new') }}">Create a new user</a>
+            <a href="{{ path('user_new') }}">Création d'un utilisateur</a>
         </li>
     </ul>
 {% endblock %}

@@ -10,11 +10,11 @@
                 <td>{{ note.id }}</td>
             </tr>
             <tr>
-                <th>Comm</th>
+                <th>Commentaire</th>
                 <td>{{ note.comm }}</td>
             </tr>
             <tr>
-                <th>Proprete</th>
+                <th>Propreté</th>
                 <td>{{ note.proprete }}</td>
             </tr>
             <tr>
@@ -34,10 +34,10 @@
 
     <ul>
         <li>
-            <a href="{{ path('note_index') }}">Back to the list</a>
+            <a href="{{ path('note_index') }}">Retour à la liste</a>
         </li>
         <li>
-            <a href="{{ path('note_edit', { 'id': note.id }) }}">Edit</a>
+            <a href="{{ path('note_edit', { 'id': note.id }) }}">Modifier</a>
         </li>
         <li>
             {{ form_start(delete_form) }}

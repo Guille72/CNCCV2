@@ -11,14 +11,14 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Note controller.
  *
- * @Route("Note")
+ * @Route("note")
  */
 class NoteController extends Controller
 {
     /**
      * Lists all note entities.
      *
-     * @Route("/", name="note_index")
+     * @Route("/note", name="note_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -35,7 +35,7 @@ class NoteController extends Controller
     /**
      * Creates a new note entity.
      *
-     * @Route("/new", name="note_new")
+     * @Route("/note/new", name="note_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -61,7 +61,7 @@ class NoteController extends Controller
     /**
      * Finds and displays a note entity.
      *
-     * @Route("/{id}", name="note_show")
+     * @Route("/note/{id}", name="note_show")
      * @Method("GET")
      */
     public function showAction(Note $note)
@@ -77,7 +77,7 @@ class NoteController extends Controller
     /**
      * Displays a form to edit an existing note entity.
      *
-     * @Route("/{id}/edit", name="note_edit")
+     * @Route("/note/edit/{id}", name="note_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Note $note)
@@ -102,7 +102,7 @@ class NoteController extends Controller
     /**
      * Deletes a note entity.
      *
-     * @Route("/{id}", name="note_delete")
+     * @Route("/note/delete/{id}", name="note_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Note $note)

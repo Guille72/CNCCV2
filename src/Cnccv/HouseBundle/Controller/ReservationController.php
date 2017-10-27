@@ -18,7 +18,7 @@ class ReservationController extends Controller
     /**
      * Lists all reservation entities.
      *
-     * @Route("/", name="reservation_index")
+     * @Route("/reservation", name="reservation_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -35,7 +35,7 @@ class ReservationController extends Controller
     /**
      * Creates a new reservation entity.
      *
-     * @Route("/new", name="reservation_new")
+     * @Route("/reservation/new", name="reservation_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -61,7 +61,7 @@ class ReservationController extends Controller
     /**
      * Finds and displays a reservation entity.
      *
-     * @Route("/{id}", name="reservation_show")
+     * @Route("/reservation/{id}", name="reservation_show")
      * @Method("GET")
      */
     public function showAction(Reservation $reservation)
@@ -77,7 +77,7 @@ class ReservationController extends Controller
     /**
      * Displays a form to edit an existing reservation entity.
      *
-     * @Route("/{id}/edit", name="reservation_edit")
+     * @Route("/reservation/edit/{id}", name="reservation_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Reservation $reservation)
@@ -102,7 +102,7 @@ class ReservationController extends Controller
     /**
      * Deletes a reservation entity.
      *
-     * @Route("/{id}", name="reservation_delete")
+     * @Route("/reservation/delete/{id}", name="reservation_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Reservation $reservation)

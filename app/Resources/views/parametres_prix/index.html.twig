@@ -1,23 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Parametres_prixes list</h1>
+    <h1>Liste des paramètres de prix</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Jourannulable</th>
-                <th>Journonannulable</th>
-                <th>Penaliteannulationtardive</th>
-                <th>Remisesemaine</th>
-                <th>Remisemois</th>
-                <th>Minimumfacture</th>
-                <th>Coefpersosupp</th>
-                <th>Forfaitmenagettc</th>
-                <th>Joursmenage</th>
-                <th>Taxesejour</th>
-                <th>Tva</th>
+                <th>Jours annulables</th>
+                <th>Jours non annulables</th>
+                <th>Penalité d'annulation tardive</th>
+                <th>Remise à la semaine</th>
+                <th>Remise au mois</th>
+                <th>Minimum de facturation</th>
+                <th>Coefficient par personnes supplémentaires</th>
+                <th>Forfait ménage TTC</th>
+                <th>Ménage au jour</th>
+                <th>Taxe de séjour</th>
+                <th>TVA</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -39,10 +39,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('parametres_prix_show', { 'id': parametres_prix.id }) }}">show</a>
+                            <a href="{{ path('parametres_prix_show', { 'id': parametres_prix.id }) }}">Afficher</a>
                         </li>
                         <li>
-                            <a href="{{ path('parametres_prix_edit', { 'id': parametres_prix.id }) }}">edit</a>
+                            <a href="{{ path('parametres_prix_edit', { 'id': parametres_prix.id }) }}">Modifier</a>
                         </li>
                     </ul>
                 </td>
@@ -53,7 +53,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('parametres_prix_new') }}">Create a new parametres_prix</a>
+            <a href="{{ path('parametres_prix_new') }}">Créer un nouveau paramètre</a>
         </li>
     </ul>
 {% endblock %}

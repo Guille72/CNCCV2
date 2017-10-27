@@ -1,15 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Base_prixes list</h1>
+    <h1>Base prix</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Prix</th>
-                <th>Datedebut</th>
-                <th>Datefin</th>
+                <th>Date de début</th>
+                <th>Date de fin</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -23,10 +23,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('base_prix_show', { 'id': base_prix.id }) }}">show</a>
+                            <a href="{{ path('base_prix_show', { 'id': base_prix.id }) }}">Afficher</a>
                         </li>
                         <li>
-                            <a href="{{ path('base_prix_edit', { 'id': base_prix.id }) }}">edit</a>
+                            <a href="{{ path('base_prix_edit', { 'id': base_prix.id }) }}">Modifier</a>
                         </li>
                     </ul>
                 </td>
@@ -37,7 +37,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('base_prix_new') }}">Create a new base_prix</a>
+            <a href="{{ path('base_prix_new') }}">Créer une nouvelle base prix </a>
         </li>
     </ul>
 {% endblock %}

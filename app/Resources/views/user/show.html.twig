@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>User</h1>
+    <h1>Utilisateur</h1>
 
     <table>
         <tbody>
@@ -10,23 +10,23 @@
                 <td>{{ user.id }}</td>
             </tr>
             <tr>
-                <th>Firstname</th>
+                <th>Prénom</th>
                 <td>{{ user.firstname }}</td>
             </tr>
             <tr>
-                <th>Birthdate</th>
+                <th>Date d'anniversaire</th>
                 <td>{% if user.birthdate %}{{ user.birthdate|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Address</th>
+                <th>Adresse</th>
                 <td>{{ user.address }}</td>
             </tr>
             <tr>
-                <th>Zip</th>
+                <th>Code postal</th>
                 <td>{{ user.zip }}</td>
             </tr>
             <tr>
-                <th>City</th>
+                <th>Ville</th>
                 <td>{{ user.city }}</td>
             </tr>
             <tr>
@@ -34,7 +34,7 @@
                 <td>{{ user.tel }}</td>
             </tr>
             <tr>
-                <th>Company</th>
+                <th>Companie</th>
                 <td>{{ user.company }}</td>
             </tr>
             <tr>
@@ -42,15 +42,15 @@
                 <td>{{ user.siren }}</td>
             </tr>
             <tr>
-                <th>Created</th>
+                <th>Créé le</th>
                 <td>{% if user.created %}{{ user.created|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Updated</th>
+                <th>Modifié le</th>
                 <td>{% if user.updated %}{{ user.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Imagename</th>
+                <th>CNI</th>
                 <td>{{ user.imageName }}</td>
             </tr>
         </tbody>
@@ -58,10 +58,10 @@
 
     <ul>
         <li>
-            <a href="{{ path('user_index') }}">Back to the list</a>
+            <a href="{{ path('user_index') }}">Retour à la liste</a>
         </li>
         <li>
-            <a href="{{ path('user_edit', { 'id': user.id }) }}">Edit</a>
+            <a href="{{ path('user_edit', { 'id': user.id }) }}">Modifier</a>
         </li>
         <li>
             {{ form_start(delete_form) }}

@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Notes list</h1>
+    <h1>Liste des notes</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Comm</th>
-                <th>Proprete</th>
+                <th>Commentaire</th>
+                <th>Propreté</th>
                 <th>Accueil</th>
                 <th>Confort</th>
                 <th>Etoile</th>
@@ -27,10 +27,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('note_show', { 'id': note.id }) }}">show</a>
+                            <a href="{{ path('note_show', { 'id': note.id }) }}">Afficher</a>
                         </li>
                         <li>
-                            <a href="{{ path('note_edit', { 'id': note.id }) }}">edit</a>
+                            <a href="{{ path('note_edit', { 'id': note.id }) }}">Modifier</a>
                         </li>
                     </ul>
                 </td>
@@ -41,7 +41,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('note_new') }}">Create a new note</a>
+            <a href="{{ path('note_new') }}">Créer une note</a>
         </li>
     </ul>
 {% endblock %}

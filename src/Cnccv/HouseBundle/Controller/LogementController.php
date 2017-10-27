@@ -18,7 +18,7 @@ class LogementController extends Controller
     /**
      * Lists all logement entities.
      *
-     * @Route("/", name="logement_index")
+     * @Route("/logement", name="logement_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -35,7 +35,7 @@ class LogementController extends Controller
     /**
      * Creates a new logement entity.
      *
-     * @Route("/new", name="logement_new")
+     * @Route("/logement/new", name="logement_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -61,7 +61,7 @@ class LogementController extends Controller
     /**
      * Finds and displays a logement entity.
      *
-     * @Route("/{id}", name="logement_show")
+     * @Route("/logement/{id}", name="logement_show")
      * @Method("GET")
      */
     public function showAction(Logement $logement)
@@ -77,7 +77,7 @@ class LogementController extends Controller
     /**
      * Displays a form to edit an existing logement entity.
      *
-     * @Route("/{id}/edit", name="logement_edit")
+     * @Route("/logement/edit/{id}", name="logement_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Logement $logement)
@@ -102,7 +102,7 @@ class LogementController extends Controller
     /**
      * Deletes a logement entity.
      *
-     * @Route("/{id}", name="logement_delete")
+     * @Route("/logement/delete/{id}", name="logement_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Logement $logement)

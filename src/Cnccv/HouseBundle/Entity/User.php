@@ -30,7 +30,7 @@ class User extends BaseUser
      * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Note")
      * @ORM\JoinColumn ()
      */
-    private $note;
+    private $note_id;
 
     /**
      * @var string
@@ -95,6 +95,12 @@ class User extends BaseUser
      * @ORM\Column(type="datetime")
      */
     private $updated;
+
+    /**
+     * @var string
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $comm_prive;
 
     /**
      * @var File
@@ -423,5 +429,53 @@ class User extends BaseUser
     public function getNote()
     {
         return $this->note;
+    }
+
+    /**
+     * Set noteId
+     *
+     * @param \Cnccv\HouseBundle\Entity\Note $noteId
+     *
+     * @return User
+     */
+    public function setNoteId(\Cnccv\HouseBundle\Entity\Note $noteId = null)
+    {
+        $this->note_id = $noteId;
+
+        return $this;
+    }
+
+    /**
+     * Get noteId
+     *
+     * @return \Cnccv\HouseBundle\Entity\Note
+     */
+    public function getNoteId()
+    {
+        return $this->note_id;
+    }
+
+    /**
+     * Set commPrive
+     *
+     * @param string $commPrive
+     *
+     * @return User
+     */
+    public function setCommPrive($commPrive)
+    {
+        $this->comm_prive = $commPrive;
+
+        return $this;
+    }
+
+    /**
+     * Get commPrive
+     *
+     * @return string
+     */
+    public function getCommPrive()
+    {
+        return $this->comm_prive;
     }
 }

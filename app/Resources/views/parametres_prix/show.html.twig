@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Parametres_prix</h1>
+    <h1>Paramètre de prix</h1>
 
     <table>
         <tbody>
@@ -58,10 +58,10 @@
 
     <ul>
         <li>
-            <a href="{{ path('parametres_prix_index') }}">Back to the list</a>
+            <a href="{{ path('parametres_prix_index') }}">Retour à la liste</a>
         </li>
         <li>
-            <a href="{{ path('parametres_prix_edit', { 'id': parametres_prix.id }) }}">Edit</a>
+            <a href="{{ path('parametres_prix_edit', { 'id': parametres_prix.id }) }}">Modifier</a>
         </li>
         <li>
             {{ form_start(delete_form) }}

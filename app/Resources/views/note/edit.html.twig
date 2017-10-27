@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Note edit</h1>
+    <h1>Modifier la note</h1>
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
@@ -10,7 +10,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('note_index') }}">Back to the list</a>
+            <a href="{{ path('note_index') }}">Retour à la liste</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
