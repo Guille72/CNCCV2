@@ -1,6 +1,6 @@
 modalConnexion:
     connexion:
-        title: Connection
+        title: Connexion
         address: Adresse Mail
         psw: Mot de passe
         button: Se connecter
