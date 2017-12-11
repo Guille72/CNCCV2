@@ -2850,14 +2850,6 @@ materialize-css@^0.100.2:
     hammerjs "^2.0.8"
     jquery "^3.0.0 || ^2.1.4"
 
-materialize-js@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/materialize-js/-/materialize-js-1.0.0.tgz#b61d68174c5d010f8a088daa288844833b923a5b"
-
-materialize@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/materialize/-/materialize-1.0.0.tgz#3e91c8a8c25475a7324e062ba34baf71c4a334aa"
-
 math-expression-evaluator@^1.2.14:
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
