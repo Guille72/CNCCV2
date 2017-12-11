@@ -37,7 +37,8 @@ global.$ = global.jQuery = $;
         today: 'Aujourd\'hui',
         clear: 'Effacer',
         close: 'Ok',
-        closeOnSelect: true // Close upon selecting a date,
+        closeOnSelect: true, // Close upon selecting a date,
+
     });
 })(window.jQuery);
 
