@@ -14,12 +14,6 @@ cnccv_house:
     path:      /admin
     defaults: {_controller: CnccvHouseBundle:Admin:index}
 
-#Dashboard admin
-#dashboard:
-#    resource: "@CnccvHouseBundle/Resources/views/admin/dashboard.html.twig"
-#    type: annotation
-#    prefix: /dashboard
-
 #User
 user_index:
     path: /user
