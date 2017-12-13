@@ -9,6 +9,11 @@ fos_user:
 logout:
     path: /logout
 
+#Admin
+cnccv_house:
+    path:      /admin
+    defaults: {_controller: CnccvHouseBundle:Admin:index}
+
 #Dashboard admin
 #dashboard:
 #    resource: "@CnccvHouseBundle/Resources/views/admin/dashboard.html.twig"
@@ -18,128 +23,128 @@ logout:
 #User
 user_index:
     path: /user
-    defaults: {_controller:CnccvHouseBundle:User:index}
+    defaults: {_controller: CnccvHouseBundle:User:index}
 
 user_new:
     path: /user/new
-    defaults: {_controller:CnccvHouseBundle:User:new}
+    defaults: {_controller: CnccvHouseBundle:User:new}
 
 user_show:
     path: /user/{id}
-    defaults: {_controller:CnccvHouseBundle:User:show}
+    defaults: {_controller: CnccvHouseBundle:User:show}
 
 user_edit:
     path: /user/edit/{id}
-    defaults: {_controller:CnccvHouseBundle:User:edit}
+    defaults: {_controller: CnccvHouseBundle:User:edit}
 
 user_delete:
     path: /user/delete/{id}
-    defaults: {_controller:CnccvHouseBundle:User:delete}
+    defaults: {_controller: CnccvHouseBundle:User:delete}
 
 #Base_prix
 base_prix_index:
     path: /base_prix
-    defaults: {_controller:CnccvHouseBundle:Base_prix:index}
+    defaults: {_controller: CnccvHouseBundle:Base_prix:index}
 
 base_prix_new:
     path: /base_prix/new
-    defaults: {_controller:CnccvHouseBundle:Base_prix:new}
+    defaults: {_controller: CnccvHouseBundle:Base_prix:new}
 
 base_prix_show:
     path: /base_prix/show/{id}
-    defaults: {_controller:CnccvHouseBundle:Base_prix:show}
+    defaults: {_controller: CnccvHouseBundle:Base_prix:show}
 
 base_prix_edit:
     path: /base_prix/edit/{id}
-    defaults: {_controller:CnccvHouseBundle:Base_prix:edit}
+    defaults: {_controller: CnccvHouseBundle:Base_prix:edit}
 
 base_prix_delete:
     path: /base_prix/delete/{id}
-    defaults: {_controller:CnccvHouseBundle:Base_prix:delete}
+    defaults: {_controller: CnccvHouseBundle:Base_prix:delete}
 
 #Logement
 logement_index:
     path: /logement
-    defaults: {_controller:CnccvHouseBundle:Logement:index}
+    defaults: {_controller: CnccvHouseBundle:Logement:index}
 
 logement_new:
     path: /logement/new
-    defaults: {_controller:CnccvHouseBundle:Logement:new}
+    defaults: {_controller: CnccvHouseBundle:Logement:new}
 
 logement_show:
     path: /logement/show/{id}
-    defaults: {_controller:CnccvHouseBundle:Logement:show}
+    defaults: {_controller: CnccvHouseBundle:Logement:show}
 
 logement_edit:
     path: /logement/edit/{id}
-    defaults: {_controller:CnccvHouseBundle:Logement:edit}
+    defaults: {_controller: CnccvHouseBundle:Logement:edit}
 
 logement_delete:
     path: /logement/delete/{id}
-    defaults: {_controller:CnccvHouseBundle:Logement:delete}
+    defaults: {_controller: CnccvHouseBundle:Logement:delete}
 
 #Note
 note_index:
     path: /note
-    defaults: {_controller:CnccvHouseBundle:Note:index}
+    defaults: {_controller: CnccvHouseBundle:Note:index}
 
 note_new:
     path: /note/new
-    defaults: {_controller:CnccvHouseBundle:Note:new}
+    defaults: {_controller: CnccvHouseBundle:Note:new}
 
 note_show:
     path: /note/show/{id}
-    defaults: {_controller:CnccvHouseBundle:Note:show}
+    defaults: {_controller: CnccvHouseBundle:Note:show}
 
 note_edit:
     path: /note/edit/{id}
-    defaults: {_controller:CnccvHouseBundle:Note:edit}
+    defaults: {_controller: CnccvHouseBundle:Note:edit}
 
 note_delete:
     path: /note/delete/{id}
-    defaults: {_controller:CnccvHouseBundle:Note:delete}
+    defaults: {_controller: CnccvHouseBundle:Note:delete}
 
 #Parametres_prix
 parametres_prix_index:
     path: /parametres_prix
-    defaults: {_controller:CnccvHouseBundle:Parametres_prix:index}
+    defaults: {_controller: CnccvHouseBundle:Parametres_prix:index}
 
 parametres_prix_new:
     path: /parametres_prix/new
-    defaults: {_controller:CnccvHouseBundle:Parametres_prix:new}
+    defaults: {_controller: CnccvHouseBundle:Parametres_prix:new}
 
 parametres_prix_show:
     path: /parametres_prix/show/{id}
-    defaults: {_controller:CnccvHouseBundle:Parametres_prix:show}
+    defaults: {_controller: CnccvHouseBundle:Parametres_prix:show}
 
 parametres_prix_edit:
     path: /parametres_prix/edit/{id}
-    defaults: {_controller:CnccvHouseBundle:Parametres_prix:edit}
+    defaults: {_controller: CnccvHouseBundle:Parametres_prix:edit}
 
 parametres_prix_delete:
     path: /parametres_prix/delete/{id}
-    defaults: {_controller:CnccvHouseBundle:Parametres_prix:delete}
+    defaults: {_controller: CnccvHouseBundle:Parametres_prix:delete}
 
 #Reservation
 reservation_index:
     path: /reservation
-    defaults: {_controller:CnccvHouseBundle:Reservation:index}
+    defaults: {_controller: CnccvHouseBundle:Reservation:index}
 
 reservation_new:
     path: /reservation/new
-    defaults: {_controller:CnccvHouseBundle:Reservation:new}
+    defaults: {_controller: CnccvHouseBundle:Reservation:new}
 
 reservation_show:
     path: /reservation/show/{id}
-    defaults: {_controller:CnccvHouseBundle:Reservation:show}
+    defaults: {_controller: CnccvHouseBundle:Reservation:show}
 
 reservation_edit:
     path: /reservation/edit/{id}
-    defaults: {_controller:CnccvHouseBundle:Reservation:edit}
+    defaults: {_controller: CnccvHouseBundle:Reservation:edit}
 
 reservation_delete:
     path: /reservation/delete/{id}
-    defaults: {_controller:CnccvHouseBundle:Reservation:delete}
+    defaults: {_controller: CnccvHouseBundle:Reservation:delete}
 
 # Exemple de route
 # ce_que_je_mets_en_route:
