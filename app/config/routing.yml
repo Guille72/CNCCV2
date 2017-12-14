@@ -14,6 +14,11 @@ cnccv_house:
     path:      /admin
     defaults: {_controller: CnccvHouseBundle:Admin:index}
 
+#Qui sommes-nous
+cnccv_house:
+    path:      /qui
+    defaults: {_controller: CnccvHouseBundle:Qui:index}
+
 #User
 user_index:
     path: /user

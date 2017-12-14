@@ -5,14 +5,14 @@ namespace Cnccv\HouseBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-class AdminController extends Controller
+class QuiController extends Controller
 {
     /**
-     * @Route("/admin", name="admin")
+     * @Route("/qui", name="qui")
      */
     public function indexAction()
     {
-        $url = $this->get('router')->generate('admin', array(), true);
-        return $this->render('CnccvHouseBundle:admin:dashboard.html.twig');
+        $url = $this->get('router')->generate('qui', array(), true);
+        return $this->render('CnccvHouseBundle:Default:qui.html.twig');
     }
 }
