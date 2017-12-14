@@ -50,72 +50,76 @@
         </div>
         {# Désactiver le bouton agree par false#}
         {% include 'CnccvHouseBundle:widgets:_modal.html.twig' with {
-        dataId: 'connexion',
-        vue: 'CnccvHouseBundle:Default:connexion.html.twig',
-        modalFooter: false
+            dataId: 'connexion',
+            vue: 'CnccvHouseBundle:Default:connexion.html.twig',
+            modalFooter: false
         } %}
     </li>
 {% endif %}
 
-{% if is_granted("IS_AUTHENTICATED_FULLY") %}
-    <div class="navbar-fixed appear">
-        <!--Menu compressé-->
-        <nav>
-            <div class="nav-wrapper">
-                <a href="{{ path('homePage') }}" class="brand-logo red-text gt">
-                    <img src="{{ asset('img/logoSansCNCCV.svg') }}" width="58" height="58">
-                </a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i
-                            class="material-icons red-text">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a class="red-text gt" href="#!">Sass</a></li>
-                    <li><a class="red-text gt" href="#!">Components</a></li>
-                    <li><a class="red-text gt" href="#!">Javascript</a></li>
-                    <li><a class="red-text gt" href="#!">Mobile</a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a class="red-text gt" href="#!">Sass</a></li>
-                    <li><a class="red-text gt" href="#!">Components</a></li>
-                    <li><a class="red-text gt" href="#!">Javascript</a></li>
-                    <li><a class="red-text gt" href="#!">Mobile</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-{% else %}
-    <div class="navbar-fixed appear">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="{{ path('homePage') }}" class="brand-logo red-text gt">
-                    <img src="{{ asset('img/logoSansCNCCV.svg') }}" width="58" height="58">
-                </a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i
-                            class="material-icons red-text">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a class="red-text gt" href="#!">Sass</a></li>
-                    <li><a class="red-text gt" href="#!">Components</a></li>
-                    <li><a class="red-text gt" href="#!">Javascript</a></li>
-                    <li><a class="red-text gt" href="#!">Mobile</a></li>
-                </ul>
-                <ul class="side-nav" id="nav-mobile">
-                    <li><a class="red-text gt" href="#!">Sass</a></li>
-                    <li><a class="red-text gt" href="#!">Components</a></li>
-                    <li><a class="red-text gt" href="#!">Javascript</a></li>
-                    <li><a class="red-text gt" href="#!">Mobile</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <li>
-        <div class="center fix appear">
-            <a id="btn-connexion" class="waves-effect waves-light btn red darken-4 modal-trigger"
-               href="#connexion">Se connecter</a>
+    {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+        <div class="navbar-fixed appear">
+            <!--Menu compressé-->
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="{{ path('homePage') }}" class="brand-logo red-text gt">
+                        <img src="{{ asset('img/logoSansCNCCV.svg') }}" width="58" height="58">
+                    </a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i
+                                class="material-icons red-text">menu</i></a>
+                    <div class="sidebar">
+                        <ul class="right hide-on-med-and-down">
+                            <li><a class="red-text gt" href="#!">Sass</a></li>
+                            <li><a class="red-text gt" href="#!">Components</a></li>
+                            <li><a class="red-text gt" href="#!">Javascript</a></li>
+                            <li><a class="red-text gt" href="#!">Mobile</a></li>
+                        </ul>
+                        <ul class="side-nav" id="mobile-demo">
+                            <li><a class="red-text gt" href="#!">Sass</a></li>
+                            <li><a class="red-text gt" href="#!">Components</a></li>
+                            <li><a class="red-text gt" href="#!">Javascript</a></li>
+                            <li><a class="red-text gt" href="#!">Mobile</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
-        {# Désactiver le bouton agree par false#}
-        {% include 'CnccvHouseBundle:widgets:_modal.html.twig' with {
-        dataId: 'connexion',
-        vue: 'CnccvHouseBundle:Default:connexion.html.twig',
-        modalFooter: false
-        } %}
-    </li>
-{% endif %}
+    {% else %}
+        <div class="navbar-fixed appear">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="{{ path('homePage') }}" class="brand-logo red-text gt">
+                        <img src="{{ asset('img/logoSansCNCCV.svg') }}" width="58" height="58">
+                    </a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i
+                                class="material-icons red-text">menu</i></a>
+                    <div class="sidebar">
+                        <ul class="right hide-on-med-and-down">
+                            <li><a class="red-text gt" href="#!">Sass</a></li>
+                            <li><a class="red-text gt" href="#!">Components</a></li>
+                            <li><a class="red-text gt" href="#!">Javascript</a></li>
+                            <li><a class="red-text gt" href="#!">Mobile</a></li>
+                        </ul>
+                        <ul class="side-nav" id="nav-mobile">
+                            <li><a class="red-text gt" href="#!">Sass</a></li>
+                            <li><a class="red-text gt" href="#!">Components</a></li>
+                            <li><a class="red-text gt" href="#!">Javascript</a></li>
+                            <li><a class="red-text gt" href="#!">Mobile</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <li>
+            <div class="center fix appear">
+                <a id="btn-connexion" class="waves-effect waves-light btn red darken-4 modal-trigger"
+                   href="#connexion">Se connecter</a>
+            </div>
+            {# Désactiver le bouton agree par false#}
+            {% include 'CnccvHouseBundle:widgets:_modal.html.twig' with {
+                dataId: 'connexion',
+                vue: 'CnccvHouseBundle:Default:connexion.html.twig',
+                modalFooter: false
+            } %}
+        </li>
+    {% endif %}
