@@ -92,6 +92,9 @@ Créer des fichiers source-map en cas de débuggage.
 * Générer un CRUD :
     * `php bin/console generate:doctrine:crud`
     
+* Générer un controller :
+    * `php bin/console generate:controller`
+    
 * Mettre à jour l'entité :
     * `php bin/console generate:doctrine:entities CnccvHouseBundle:NomEntité`
 

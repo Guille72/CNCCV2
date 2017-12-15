@@ -49,12 +49,6 @@ class Logement
     private $adresse;
 
     /**
-     * @var boolean
-     * @ORM\Column(name="poele", type="boolean")
-     */
-    private $poele;
-
-    /**
      * @var string
      * @ORM\Column(name="localisation", type="string")
      */
@@ -77,13 +71,6 @@ class Logement
      * @ORM\Column(name="chambres", type="string")
      */
     private $chambres;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="taxe", type="decimal")
-     */
-    private $taxe;
 
     /**
      * @var string
@@ -128,30 +115,6 @@ class Logement
     }
 
     /**
-     * Set taxe
-     *
-     * @param float $taxe
-     *
-     * @return Logement
-     */
-    public function setTaxe($taxe)
-    {
-        $this->taxe = $taxe;
-
-        return $this;
-    }
-
-    /**
-     * Get taxe
-     *
-     * @return float
-     */
-    public function getTaxe()
-    {
-        return $this->taxe;
-    }
-
-    /**
      * Set description
      *
      * @param string $description
@@ -174,7 +137,7 @@ class Logement
     {
         return $this->description;
     }
-    
+
     /**
      * Set coefPrix
      *
@@ -221,30 +184,6 @@ class Logement
     public function getAdresse()
     {
         return $this->adresse;
-    }
-
-    /**
-     * Set poele
-     *
-     * @param boolean $poele
-     *
-     * @return Logement
-     */
-    public function setPoele($poele)
-    {
-        $this->poele = $poele;
-
-        return $this;
-    }
-
-    /**
-     * Get poele
-     *
-     * @return boolean
-     */
-    public function getPoele()
-    {
-        return $this->poele;
     }
 
     /**

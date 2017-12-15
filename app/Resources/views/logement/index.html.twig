@@ -10,10 +10,8 @@
                 <th>Id</th>
                 <th>Personnes maximum</th>
                 <th>Prix</th>
-                <th>Taxe</th>
                 <th>Description</th>
                 <th>Adresse</th>
-                <th>Poele</th>
                 <th>Localisation</th>
                 <th>Surface</th>
                 <th>Type</th>
@@ -27,11 +25,9 @@
                 <tr>
                     <td><a href="{{ path('logement_show', { 'id': logement.id }) }}">{{ logement.id }}</a></td>
                     <td>{{ logement.personneMax }}</td>
-                    <td>{{ logement.prix }}</td>
-                    <td>{{ logement.taxe }}</td>
+                    <td>{{ logement.base_prix_id_id }}</td>
                     <td>{{ logement.description }}</td>
                     <td>{{ logement.adresse }}</td>
-                    <td>{{ logement.poele }}</td>
                     <td>{{ logement.localisation }}</td>
                     <td>{{ logement.surface }}</td>
                     <td>{{ logement.type }}</td>
