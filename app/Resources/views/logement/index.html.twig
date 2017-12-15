@@ -9,7 +9,6 @@
             <tr>
                 <th>Id</th>
                 <th>Personnes maximum</th>
-                <th>Prix</th>
                 <th>Description</th>
                 <th>Adresse</th>
                 <th>Localisation</th>
@@ -25,7 +24,6 @@
                 <tr>
                     <td><a href="{{ path('logement_show', { 'id': logement.id }) }}">{{ logement.id }}</a></td>
                     <td>{{ logement.personneMax }}</td>
-                    <td>{{ logement.base_prix_id_id }}</td>
                     <td>{{ logement.description }}</td>
                     <td>{{ logement.adresse }}</td>
                     <td>{{ logement.localisation }}</td>
