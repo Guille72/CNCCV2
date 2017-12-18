@@ -60,7 +60,18 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="security.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -149,7 +160,6 @@
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/ResaController.php" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/cards.html.twig" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_header.html.twig" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/layout.html.twig" />
@@ -166,6 +176,7 @@
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/qui.html.twig" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_map.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/assets/scss/style.scss" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
       </list>
     </option>
   </component>
@@ -497,12 +508,12 @@
       <workItem from="1513239365416" duration="8286000" />
       <workItem from="1513324664761" duration="2435000" />
       <workItem from="1513327184055" duration="2218000" />
-      <workItem from="1513585177722" duration="6658000" />
+      <workItem from="1513585177722" duration="7141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221875000" />
+    <option name="totallyTimeSpent" value="222358000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="416" y="0" width="1189" height="867" extended-state="0" />
@@ -710,14 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="31" column="15" lean-forward="false" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/widgets/_header.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1496">
@@ -920,6 +923,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
           <folding />
         </state>
       </provider>
