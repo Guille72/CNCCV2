@@ -1,4 +1,8 @@
 // Google Map
+.gm {
+  border-top: black solid 1px;
+}
+
 #map {
   width: 100%;
   height: 400px;
@@ -86,9 +90,13 @@ h5 {
 
 // Qui sommes-nous ?
 .qui {
+  margin-top: 3%;
+  margin-bottom: 3%;
   margin-left: 25%;
   margin-right: 20%;
-  background-color: snow;
+  background-color: #fbfafa;
+  border: solid 1px black;
+  padding-left: 10px;
   h3 {
     text-align: center;
     margin-bottom: 30px;
