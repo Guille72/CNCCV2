@@ -1,71 +1,71 @@
 {% extends '::admin.html.twig' %}
 
 {% block body %}
-<div class="row">
-    <div class="col s6 m3">
-        <div class="card">
-            <div class="card-content">
-                <p><strong>Utilisateurs</strong></p>
-                <a href="{{ path('user_index') }}" class="waves-effect waves-light btn btn-block">Liste</a>
-                <a href="{{ path('user_new') }}" class="waves-effect waves-light btn btn-block light-blue">Ajouter</a>
+    <div class="row">
+        <div class="col s6 m3">
+            <div class="card">
+                <div class="card-content">
+                    <p><strong>Utilisateurs</strong></p>
+                    <a href="{{ path('user_index') }}" class="waves-effect waves-light btn btn-block">Liste</a>
+                    <a href="{{ path('user_new') }}"
+                       class="waves-effect waves-light btn btn-block light-blue">Ajouter</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s6 m3">
+            <div class="card">
+                <div class="card-content">
+                    <p><strong>Logements</strong></p>
+                    <a href="{{ path('logement_index') }}" class="waves-effect waves-light btn btn-block">Liste</a>
+                    <a href="{{ path('logement_new') }}"
+                       class="waves-effect waves-light btn btn-block light-blue">Ajouter</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s6 m3">
+            <div class="card">
+                <div class="card-content">
+                    <p><strong>Réservations</strong></p>
+                    <a href="{{ path('reservation_index') }}" class="waves-effect waves-light btn btn-block">Liste</a>
+                    <a href="{{ path('reservation_new') }}" class="waves-effect waves-light btn btn-block light-blue">Ajouter</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s6 m3">
+            <div class="card">
+                <div class="card-content">
+                    <p><strong>Bases prix</strong></p>
+                    <a href="{{ path('base_prix_index') }}" class="waves-effect waves-light btn btn-block">Liste</a>
+                    <a href="{{ path('base_prix_new') }}"
+                       class="waves-effect waves-light btn btn-block light-blue">Modifier</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s6 m3">
+            <div class="card">
+                <div class="card-content">
+                    <p><strong>Notes</strong></p>
+                    <a href="{{ path('note_index') }}" class="waves-effect waves-light btn btn-block">Liste</a>
+                    <a href="{{ path('note_new') }}"
+                       class="waves-effect waves-light btn btn-block light-blue">Modifier</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s6 m3">
+            <div class="card">
+                <div class="card-content">
+                    <p><strong>Parametres de prix</strong></p>
+                    <a href="{{ path('parametres_prix_index') }}"
+                       class="waves-effect waves-light btn btn-block">Liste</a>
+                    <a href="{{ path('parametres_prix_new') }}"
+                       class="waves-effect waves-light btn btn-block light-blue">Modifier</a>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="col s6 m3">
-        <div class="card">
-            <div class="card-content">
-                <p><strong>Logements</strong></p>
-                <a href="{{ path('logement_index') }}" class="waves-effect waves-light btn btn-block">Liste</a>
-                <a href="{{ path('logement_new') }}"
-                   class="waves-effect waves-light btn btn-block light-blue">Ajouter</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col s6 m3">
-        <div class="card">
-            <div class="card-content">
-                <p><strong>Réservations</strong></p>
-                <a href="{{ path('reservation_index') }}" class="waves-effect waves-light btn btn-block">Liste</a>
-                <a href="{{ path('reservation_new') }}" class="waves-effect waves-light btn btn-block light-blue">Ajouter</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col s6 m3">
-        <div class="card">
-            <div class="card-content">
-                <p><strong>Bases prix</strong></p>
-                <a href="{{ path('base_prix_index') }}" class="waves-effect waves-light btn btn-block">Liste</a>
-                <a href="{{ path('base_prix_new') }}"
-                   class="waves-effect waves-light btn btn-block light-blue">Modifier</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col s6 m3">
-        <div class="card">
-            <div class="card-content">
-                <p><strong>Notes</strong></p>
-                <a href="{{ path('note_index') }}" class="waves-effect waves-light btn btn-block">Liste</a>
-                <a href="{{ path('note_new') }}"
-                   class="waves-effect waves-light btn btn-block light-blue">Modifier</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col s6 m3">
-        <div class="card">
-            <div class="card-content">
-                <p><strong>Parametres de prix</strong></p>
-                <a href="{{ path('parametres_prix_index') }}" class="waves-effect waves-light btn btn-block">Liste</a>
-                <a href="{{ path('parametres_prix_new') }}"
-                   class="waves-effect waves-light btn btn-block light-blue">Modifier</a>
-            </div>
-        </div>
-    </div>
-
-</div>
-
 {% endblock %}

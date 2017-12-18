@@ -24,9 +24,9 @@ class Logement
 
     /**
      * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Base_prix")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(name="base_prix", referencedColumnName="id")
      */
-    private $base_prix_id;
+    private $base_prix;
 
     /**
      * @var int
@@ -280,29 +280,5 @@ class Logement
     public function getChambres()
     {
         return $this->chambres;
-    }
-
-    /**
-     * Set basePrixId
-     *
-     * @param \Cnccv\HouseBundle\Entity\Base_prix $basePrixId
-     *
-     * @return Logement
-     */
-    public function setBasePrixId(\Cnccv\HouseBundle\Entity\Base_prix $basePrixId)
-    {
-        $this->base_prix_id = $basePrixId;
-
-        return $this;
-    }
-
-    /**
-     * Get basePrixId
-     *
-     * @return \Cnccv\HouseBundle\Entity\Base_prix
-     */
-    public function getBasePrixId()
-    {
-        return $this->base_prix_id;
     }
 }
