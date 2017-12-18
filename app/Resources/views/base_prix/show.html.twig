@@ -16,11 +16,19 @@
             </tr>
             <tr>
                 <th>Date de début</th>
-                <td>{% if base_prix.dateDebut %}{{ base_prix.dateDebut|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    {% if base_prix.dateDebut %}
+                        {{ base_prix.dateDebut|date('Y-m-d') }}
+                    {% endif %}
+                </td>
             </tr>
             <tr>
                 <th>Date de fin</th>
-                <td>{% if base_prix.dateFin %}{{ base_prix.dateFin|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    {% if base_prix.dateFin %}
+                        {{ base_prix.dateFin|date('Y-m-d') }}
+                    {% endif %}
+                </td>
             </tr>
             </tbody>
         </table>

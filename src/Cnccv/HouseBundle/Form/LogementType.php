@@ -13,7 +13,7 @@ class LogementType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('personneMax')->add('description')->add('base_prix_id_id')->add('adresse')->add('localisation')->add('surface')->add('type')->add('coefPrix')->add('chambres');
+        $builder->add('personneMax')->add('description')->add('basePrix')->add('adresse')->add('localisation')->add('surface')->add('type')->add('coefPrix')->add('chambres');
     }
 
     /**

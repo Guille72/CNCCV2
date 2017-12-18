@@ -25,6 +25,15 @@ class Base_prix
     private $id;
 
     /**
+     * @ORM\OneToMany(targetEntity="Logement", mappedBy="base_prix")
+     */
+    private $logement;
+
+    public function __construct() {
+        $this->logement = new ArrayCollection();
+    }
+
+    /**
      * @var string
      *
      * @ORM\Column(name="prix", type="decimal")
@@ -126,5 +135,39 @@ class Base_prix
     public function getDateFin()
     {
         return $this->dateFin;
+    }
+
+    /**
+     * Add logement
+     *
+     * @param \Cnccv\HouseBundle\Entity\Logement $logement
+     *
+     * @return Base_prix
+     */
+    public function addLogement(\Cnccv\HouseBundle\Entity\Logement $logement)
+    {
+        $this->logement[] = $logement;
+
+        return $this;
+    }
+
+    /**
+     * Remove logement
+     *
+     * @param \Cnccv\HouseBundle\Entity\Logement $logement
+     */
+    public function removeLogement(\Cnccv\HouseBundle\Entity\Logement $logement)
+    {
+        $this->logement->removeElement($logement);
+    }
+
+    /**
+     * Get logement
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getLogement()
+    {
+        return $this->logement;
     }
 }
