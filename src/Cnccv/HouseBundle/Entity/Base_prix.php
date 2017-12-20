@@ -25,11 +25,12 @@ class Base_prix
     private $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="Logement", mappedBy="base_prix")
+     * @ORM\OneToMany(targetEntity="Logement", mappedBy="basePrix")
      */
     private $logement;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->logement = new ArrayCollection();
     }
 

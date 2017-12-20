@@ -1012,13 +1012,13 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="230" name="base_prix">
+    <column id="249" parent="230" name="base_prix_id">
       <Position>10</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="250" parent="230" name="IDX_F0FD4457618C24AE">
-      <ColNames>base_prix</ColNames>
+    <index id="250" parent="230" name="IDX_F0FD4457A0419B96">
+      <ColNames>base_prix_id</ColNames>
     </index>
     <key id="251" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>

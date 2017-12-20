@@ -97,6 +97,9 @@ Créer des fichiers source-map en cas de débuggage.
     
 * Mettre à jour l'entité :
     * `php bin/console generate:doctrine:entities CnccvHouseBundle:NomEntité`
+    
+* Mettre à jour toutes les entités :
+    * `php bin/console generate:doctrine:entities CnccvHouseBundle`
 
 * Mettre à jour les tables :
     * `php bin/console doctrine:schema:update --force`
