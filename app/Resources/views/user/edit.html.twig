@@ -6,7 +6,7 @@
 
         {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit"/>
+        <input class="waves-effect waves-light btn"  type="submit" value="Editer"/>
         {{ form_end(edit_form) }}
 
         <ul>
@@ -15,7 +15,7 @@
             </li>
             <li>
                 {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input class="waves-effect waves-light btn red" type="submit" value="Supprimer">
                 {{ form_end(delete_form) }}
             </li>
         </ul>
