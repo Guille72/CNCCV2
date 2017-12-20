@@ -2,31 +2,35 @@
 
 {% block body %}
     <div class="container">
-        <h1>Base prix</h1>
+        <h1>Evènement</h1>
 
         <table>
             <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ base_prix.id }}</td>
+                <td>{{ evenement.id }}</td>
+            </tr>
+            <tr>
+                <th>Evènement</th>
+                <td>{{ evenement.evenement }}</td>
             </tr>
             <tr>
                 <th>Prix</th>
-                <td>{{ base_prix.prix }}</td>
+                <td>{{ evenement.prix }}</td>
             </tr>
             <tr>
                 <th>Date de début</th>
                 <td>
-                    {% if base_prix.dateDebut %}
-                        {{ base_prix.dateDebut|date('Y-m-d') }}
+                    {% if evenement.dateDebut %}
+                        {{ evenement.dateDebut|date('Y-m-d') }}
                     {% endif %}
                 </td>
             </tr>
             <tr>
                 <th>Date de fin</th>
                 <td>
-                    {% if base_prix.dateFin %}
-                        {{ base_prix.dateFin|date('Y-m-d') }}
+                    {% if evenement.dateFin %}
+                        {{ evenement.dateFin|date('Y-m-d') }}
                     {% endif %}
                 </td>
             </tr>
@@ -35,10 +39,10 @@
 
         <ul>
             <li>
-                <a href="{{ path('base_prix_index') }}">Retour à la liste</a>
+                <a href="{{ path('evenement_index') }}">Retour à la liste</a>
             </li>
             <li>
-                <a href="{{ path('base_prix_edit', { 'id': base_prix.id }) }}">Modifier</a>
+                <a href="{{ path('evenement_edit', { 'id': evenement.id }) }}">Modifier</a>
             </li>
             <li>
                 {{ form_start(delete_form) }}

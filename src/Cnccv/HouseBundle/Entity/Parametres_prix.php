@@ -34,7 +34,7 @@ class Parametres_prix
     private $reservation;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Base_prix")
+     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Evenement")
      * @ORM\JoinColumn(nullable=false)
      */
     private $base_prix;
@@ -442,11 +442,11 @@ class Parametres_prix
     /**
      * Set basePrix
      *
-     * @param \Cnccv\HouseBundle\Entity\Base_prix $basePrix
+     * @param \Cnccv\HouseBundle\Entity\Evenement $basePrix
      *
      * @return Parametres_prix
      */
-    public function setBasePrix(\Cnccv\HouseBundle\Entity\Base_prix $basePrix)
+    public function setBasePrix(\Cnccv\HouseBundle\Entity\Evenement $basePrix)
     {
         $this->base_prix = $basePrix;
 
@@ -456,7 +456,7 @@ class Parametres_prix
     /**
      * Get basePrix
      *
-     * @return \Cnccv\HouseBundle\Entity\Base_prix
+     * @return \Cnccv\HouseBundle\Entity\Evenement
      */
     public function getBasePrix()
     {

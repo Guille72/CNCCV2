@@ -8,6 +8,8 @@
             <thead>
             <tr>
                 <th>Id</th>
+                <th>Ajouté le</th>
+                <th>Modifié le</th>
                 <th>Arrivée</th>
                 <th>Depart</th>
                 <th>Nombre de personnes</th>
@@ -15,6 +17,7 @@
                 <th>Annulation</th>
                 <th>Supplément</th>
                 <th>Avoir</th>
+                <th>Prix</th>
                 <th>Calendrier externe</th>
                 <th>Numéro de réservation</th>
                 <th>Actions</th>
@@ -24,6 +27,8 @@
             {% for reservation in reservations %}
                 <tr>
                     <td><a href="{{ path('reservation_show', { 'id': reservation.id }) }}">{{ reservation.id }}</a></td>
+                    <td>{% if reservation.created %}{{ reservation.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    <td>{% if reservation.updated %}{{ reservation.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
                     <td>{% if reservation.arrivee %}{{ reservation.arrivee|date('Y-m-d') }}{% endif %}</td>
                     <td>{% if reservation.depart %}{{ reservation.depart|date('Y-m-d') }}{% endif %}</td>
                     <td>{{ reservation.nbPersonne }}</td>
@@ -31,6 +36,7 @@
                     <td>{% if reservation.annulation %}{{ reservation.annulation|date('Y-m-d') }}{% endif %}</td>
                     <td>{{ reservation.supplement }}</td>
                     <td>{{ reservation.avoir }}</td>
+                    <td>{{ reservation.prix }}</td>
                     <td>{{ reservation.calendrierExt }}</td>
                     <td>{{ reservation.numReservation }}</td>
                     <td>

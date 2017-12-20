@@ -19,6 +19,7 @@
                 <th>Créé le</th>
                 <th>Modifié le</th>
                 <th>CNI</th>
+                <th>TVA Intracom.</th>
                 <th>Actions</th>
             </tr>
             </thead>
@@ -38,6 +39,7 @@
                     <td>{% if user.created %}{{ user.created|date('Y-m-d H:i:s') }}{% endif %}</td>
                     <td>{% if user.updated %}{{ user.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
                     <td>{{ user.imageName }}</td>
+                    <td>{{ user.tvaInt }}</td>
                     <td>
                         <ul>
                             <li>

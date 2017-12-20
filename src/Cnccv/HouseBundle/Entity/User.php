@@ -39,6 +39,12 @@ class User extends BaseUser
     private $firstname;
 
     /**
+     * @var string
+     * @ORM\Column(type="string", name="tvaInt")
+     */
+    private $tvaInt;
+
+    /**
      * @var \Date
      * @ORM\Column(type="date")
      */
@@ -477,5 +483,29 @@ class User extends BaseUser
     public function getCommPrive()
     {
         return $this->comm_prive;
+    }
+
+    /**
+     * Set tvaInt
+     *
+     * @param string $tvaInt
+     *
+     * @return User
+     */
+    public function setTvaInt($tvaInt)
+    {
+        $this->tvaInt = $tvaInt;
+
+        return $this;
+    }
+
+    /**
+     * Get tvaInt
+     *
+     * @return string
+     */
+    public function getTvaInt()
+    {
+        return $this->tvaInt;
     }
 }

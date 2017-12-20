@@ -23,11 +23,6 @@ class Logement
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Base_prix", inversedBy="logement")
-     */
-    private $basePrix;
-
-    /**
      * @var int
      *
      * @ORM\Column(name="personne_max", type="integer")
@@ -40,6 +35,12 @@ class Logement
      * @ORM\Column(name="coefPrix", type="decimal")
      */
     private $coefPrix;
+
+    /**
+     * @var string
+     * @ORM\Column(name="nom", type="string")
+     */
+    private $nom;
 
     /**
      * @var string
@@ -282,50 +283,26 @@ class Logement
     }
 
     /**
-     * Set basePrix
+     * Set nom
      *
-     * @param \Cnccv\HouseBundle\Entity\Base_prix $basePrix
+     * @param string $nom
      *
      * @return Logement
      */
-    public function setBasePrix(\Cnccv\HouseBundle\Entity\Base_prix $basePrix)
+    public function setNom($nom)
     {
-        $this->basePrix = $basePrix;
+        $this->nom = $nom;
 
         return $this;
     }
 
     /**
-     * Get basePrix
+     * Get nom
      *
-     * @return \Cnccv\HouseBundle\Entity\Base_prix
+     * @return string
      */
-    public function getBasePrix()
+    public function getNom()
     {
-        return $this->basePrix;
-    }
-
-    /**
-     * Set basePrixId
-     *
-     * @param \Cnccv\HouseBundle\Entity\Base_prix $basePrixId
-     *
-     * @return Logement
-     */
-    public function setBasePrixId(\Cnccv\HouseBundle\Entity\Base_prix $basePrixId = null)
-    {
-        $this->basePrixId = $basePrixId;
-
-        return $this;
-    }
-
-    /**
-     * Get basePrixId
-     *
-     * @return \Cnccv\HouseBundle\Entity\Base_prix
-     */
-    public function getBasePrixId()
-    {
-        return $this->basePrixId;
+        return $this->nom;
     }
 }

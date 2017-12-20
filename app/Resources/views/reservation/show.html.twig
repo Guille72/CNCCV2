@@ -11,6 +11,14 @@
                 <td>{{ reservation.id }}</td>
             </tr>
             <tr>
+            <tr>
+                <th>Créé le</th>
+                <td>{% if reservation.created %}{{ reservation.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Modifié le</th>
+                <td>{% if reservation.updated %}{{ reservation.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
                 <th>Arrivee</th>
                 <td>{% if reservation.arrivee %}{{ reservation.arrivee|date('Y-m-d') }}{% endif %}</td>
             </tr>
@@ -37,6 +45,10 @@
             <tr>
                 <th>Avoir</th>
                 <td>{{ reservation.avoir }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ reservation.prix }}</td>
             </tr>
             <tr>
                 <th>Calendrierext</th>

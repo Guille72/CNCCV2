@@ -8,15 +8,15 @@
         <thead>
         <tr>
             <th>Id</th>
+            <th>Nom</th>
             <th>Adresse</th>
             <th>Localisation</th>
             <th>Type</th>
             <th>Surface</th>
             <th>Chambres</th>
-            <th>Personnes maximum</th>
+            <th>Personnes max</th>
             <th>Description</th>
-            <th>Prix</th>
-            <th>Coefficient prix</th>
+            <th>Coef. prix</th>
             <th>Actions</th>
         </tr>
         </thead>
@@ -24,6 +24,7 @@
         {% for logement in logements %}
         <tr>
             <td><a href="{{ path('logement_show', { 'id': logement.id }) }}">{{ logement.id }}</a></td>
+            <td>{{ logement.nom}}</td>
             <td>{{ logement.adresse }}</td>
             <td>{{ logement.localisation }}</td>
             <td>{{ logement.type }}</td>
@@ -31,7 +32,6 @@
             <td>{{ logement.chambres }}</td>
             <td>{{ logement.personneMax }}</td>
             <td>{{ logement.description }}</td>
-            <td>{{ logement.basePrix ? logement.basePrix.prix }}</td>
             <td>{{ logement.coefPrix }}</td>
             <td>
                 <ul>

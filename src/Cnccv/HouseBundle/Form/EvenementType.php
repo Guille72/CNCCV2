@@ -6,14 +6,14 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class Base_prixType extends AbstractType
+class EvenementType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('prix')->add('dateDebut')->add('dateFin');
+        $builder->add('evenement')->add('prix')->add('dateDebut')->add('dateFin');
     }
 
     /**
@@ -22,7 +22,7 @@ class Base_prixType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Cnccv\HouseBundle\Entity\Base_prix'
+            'data_class' => 'Cnccv\HouseBundle\Entity\Evenement'
         ));
     }
 
@@ -31,7 +31,7 @@ class Base_prixType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'cnccv_housebundle_base_prix';
+        return 'cnccv_housebundle_evenement';
     }
 
 

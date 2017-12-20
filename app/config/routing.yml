@@ -45,26 +45,26 @@ user_delete:
     path: admin/user/delete/{id}
     defaults: {_controller: CnccvHouseBundle:User:delete}
 
-#Base_prix
-base_prix_index:
-    path: admin/base_prix
-    defaults: {_controller: CnccvHouseBundle:Base_prix:index}
+#Evenement
+evenement_index:
+    path: admin/evenement
+    defaults: {_controller: CnccvHouseBundle:Evenement:index}
 
-base_prix_new:
-    path: admin/base_prix/new
-    defaults: {_controller: CnccvHouseBundle:Base_prix:new}
+evenement_new:
+    path: admin/evenement/new
+    defaults: {_controller: CnccvHouseBundle:Evenement:new}
 
-base_prix_show:
-    path: admin/base_prix/show/{id}
-    defaults: {_controller: CnccvHouseBundle:Base_prix:show}
+evenement_show:
+    path: admin/evenement/show/{id}
+    defaults: {_controller: CnccvHouseBundle:Evenement:show}
 
-base_prix_edit:
-    path: admin/base_prix/edit/{id}
-    defaults: {_controller: CnccvHouseBundle:Base_prix:edit}
+evenement_edit:
+    path: admin/evenement/edit/{id}
+    defaults: {_controller: CnccvHouseBundle:Evenement:edit}
 
-base_prix_delete:
-    path: admin/base_prix/delete/{id}
-    defaults: {_controller: CnccvHouseBundle:Base_prix:delete}
+evenement_delete:
+    path: admin/evenement/delete/{id}
+    defaults: {_controller: CnccvHouseBundle:Evenement:delete}
 
 #Logement
 logement_index:

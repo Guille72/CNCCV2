@@ -8,12 +8,12 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
 /**
- * Base_prix
+ * Evenement
  *
- * @ORM\Table(name="base_prix")
- * @ORM\Entity(repositoryClass="Cnccv\HouseBundle\Repository\Base_prixRepository")
+ * @ORM\Table(name="evenement")
+ * @ORM\Entity(repositoryClass="Cnccv\HouseBundle\Repository\EvenementRepository")
  */
-class Base_prix
+class Evenement
 {
     /**
      * @var int
@@ -24,11 +24,6 @@ class Base_prix
      */
     private $id;
 
-    /**
-     * @ORM\OneToMany(targetEntity="Logement", mappedBy="basePrix")
-     */
-    private $logement;
-
     public function __construct()
     {
         $this->logement = new ArrayCollection();
@@ -37,7 +32,14 @@ class Base_prix
     /**
      * @var string
      *
-     * @ORM\Column(name="prix", type="decimal")
+     * @ORM\Column(name="evenement", type="string")
+     */
+    private $evenement;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prix", type="string")
      */
     private $prix;
 
@@ -71,7 +73,7 @@ class Base_prix
      *
      * @param float $prix
      *
-     * @return Base_prix
+     * @return Evenement
      */
     public function setPrix($prix)
     {
@@ -95,7 +97,7 @@ class Base_prix
      *
      * @param \DateTime $dateDebut
      *
-     * @return Base_prix
+     * @return Evenement
      */
     public function setDateDebut($dateDebut)
     {
@@ -119,7 +121,7 @@ class Base_prix
      *
      * @param \DateTime $dateFin
      *
-     * @return Base_prix
+     * @return Evenement
      */
     public function setDateFin($dateFin)
     {
@@ -139,36 +141,26 @@ class Base_prix
     }
 
     /**
-     * Add logement
+     * Set evenement
      *
-     * @param \Cnccv\HouseBundle\Entity\Logement $logement
+     * @param string $evenement
      *
-     * @return Base_prix
+     * @return Evenement
      */
-    public function addLogement(\Cnccv\HouseBundle\Entity\Logement $logement)
+    public function setEvenement($evenement)
     {
-        $this->logement[] = $logement;
+        $this->evenement = $evenement;
 
         return $this;
     }
 
     /**
-     * Remove logement
+     * Get evenement
      *
-     * @param \Cnccv\HouseBundle\Entity\Logement $logement
+     * @return string
      */
-    public function removeLogement(\Cnccv\HouseBundle\Entity\Logement $logement)
+    public function getEvenement()
     {
-        $this->logement->removeElement($logement);
-    }
-
-    /**
-     * Get logement
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getLogement()
-    {
-        return $this->logement;
+        return $this->evenement;
     }
 }
