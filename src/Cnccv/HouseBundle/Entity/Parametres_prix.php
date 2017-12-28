@@ -23,19 +23,19 @@ class Parametres_prix
 
     /**
      * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Logement")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn()
      */
     private $logement;
 
     /**
      * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Reservation")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn()
      */
     private $reservation;
 
     /**
      * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Evenement")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn()
      */
     private $base_prix;
 
@@ -73,6 +73,13 @@ class Parametres_prix
      * @ORM\Column(name="remise_mois", type="decimal", precision=10, scale=0)
      */
     private $remiseMois;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prixDef", type="decimal", precision=10, scale=0)
+     */
+    private $prixDef;
 
     /**
      * @var string
@@ -461,5 +468,29 @@ class Parametres_prix
     public function getBasePrix()
     {
         return $this->base_prix;
+    }
+
+    /**
+     * Set prixDef
+     *
+     * @param string $prixDef
+     *
+     * @return Parametres_prix
+     */
+    public function setPrixDef($prixDef)
+    {
+        $this->prixDef = $prixDef;
+
+        return $this;
+    }
+
+    /**
+     * Get prixDef
+     *
+     * @return string
+     */
+    public function getPrixDef()
+    {
+        return $this->prixDef;
     }
 }

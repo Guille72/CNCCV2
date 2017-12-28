@@ -1,25 +1,25 @@
 ﻿# CNCCV
 
-##Composer en ligne de commande
-###Acquérir Composer :
+## Composer en ligne de commande
+### Acquérir Composer :
 https://getcomposer.org/
 * Composer va permettre de récupérer des bibliothèques externes au projet afin d'ajouter des fonctionnalités.
 * Exemples : PHPMailer, Xajax, FPDF...
 
-###Installer Composer localement (uniquement sur le projet) =/= globalement:
+### Installer Composer localement (uniquement sur le projet) =/= globalement:
 * `$ composer ` ou `$ php composer.phar `
 
-###Débuter un projet :
+### Débuter un projet :
 * `$ composer init` ou `$ php composer.phar init`
 
-###Installer des composants :
+### Installer des composants :
 * `$ composer install LeNomDeLaLibrairie` ou `$ php composer.phar install LeNomDeLaLibrairie`
 
-###Mettre à jour les composants installés :
+### Mettre à jour les composants installés :
 * `$ composer update` ou `$ php composer.phar update`
 
-##NPM
-###Acquérir NPM avec NodeJS :
+## NPM
+### Acquérir NPM avec NodeJS :
 * NPM permet également d'installer des applications Node.js disponibles sur le dépôt npm. Il s'agit donc d'un
 gestionnaire pour des dépendances en JavaScript.
 
@@ -31,18 +31,18 @@ web sans avoir besoin d'un logiciel externe sur notre site. En clair, les élém
 
 https://nodejs.org/en/
 
-###Installation de NPM et NodeJS :
+### Installation de NPM et NodeJS :
 * Pour installer NPM, il faut obligatoirement installer NodeJS.
 * Pour installer NodeJS, il faut aller sur le site internet et prendre le fichier .exe
 
-###Installer des dépendances (jquery, magnific-popup, webpack...):
+### Installer des dépendances (jquery, magnific-popup, webpack...):
 * Sur Github ou le site des frameworks (par exemple) il est écrit une ligne de commande.
 * Exemple :   `$ npm install materialize-css --save-dev|--save`
    
     * `--save-dev` : Une dépendance de développement.
     * `--save` : Une dépendance.
 
-###Commandes NPM :
+### Commandes NPM :
 * `$ npm install`<br/>
     Installe les dépendances du projet.
     
@@ -58,7 +58,7 @@ Pour minimiser tous les fichiers à la fin du projet avant la mise en production
 * `$ npm run debug`<br/>
 Créer des fichiers source-map en cas de débuggage.
 
-##Pour ajouter des dépendances :
+## Pour ajouter des dépendances :
 
 * Du type JavaScript : 
     * Pour ajouter notre propre JavaScript, il faut l'insérer dans le fichier main.js, dans le dossier assets puis le
@@ -72,7 +72,7 @@ Créer des fichiers source-map en cas de débuggage.
     
     * Dans ces mêmes dossiers, le CSS/SCSS des dépendances installées se situe dans le fichier app.scss : `assets/scss/app.scss` (Ne pas y toucher)
 
-##Framework PHP : Symfony
+## Framework PHP : Symfony
 
 * Lancer le seveur :
     * `php bin/console server:run`
