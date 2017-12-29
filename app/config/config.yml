@@ -98,3 +98,6 @@ vich_uploader:
             delete_on_update: '%uploader.cni.delete_on_update%'
             delete_on_remove: '%uploader.cni.delete_on_remove%'
             namer: vich_uploader.namer_origname
+
+kami_booking:
+    entity_class: Cnccv\HouseBundle\Entity\Reservation
