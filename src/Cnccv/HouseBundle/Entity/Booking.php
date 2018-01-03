@@ -6,12 +6,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 
 /**
- * Reservation
+ * Booking
  *
  * @ORM\Table(name="reservation")
- * @ORM\Entity(repositoryClass="Cnccv\HouseBundle\Repository\ReservationRepository")
+ * @ORM\Entity(repositoryClass="Cnccv\HouseBundle\Repository\BookingRepository")
  */
-class Reservation
+class Booking
 {
     /**
      * @var int
@@ -23,30 +23,18 @@ class Reservation
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Logement")
-     * @ORM\JoinColumn(nullable=false)
+     * @var \DateTime
+     *
+     * @ORM\Column(name="start_date", type="datetime", unique=true)
      */
-    private $logement;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\User")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $user;
+    private $start_date;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="arrivee", type="date", unique=true)
+     * @ORM\Column(name="end_date", type="datetime", unique=true)
      */
-    private $arrivee;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="depart", type="date", unique=true)
-     */
-    private $depart;
+    private $end_date;
 
     /**
      * @var int
@@ -91,14 +79,6 @@ class Reservation
     private $calendrierExt;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="num_reservation", type="integer", unique=true)
-     */
-    private $numReservation;
-
-
-    /**
      * Get id
      *
      * @return int
@@ -109,59 +89,11 @@ class Reservation
     }
 
     /**
-     * Set arrivee
-     *
-     * @param \DateTime $arrivee
-     *
-     * @return Reservation
-     */
-    public function setArrivee($arrivee)
-    {
-        $this->arrivee = $arrivee;
-
-        return $this;
-    }
-
-    /**
-     * Get arrivee
-     *
-     * @return \DateTime
-     */
-    public function getArrivee()
-    {
-        return $this->arrivee;
-    }
-
-    /**
-     * Set depart
-     *
-     * @param \DateTime $depart
-     *
-     * @return Reservation
-     */
-    public function setDepart($depart)
-    {
-        $this->depart = $depart;
-
-        return $this;
-    }
-
-    /**
-     * Get depart
-     *
-     * @return \DateTime
-     */
-    public function getDepart()
-    {
-        return $this->depart;
-    }
-
-    /**
      * Set nbPersonne
      *
      * @param integer $nbPersonne
      *
-     * @return Reservation
+     * @return Booking
      */
     public function setNbPersonne($nbPersonne)
     {
@@ -185,7 +117,7 @@ class Reservation
      *
      * @param integer $nbNuit
      *
-     * @return Reservation
+     * @return Booking
      */
     public function setNbNuit($nbNuit)
     {
@@ -209,7 +141,7 @@ class Reservation
      *
      * @param \DateTime $annulation
      *
-     * @return Reservation
+     * @return Booking
      */
     public function setAnnulation($annulation)
     {
@@ -233,7 +165,7 @@ class Reservation
      *
      * @param float $supplement
      *
-     * @return Reservation
+     * @return Booking
      */
     public function setSupplement($supplement)
     {
@@ -257,7 +189,7 @@ class Reservation
      *
      * @param float $avoir
      *
-     * @return Reservation
+     * @return Booking
      */
     public function setAvoir($avoir)
     {
@@ -281,7 +213,7 @@ class Reservation
      *
      * @param string $calendrierExt
      *
-     * @return Reservation
+     * @return Booking
      */
     public function setCalendrierExt($calendrierExt)
     {
@@ -298,77 +230,5 @@ class Reservation
     public function getCalendrierExt()
     {
         return $this->calendrierExt;
-    }
-
-    /**
-     * Set numReservation
-     *
-     * @param integer $numReservation
-     *
-     * @return Reservation
-     */
-    public function setNumReservation($numReservation)
-    {
-        $this->numReservation = $numReservation;
-
-        return $this;
-    }
-
-    /**
-     * Get numReservation
-     *
-     * @return int
-     */
-    public function getNumReservation()
-    {
-        return $this->numReservation;
-    }
-
-    /**
-     * Set logement
-     *
-     * @param \Cnccv\HouseBundle\Entity\Logement $logement
-     *
-     * @return Reservation
-     */
-    public function setLogement(\Cnccv\HouseBundle\Entity\Logement $logement)
-    {
-        $this->logement = $logement;
-
-        return $this;
-    }
-
-    /**
-     * Get logement
-     *
-     * @return \Cnccv\HouseBundle\Entity\Logement
-     */
-    public function getLogement()
-    {
-        return $this->logement;
-    }
-
-    /**
-     * Set user
-     *
-     * @param \Cnccv\HouseBundle\Entity\User $user
-     *
-     * @return Reservation
-     */
-    public function setUser(\Cnccv\HouseBundle\Entity\User $user)
-    {
-        $this->user = $user;
-
-        return $this;
-    }
-
-    /**
-     * Get user
-     *
-     * @return \Cnccv\HouseBundle\Entity\User
-     */
-    public function getUser()
-    {
-        return $this->user;
     }
 }

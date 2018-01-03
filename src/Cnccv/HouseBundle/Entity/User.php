@@ -27,12 +27,6 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Note")
-     * @ORM\JoinColumn ()
-     */
-    private $note_id;
-
-    /**
      * @var string
      * @ORM\Column(type="string")
      */
@@ -40,7 +34,7 @@ class User extends BaseUser
 
     /**
      * @var string
-     * @ORM\Column(type="string", name="tvaInt")
+     * @ORM\Column(type="string", name="tvaInt", nullable=true)
      */
     private $tvaInt;
 

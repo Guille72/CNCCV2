@@ -2,18 +2,18 @@
 
 namespace Cnccv\HouseBundle\Controller;
 
-use Cnccv\HouseBundle\Entity\Reservation;
+use Cnccv\HouseBundle\Entity\Booking;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Reservation controller.
+ * Booking controller.
  *
  * @Route("reservation")
  */
-class ReservationController extends Controller
+class BookingController extends Controller
 {
     /**
      * Lists all reservation entities.
@@ -25,7 +25,7 @@ class ReservationController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $reservations = $em->getRepository('CnccvHouseBundle:Reservation')->findAll();
+        $reservations = $em->getRepository('CnccvHouseBundle:Booking')->findAll();
 
         return $this->render('reservation/index.html.twig', array(
             'reservations' => $reservations,
@@ -40,8 +40,8 @@ class ReservationController extends Controller
      */
     public function newAction(Request $request)
     {
-        $reservation = new Reservation();
-        $form = $this->createForm('Cnccv\HouseBundle\Form\ReservationType', $reservation);
+        $reservation = new Booking();
+        $form = $this->createForm('Cnccv\HouseBundle\Form\BookingType', $reservation);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -64,7 +64,7 @@ class ReservationController extends Controller
      * @Route("/reservation/{id}", name="reservation_show")
      * @Method("GET")
      */
-    public function showAction(Reservation $reservation)
+    public function showAction(Booking $reservation)
     {
         $deleteForm = $this->createDeleteForm($reservation);
 
@@ -80,10 +80,10 @@ class ReservationController extends Controller
      * @Route("/reservation/edit/{id}", name="reservation_edit")
      * @Method({"GET", "POST"})
      */
-    public function editAction(Request $request, Reservation $reservation)
+    public function editAction(Request $request, Booking $reservation)
     {
         $deleteForm = $this->createDeleteForm($reservation);
-        $editForm = $this->createForm('Cnccv\HouseBundle\Form\ReservationType', $reservation);
+        $editForm = $this->createForm('Cnccv\HouseBundle\Form\BookingType', $reservation);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -105,7 +105,7 @@ class ReservationController extends Controller
      * @Route("/reservation/delete/{id}", name="reservation_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, Reservation $reservation)
+    public function deleteAction(Request $request, Booking $reservation)
     {
         $form = $this->createDeleteForm($reservation);
         $form->handleRequest($request);
@@ -122,11 +122,11 @@ class ReservationController extends Controller
     /**
      * Creates a form to delete a reservation entity.
      *
-     * @param reservation $reservation The reservation entity
+     * @param Booking $reservation The reservation entity
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm(Reservation $reservation)
+    private function createDeleteForm(Booking $reservation)
     {
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('reservation_delete', array('id' => $reservation->getId())))

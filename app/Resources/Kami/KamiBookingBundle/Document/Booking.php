@@ -3,10 +3,11 @@
 namespace Kami\BookingBundle\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Class Booking
- * @package Kami\BookingBundle\Document
+ * @package Kami\KamiBookingBundle\Document
  * @codeCoverageIgnore
  * @ODM\MappedSuperClass
  */

@@ -28,7 +28,7 @@ class Parametres_prix
     private $logement;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Reservation")
+     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Booking")
      * @ORM\JoinColumn()
      */
     private $reservation;
@@ -123,6 +123,12 @@ class Parametres_prix
      */
     private $tva;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ville", type="string")
+     */
+    private $ville;
 
     /**
      * Get id
@@ -425,11 +431,11 @@ class Parametres_prix
     /**
      * Set reservation
      *
-     * @param \Cnccv\HouseBundle\Entity\Reservation $reservation
+     * @param \Cnccv\HouseBundle\Entity\Booking $reservation
      *
      * @return Parametres_prix
      */
-    public function setReservation(\Cnccv\HouseBundle\Entity\Reservation $reservation)
+    public function setReservation(\Cnccv\HouseBundle\Entity\Booking $reservation)
     {
         $this->reservation = $reservation;
 
@@ -439,7 +445,7 @@ class Parametres_prix
     /**
      * Get reservation
      *
-     * @return \Cnccv\HouseBundle\Entity\Reservation
+     * @return \Cnccv\HouseBundle\Entity\Booking
      */
     public function getReservation()
     {

@@ -9,6 +9,7 @@
                 <th>Id</th>
                 <th>Prénom</th>
                 <th>Nom</th>
+                <th>Email</th>
                 <th>Date de naissance</th>
                 <th>Adresse</th>
                 <th>Code postal</th>
@@ -29,6 +30,7 @@
                     <td><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
                     <td>{{ user.firstname }}</td>
                     <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
                     <td>{% if user.birthdate %}{{ user.birthdate|date('Y-m-d') }}{% endif %}</td>
                     <td>{{ user.address }}</td>
                     <td>{{ user.zip }}</td>

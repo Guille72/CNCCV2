@@ -23,12 +23,6 @@ class Note
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Logement")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $logement;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="comm", type="string", length=255)
@@ -63,6 +57,12 @@ class Note
      */
     private $etoile;
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="global", type="integer", nullable=true)
+     */
+    private $global;
 
     /**
      * Get id
@@ -192,29 +192,5 @@ class Note
     public function getEtoile()
     {
         return $this->etoile;
-    }
-
-    /**
-     * Set logement
-     *
-     * @param \Cnccv\HouseBundle\Entity\Logement $logement
-     *
-     * @return Note
-     */
-    public function setLogement(\Cnccv\HouseBundle\Entity\Logement $logement)
-    {
-        $this->logement = $logement;
-
-        return $this;
-    }
-
-    /**
-     * Get logement
-     *
-     * @return \Cnccv\HouseBundle\Entity\Logement
-     */
-    public function getLogement()
-    {
-        return $this->logement;
     }
 }

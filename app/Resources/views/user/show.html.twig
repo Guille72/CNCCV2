@@ -15,6 +15,10 @@
                 <td>{{ user.firstname }}</td>
             </tr>
             <tr>
+                <th>Nom</th>
+                <td>{{ user.username }}</td>
+            </tr>
+            <tr>
                 <th>Date d'anniversaire</th>
                 <td>{% if user.birthdate %}{{ user.birthdate|date('Y-m-d') }}{% endif %}</td>
             </tr>

@@ -56,6 +56,18 @@ class Logement
 
     /**
      * @var string
+     * @ORM\Column(name="ville", type="string")
+     */
+    private $ville;
+
+    /**
+     * @var string
+     * @ORM\Column(name="image", type="string")
+     */
+    private $image;
+
+    /**
+     * @var string
      * @ORM\Column(name="surface", type="string")
      */
     private $surface;

@@ -97,7 +97,7 @@ note_new:
     defaults: {_controller: CnccvHouseBundle:Note:new}
 
 note_show:
-    path: /note/show/{id}
+    path: admin/note/show/{id}
     defaults: {_controller: CnccvHouseBundle:Note:show}
 
 note_edit:
@@ -126,27 +126,27 @@ parametres_prix_edit:
     defaults: {_controller: CnccvHouseBundle:Parametres_prix:edit}
 
 parametres_prix_delete:
-    path: /parametres_prix/delete/{id}
+    path: admin/parametres_prix/delete/{id}
     defaults: {_controller: CnccvHouseBundle:Parametres_prix:delete}
 
 #Reservation
 reservation_index:
     path: admin/reservation
-    defaults: {_controller: CnccvHouseBundle:Reservation:index}
+    defaults: {_controller: CnccvHouseBundle:Booking:index}
 
 reservation_new:
     path: admin/reservation/new
-    defaults: {_controller: CnccvHouseBundle:Reservation:new}
+    defaults: {_controller: CnccvHouseBundle:Booking:new}
 
 reservation_show:
     path: admin/reservation/show/{id}
-    defaults: {_controller: CnccvHouseBundle:Reservation:show}
+    defaults: {_controller: CnccvHouseBundle:Booking:show}
 
 reservation_edit:
     path: admin/reservation/edit/{id}
-    defaults: {_controller: CnccvHouseBundle:Reservation:edit}
+    defaults: {_controller: CnccvHouseBundle:Booking:edit}
 
 reservation_delete:
     path: admin/reservation/delete/{id}
-    defaults: {_controller: CnccvHouseBundle:Reservation:delete}
+    defaults: {_controller: CnccvHouseBundle:Booking:delete}
 
