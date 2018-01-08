@@ -193,4 +193,28 @@ class Note
     {
         return $this->etoile;
     }
+
+    /**
+     * Set global
+     *
+     * @param string $global
+     *
+     * @return Note
+     */
+    public function setGlobal($global)
+    {
+        $this->global = $global;
+
+        return $this;
+    }
+
+    /**
+     * Get global
+     *
+     * @return string
+     */
+    public function getGlobal()
+    {
+        return $this->global;
+    }
 }

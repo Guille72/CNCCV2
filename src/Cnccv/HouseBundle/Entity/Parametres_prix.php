@@ -499,4 +499,28 @@ class Parametres_prix
     {
         return $this->prixDef;
     }
+
+    /**
+     * Set ville
+     *
+     * @param string $ville
+     *
+     * @return Parametres_prix
+     */
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    /**
+     * Get ville
+     *
+     * @return string
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
 }

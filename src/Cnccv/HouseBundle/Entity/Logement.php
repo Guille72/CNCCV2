@@ -317,4 +317,52 @@ class Logement
     {
         return $this->nom;
     }
+
+    /**
+     * Set ville
+     *
+     * @param string $ville
+     *
+     * @return Logement
+     */
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    /**
+     * Get ville
+     *
+     * @return string
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Logement
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
 }

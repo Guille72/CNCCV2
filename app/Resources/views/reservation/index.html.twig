@@ -24,28 +24,28 @@
             </tr>
             </thead>
             <tbody>
-            {% for booking in bookings %}
+            {% for reservation in reservations %}
                 <tr>
-                    <td><a href="{{ path('reservation_show', { 'id': booking.id }) }}">{{ booking.id }}</a></td>
-                    <td>{% if booking.created %}{{ booking.created|date('Y-m-d H:i:s') }}{% endif %}</td>
-                    <td>{% if booking.updated %}{{ booking.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
-                    <td>{% if booking.start_date %}{{ booking.start_date|date('Y-m-d') }}{% endif %}</td>
-                    <td>{% if booking.end_date %}{{ booking.end_date|date('Y-m-d') }}{% endif %}</td>
-                    <td>{{ booking.nbPersonne }}</td>
-                    <td>{{ booking.nbNuit }}</td>
-                    <td>{% if booking.annulation %}{{ reservation.annulation|date('Y-m-d') }}{% endif %}</td>
-                    <td>{{ booking.supplement }}</td>
-                    <td>{{ booking.avoir }}</td>
-                    <td>{{ booking.prix }}</td>
-                    <td>{{ booking.calendrierExt }}</td>
-                    <td>{{ booking.numReservation }}</td>
+                    <td><a href="{{ path('reservation_show', { 'id': reservation.id }) }}">{{ reservation.id }}</a></td>
+                    <td>{% if reservation.created %}{{ reservation.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    <td>{% if reservation.updated %}{{ reservation.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    <td>{% if reservation.start_date %}{{ reservation.start_date|date('Y-m-d') }}{% endif %}</td>
+                    <td>{% if reservation.end_date %}{{ reservation.end_date|date('Y-m-d') }}{% endif %}</td>
+                    <td>{{ reservation.nbPersonne }}</td>
+                    <td>{{ reservation.nbNuit }}</td>
+                    <td>{% if reservation.annulation %}{{ reservation.annulation|date('Y-m-d') }}{% endif %}</td>
+                    <td>{{ reservation.supplement }}</td>
+                    <td>{{ reservation.avoir }}</td>
+                    <td>{{ reservation.prix }}</td>
+                    <td>{{ reservation.calendrierExt }}</td>
+                    <td>{{ reservation.numReservation }}</td>
                     <td>
                         <ul>
                             <li>
-                                <a href="{{ path('reservation_show', { 'id': booking.id }) }}">Afficher</a>
+                                <a href="{{ path('reservation_show', { 'id': reservation.id }) }}">Afficher</a>
                             </li>
                             <li>
-                                <a href="{{ path('reservation_edit', { 'id': booking.id }) }}">Modifier</a>
+                                <a href="{{ path('reservation_edit', { 'id': reservation.id }) }}">Modifier</a>
                             </li>
                         </ul>
                     </td>
