@@ -24,6 +24,11 @@ class Evenement
      */
     private $id;
 
+    public function __construct()
+    {
+        $this->logement = new ArrayCollection();
+    }
+
     /**
      * @var string
      *
@@ -37,11 +42,6 @@ class Evenement
      * @ORM\Column(name="prix", type="string")
      */
     private $prix;
-
-    /**
-     * @ORM\OneToMany(targetEntity="Cnccv\HouseBundle\Entity\Parametres_prix", mappedBy="note")
-     */
-    private $parametres_prixes;
 
     /**
      * @var \DateTime
@@ -162,46 +162,5 @@ class Evenement
     public function getEvenement()
     {
         return $this->evenement;
-    }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->parametres_prixes = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add parametresPrix
-     *
-     * @param \Cnccv\HouseBundle\Entity\Parametres_prix $parametresPrix
-     *
-     * @return Evenement
-     */
-    public function addParametresPrix(\Cnccv\HouseBundle\Entity\Parametres_prix $parametresPrix)
-    {
-        $this->parametres_prixes[] = $parametresPrix;
-
-        return $this;
-    }
-
-    /**
-     * Remove parametresPrix
-     *
-     * @param \Cnccv\HouseBundle\Entity\Parametres_prix $parametresPrix
-     */
-    public function removeParametresPrix(\Cnccv\HouseBundle\Entity\Parametres_prix $parametresPrix)
-    {
-        $this->parametres_prixes->removeElement($parametresPrix);
-    }
-
-    /**
-     * Get parametresPrixes
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getParametresPrixes()
-    {
-        return $this->parametres_prixes;
     }
 }
