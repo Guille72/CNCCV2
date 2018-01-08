@@ -100,4 +100,4 @@ vich_uploader:
             namer: vich_uploader.namer_origname
 
 kami_booking:
-    entity_class: Cnccv\HouseBundle\Entity\Reservation
+    entity_class: Cnccv\HouseBundle\Entity\Booking

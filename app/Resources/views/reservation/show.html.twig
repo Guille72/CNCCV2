@@ -19,6 +19,7 @@
                 <th>Modifié le</th>
                 <td>{% if booking.updated %}{{ booking.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
+            <tr>
                 <th>Arrivee</th>
                 <td>{% if booking.start_date %}{{ booking.start_date|date('Y-m-d') }}{% endif %}</td>
             </tr>

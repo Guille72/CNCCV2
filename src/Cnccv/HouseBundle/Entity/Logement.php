@@ -23,6 +23,18 @@ class Logement
     private $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Booking")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $booking;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Note")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $note;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="personne_max", type="integer")
@@ -316,5 +328,75 @@ class Logement
     public function getNom()
     {
         return $this->nom;
+    }
+
+    public function setNote(Note $note)
+    {
+        $this->note = $note;
+        return $this;
+    }
+
+    public function getNote()
+    {
+        return $this->note;
+    }
+
+    public function setBooking(Booking $booking)
+    {
+        $this->booking = $booking;
+        return $this;
+    }
+
+    public function getBooking()
+    {
+        return $this->booking;
+    }
+
+    /**
+     * Set ville
+     *
+     * @param string $ville
+     *
+     * @return Logement
+     */
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    /**
+     * Get ville
+     *
+     * @return string
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Logement
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }

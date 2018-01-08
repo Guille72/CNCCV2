@@ -39,6 +39,18 @@ class User extends BaseUser
     private $tvaInt;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Note")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $note;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Booking")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $booking;
+
+    /**
      * @var \Date
      * @ORM\Column(type="date")
      */
@@ -408,54 +420,6 @@ class User extends BaseUser
     }
 
     /**
-     * Set note
-     *
-     * @param \Cnccv\HouseBundle\Entity\Note $note
-     *
-     * @return User
-     */
-    public function setNote(\Cnccv\HouseBundle\Entity\Note $note)
-    {
-        $this->note = $note;
-
-        return $this;
-    }
-
-    /**
-     * Get note
-     *
-     * @return \Cnccv\HouseBundle\Entity\note
-     */
-    public function getNote()
-    {
-        return $this->note;
-    }
-
-    /**
-     * Set noteId
-     *
-     * @param \Cnccv\HouseBundle\Entity\Note $noteId
-     *
-     * @return User
-     */
-    public function setNoteId(\Cnccv\HouseBundle\Entity\Note $noteId = null)
-    {
-        $this->note_id = $noteId;
-
-        return $this;
-    }
-
-    /**
-     * Get noteId
-     *
-     * @return \Cnccv\HouseBundle\Entity\Note
-     */
-    public function getNoteId()
-    {
-        return $this->note_id;
-    }
-
-    /**
      * Set commPrive
      *
      * @param string $commPrive
@@ -501,5 +465,27 @@ class User extends BaseUser
     public function getTvaInt()
     {
         return $this->tvaInt;
+    }
+
+    public function setNote(Note $note)
+    {
+        $this->note = $note;
+        return $this;
+    }
+
+    public function getNote()
+    {
+        return $this->note;
+    }
+
+    public function setBooking(Booking $booking)
+    {
+        $this->booking = $booking;
+        return $this;
+    }
+
+    public function getBooking()
+    {
+        return $this->booking;
     }
 }

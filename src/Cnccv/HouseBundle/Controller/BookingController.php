@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Request;
 class BookingController extends Controller
 {
     /**
-     * Lists all reservation entities.
+     * Lists all booking entities.
      *
      * @Route("/reservation", name="reservation_index")
      * @Method("GET")
@@ -25,35 +25,35 @@ class BookingController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $reservations = $em->getRepository('CnccvHouseBundle:Booking')->findAll();
+        $bookings = $em->getRepository('CnccvHouseBundle:Booking')->findAll();
 
         return $this->render('reservation/index.html.twig', array(
-            'reservations' => $reservations,
+            'bookings' => $bookings,
         ));
     }
 
     /**
-     * Creates a new reservation entity.
+     * Creates a new booking entity.
      *
      * @Route("/reservation/new", name="reservation_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
     {
-        $reservation = new Booking();
-        $form = $this->createForm('Cnccv\HouseBundle\Form\BookingType', $reservation);
+        $booking = new Booking();
+        $form = $this->createForm('Cnccv\HouseBundle\Form\BookingType', $booking);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($reservation);
+            $em->persist($booking);
             $em->flush();
 
-            return $this->redirectToRoute('reservation_show', array('id' => $reservation->getId()));
+            return $this->redirectToRoute('reservation_show', array('id' => $booking->getId()));
         }
 
         return $this->render('reservation/new.html.twig', array(
-            'reservation' => $reservation,
+            'booking' => $booking,
             'form' => $form->createView(),
         ));
     }
@@ -64,12 +64,12 @@ class BookingController extends Controller
      * @Route("/reservation/{id}", name="reservation_show")
      * @Method("GET")
      */
-    public function showAction(Booking $reservation)
+    public function showAction(Booking $booking)
     {
-        $deleteForm = $this->createDeleteForm($reservation);
+        $deleteForm = $this->createDeleteForm($booking);
 
         return $this->render('reservation/show.html.twig', array(
-            'reservation' => $reservation,
+            'booking' => $booking,
             'delete_form' => $deleteForm->createView(),
         ));
     }
@@ -80,20 +80,20 @@ class BookingController extends Controller
      * @Route("/reservation/edit/{id}", name="reservation_edit")
      * @Method({"GET", "POST"})
      */
-    public function editAction(Request $request, Booking $reservation)
+    public function editAction(Request $request, Booking $booking)
     {
-        $deleteForm = $this->createDeleteForm($reservation);
-        $editForm = $this->createForm('Cnccv\HouseBundle\Form\BookingType', $reservation);
+        $deleteForm = $this->createDeleteForm($booking);
+        $editForm = $this->createForm('Cnccv\HouseBundle\Form\BookingType', $booking);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('reservation_edit', array('id' => $reservation->getId()));
+            return $this->redirectToRoute('reservation_edit', array('id' => $booking->getId()));
         }
 
         return $this->render('reservation/edit.html.twig', array(
-            'reservation' => $reservation,
+            'booking' => $booking,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
@@ -105,14 +105,14 @@ class BookingController extends Controller
      * @Route("/reservation/delete/{id}", name="reservation_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, Booking $reservation)
+    public function deleteAction(Request $request, Booking $booking)
     {
-        $form = $this->createDeleteForm($reservation);
+        $form = $this->createDeleteForm($booking);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->remove($reservation);
+            $em->remove($booking);
             $em->flush();
         }
 
@@ -122,14 +122,14 @@ class BookingController extends Controller
     /**
      * Creates a form to delete a reservation entity.
      *
-     * @param Booking $reservation The reservation entity
+     * @param Booking $booking The reservation entity
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm(Booking $reservation)
+    private function createDeleteForm(Booking $booking)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('reservation_delete', array('id' => $reservation->getId())))
+            ->setAction($this->generateUrl('reservation_delete', array('id' => $booking->getId())))
             ->setMethod('DELETE')
             ->getForm();
     }

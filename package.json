@@ -12,7 +12,9 @@
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6"
   },
-  "dependencies": {},
+  "dependencies": {
+    "air-datepicker": "^2.2.3"
+  },
   "repository": "https://github.com/Guille72/CNCCV2.git",
   "author": "jayce <jayce.grandieres@laposte.net>"
 }

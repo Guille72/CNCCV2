@@ -24,7 +24,7 @@
             </tr>
             </thead>
             <tbody>
-            {% for reservation in reservations %}
+            {% for booking in bookings %}
                 <tr>
                     <td><a href="{{ path('reservation_show', { 'id': booking.id }) }}">{{ booking.id }}</a></td>
                     <td>{% if booking.created %}{{ booking.created|date('Y-m-d H:i:s') }}{% endif %}</td>
