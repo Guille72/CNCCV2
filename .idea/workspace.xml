@@ -55,21 +55,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/base.html.twig">
+      <file leaf-file-name="cards.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/cards.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="170">
+              <caret line="25" column="53" lean-forward="false" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cards.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/cards.html.twig">
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/assets/scss/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="28" column="10" lean-forward="false" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+            <state relative-caret-position="68">
+              <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -131,7 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/views/evenement/edit.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/admin.html.twig" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/EvenementController.php" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/admin/dashboard.html.twig" />
@@ -181,6 +180,7 @@
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Controller/CardController.php" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/assets/scss/style.scss" />
         <option value="$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/cards.html.twig" />
       </list>
     </option>
@@ -318,6 +318,21 @@
               <item name="cnccv_projet" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cnccv_projet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cnccv_projet" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cnccv_projet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cnccv_projet" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="cnccv_projet" type="b2602c69:ProjectViewProjectNode" />
@@ -511,12 +526,12 @@
       <workItem from="1515484767723" duration="3289000" />
       <workItem from="1515572557368" duration="4531000" />
       <workItem from="1515658247749" duration="16904000" />
-      <workItem from="1515744928716" duration="12250000" />
+      <workItem from="1515744928716" duration="15816000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="361534000" />
+    <option name="totallyTimeSpent" value="365100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1609" height="496" extended-state="0" />
@@ -557,13 +572,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Entity/Evenement.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1105">
@@ -942,9 +950,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/assets/scss/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="102">
           <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding />
         </state>
@@ -952,8 +968,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cnccv/HouseBundle/Resources/views/Default/cards.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="28" column="10" lean-forward="false" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        <state relative-caret-position="170">
+          <caret line="25" column="53" lean-forward="false" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
           <folding />
         </state>
       </provider>
