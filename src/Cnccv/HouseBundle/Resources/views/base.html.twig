@@ -1,24 +1,26 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-<!--Contenu de l'index et dégradé de couleurs-->
-<div class="degrade" id="resa">
-    {% include('CnccvHouseBundle:widgets:_header.html.twig') %}
-    <section>
-        <div class="container">
-            {% block section %}{% endblock %}
+    <!--Contenu de l'index et dégradé de couleurs-->
+    <div class="degrade" id="resa">
+        {% include('CnccvHouseBundle:widgets:_header.html.twig') %}
+        <section>
+            <div class="container">
+                {% block section %}{% endblock %}
+            </div>
+        </section>
+    </div>
+
+    <!--Cartes des maisons-->
+    <div class="container card-padding">
+        <div id="maisons" class="row">
+            {% include('CnccvHouseBundle:Default:cards.html.twig') %}
         </div>
-    </section>
-</div>
+    </div>
 
-<!--Cartes des maisons-->
-<div id="maisons">
-    {% include('CnccvHouseBundle:Default:cards.html.twig') %}
-</div>
+    <!--Google Map-->
+    {% include('CnccvHouseBundle:widgets:_map.html.twig') %}
 
-<!--Google Map-->
-{% include('CnccvHouseBundle:widgets:_map.html.twig') %}
-
-<!--Footer-->
-{% include('CnccvHouseBundle:widgets:_footer.html.twig') %}
+    <!--Footer-->
+    {% include('CnccvHouseBundle:widgets:_footer.html.twig') %}
 {% endblock %}

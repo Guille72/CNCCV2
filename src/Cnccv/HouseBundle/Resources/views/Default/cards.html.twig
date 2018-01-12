@@ -1,34 +1,31 @@
-{% for logement in logements  %}
-<div class="container card-padding">
-    <div class="row">
-        <div class="col s4 m4">
-            <div class="card">
-                <div class="card-image">
-                    <div class="slider">
-                        <ul class="slides">
-                            <li>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF_CRlqbCJ7I9L5p0fPx3hv7vVFFpqwnfRwU2bwrWtZr3_yzNY">
-                                <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="https://www.w3schools.com/css/img_fjords.jpg">
-                                <!-- random image -->
-                            </li>
-                            <li>
-                                <img src="https://encrypted-tbn0.gstatic com/images?q=tbn:ANd9GcTxhEeRGtRN0aZCuOMu3i1nZizOcP4hq__Lw_GHFoKC_ZMhDnE4">
-                                <!-- random image -->
-                            </li>
-                        </ul>
-                    </div>
+{% for logement in logements %}
+    <div class="col s4 m4">
+        <div class="card">
+            <div class="card-image">
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF_CRlqbCJ7I9L5p0fPx3hv7vVFFpqwnfRwU2bwrWtZr3_yzNY">
+                            <!-- random image -->
+                        </li>
+                        <li>
+                            <img src="https://www.w3schools.com/css/img_fjords.jpg">
+                            <!-- random image -->
+                        </li>
+                        <li>
+                            <img src="https://encrypted-tbn0.gstatic com/images?q=tbn:ANd9GcTxhEeRGtRN0aZCuOMu3i1nZizOcP4hq__Lw_GHFoKC_ZMhDnE4">
+                            <!-- random image -->
+                        </li>
+                    </ul>
                 </div>
-                <div class="card-content">
-                    <p>{{ logement.description }}</p>
-                </div>
-                <div class="card-action">
-                    <a href="">Description</a>
-                </div>
+            </div>
+            <div class="card-content">
+                <p>{{ logement.description }}</p>
+            </div>
+            <div class="card-action">
+                <a href="">Description</a>
             </div>
         </div>
     </div>
-</div>
-{% endfor%}
+
+{% endfor %}
