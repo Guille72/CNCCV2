@@ -7,9 +7,6 @@
                 <img src="{{ asset('img/logoSansCNCCV.svg') }}" width="60" height="60">
             </a>
             <ul class="right hide-on-med-and-down">
-                {% if is_granted('ROLE_SUPER_ADMIN') %}
-                    <li><a href="{{ path('admin') }}" class="red-text gt">ADMIN</a></li>
-                {% endif %}
                 <li><a href="{{ path('homePage') }}" class="red-text gt">Accueil</a></li>
                 <li><a href="{{ path('qui') }}" class="red-text gt">Qui sommes-nous ?</a></li>
                 <!-- Profil si connecté -->
@@ -22,7 +19,10 @@
             <ul id="dropdown1" class="dropdown-content">
                 <li><a class="red-text gt" href="{{ path('resa') }}">Réservations</a></li>
                 <li><a class="red-text gt" href="{{ path('documents') }}">Documents</a></li>
-                <li><a class="red-text gt" href="{{ path('parametres') }}">Paramètres</a></li>
+                <li><a class="red-text gt" href="{{ path('parametres') }}">Profil</a></li>
+                {% if is_granted('ROLE_SUPER_ADMIN') %}
+                    <li><a href="{{ path('admin') }}" class="red-text gt">ADMIN</a></li>
+                {% endif %}
                 <li class="divider"></li>
                 <li><a class="red-text gt" href="{{ path('logout') }}">Deconnexion</a></li>
             </ul>

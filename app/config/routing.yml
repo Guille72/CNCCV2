@@ -14,13 +14,22 @@ logout:
 #    path: le nom de la route
 #    defaults: {_controller: LeBundle:LeController:NomDeLaction}
 
+#Cards
+cards:
+    path: /
+    defaults: {_controller: CnccvHouseBundle:Card:index}
+
+description_show:
+    path: /description/{id}
+    defaults: {_controller: CNccvHouseBundle:Card:show}
+
 #Admin
-cnccv_house:
+admin:
     path:      /admin
     defaults: {_controller: CnccvHouseBundle:Admin:index}
 
 #Qui sommes-nous
-cnccv_house:
+qui:
     path:      /qui
     defaults: {_controller: CnccvHouseBundle:Qui:index}
 

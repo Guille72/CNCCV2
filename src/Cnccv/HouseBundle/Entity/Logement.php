@@ -4,7 +4,8 @@ namespace Cnccv\HouseBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
-
+use Cnccv\HouseBundle\Controller\CardController;
+use Cnccv\HouseBundle\Controller\LogementController;
 /**
  * Logement
  *

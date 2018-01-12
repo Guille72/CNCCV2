@@ -10,7 +10,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Booking controller.
- *
  * @Route("reservation")
  */
 class BookingController extends Controller
