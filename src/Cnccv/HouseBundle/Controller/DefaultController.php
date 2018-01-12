@@ -15,6 +15,10 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('CnccvHouseBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $logements = $em->getRepository('CnccvHouseBundle:Logement')->findAll();
+
+        return $this->render('CnccvHouseBundle:Default:index.html.twig', array('logements' => $logements));
     }
 }
