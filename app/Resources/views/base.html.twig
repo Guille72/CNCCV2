@@ -17,17 +17,52 @@
     <script src="{{ asset('build/app.js') }}"></script>
 
     <!--Google Map, ici pour éviter les conflits-->
-    <script>function initMap() {
-            var leMansCentre = {lat: 48.004127, lng: 0.196683};
+    <script>
+
+        function initMap() {
+            var leMans = {lat: 48.004127, lng: 0.196683};
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 15,
-                center: leMansCentre
+                center: leMans
             });
+
+            var rousseau = {lat: 47.976987, lng: 0.203185};
             var marker = new google.maps.Marker({
-                position: leMansCentre,
-                map: map
+                position: rousseau,
+                map: map,
             });
-        }</script>
+
+            var champion = {lat: 47.981601, lng: 0.217549};
+            var marker2 = new google.maps.Marker({
+                position: champion,
+                map: map,
+            });
+
+            var painleve = {lat: 47.962271, lng: 0.203091};
+            var marker3 = new google.maps.Marker({
+                position: painleve,
+                map: map,
+            });
+
+            var contentString = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Rousseau</h1>' +
+                '<div id="bodyContent">' +
+                '<p>Salut</p>' +
+                '</div>' +
+                '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            marker.addListener('click', function () {
+                infowindow.open(map, marker, marker2, marker3);
+            });
+        }
+
+    </script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNiPj_WLCpWCzGKI02mV6ROO_PkwEn3yo&callback=initMap">
     </script>

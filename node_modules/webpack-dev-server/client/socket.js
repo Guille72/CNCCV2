@@ -1,6 +1,6 @@
 'use strict';
 
-const SockJS = require('sockjs-client/dist/sockjs');
+const SockJS = require('sockjs-client');
 
 let retries = 0;
 let sock = null;
