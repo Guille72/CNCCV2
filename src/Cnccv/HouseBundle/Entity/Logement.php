@@ -3,9 +3,11 @@
 namespace Cnccv\HouseBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Query\Expr\Base;
 use Symfony\Component\HttpFoundation\File\File;
 use Cnccv\HouseBundle\Controller\CardController;
 use Cnccv\HouseBundle\Controller\LogementController;
+
 /**
  * Logement
  *
@@ -21,7 +23,7 @@ class Logement
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var int
@@ -365,5 +367,13 @@ class Logement
     public function getImage()
     {
         return $this->image;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function __toString()
+    {
+        return $this->getImage();
     }
 }

@@ -24,7 +24,7 @@ class CardController extends Controller
 
         $logements = $em->getRepository('CnccvHouseBundle:Logement')->findAll();
 
-        return $this->render('@CnccvHouseBundle/Default/cards.html.twig', array(
+        return $this->render('CnccvHouseBundle:Default:cards.html.twig', array(
             'logements' => $logements,
         ));
     }

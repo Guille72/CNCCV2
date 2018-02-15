@@ -85,11 +85,19 @@ body {
 
 .fix {
   position: fixed;
+  z-index: 997;
 }
 
 h5 {
   text-align: center;
   padding-bottom: 15px;
+}
+
+// imageFile-Inscription
+.if {
+  display: block;
+  text-align: center;
+  padding-top: 50px;
 }
 
 // Qui sommes-nous ?

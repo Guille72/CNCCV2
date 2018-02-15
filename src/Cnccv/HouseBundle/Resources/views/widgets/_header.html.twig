@@ -43,6 +43,8 @@
             </ul>
         </nav>
     </div>
+
+    <!--Bouton connexion-->
     <li>
         <div class="center fix sidebar">
             <a id="btn-connexion" class="waves-effect waves-light btn red darken-4 modal-trigger"
@@ -50,9 +52,9 @@
         </div>
         {# Désactiver le bouton agree par false#}
         {% include 'CnccvHouseBundle:widgets:_modal.html.twig' with {
-            dataId: 'connexion',
-            vue: 'CnccvHouseBundle:Default:connexion.html.twig',
-            modalFooter: false
+        dataId: 'connexion',
+        vue: 'CnccvHouseBundle:Default:connexion.html.twig',
+        modalFooter: false
         } %}
     </li>
 {% endif %}
@@ -84,6 +86,7 @@
                 </div>
             </nav>
         </div>
+
     {% else %}
         <div class="navbar-fixed appear">
             <nav>
@@ -110,6 +113,8 @@
                 </div>
             </nav>
         </div>
+
+        <!--Bouton connexion-->
         <li>
             <div class="center fix appear">
                 <a id="btn-connexion" class="waves-effect waves-light btn red darken-4 modal-trigger"
@@ -117,9 +122,9 @@
             </div>
             {# Désactiver le bouton agree par false#}
             {% include 'CnccvHouseBundle:widgets:_modal.html.twig' with {
-                dataId: 'connexion',
-                vue: 'CnccvHouseBundle:Default:connexion.html.twig',
-                modalFooter: false
+            dataId: 'connexion',
+            vue: 'CnccvHouseBundle:Default:connexion.html.twig',
+            modalFooter: false
             } %}
         </li>
     {% endif %}

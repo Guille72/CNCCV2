@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ app.request.locale }}">
+
 <head>
     <meta charset="UTF-8"/>
     <title>{% block title %}CNcCV{% endblock %}</title>
@@ -9,8 +10,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
 </head>
+
 <body>
 {% block body %}{% endblock %}
+
 {% block javascripts %}
     <script src="{{ asset('build/manifest.js') }}"></script>
     <script src="{{ asset('build/vendor.js') }}"></script>
@@ -18,7 +21,6 @@
 
     <!--Google Map, ici pour éviter les conflits-->
     <script>
-
         function initMap() {
             var leMans = {lat: 47.998880, lng: 0.199025};
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -61,7 +63,6 @@
                 infowindow.open(map, marker, marker2, marker3);
             });
         }
-
     </script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNiPj_WLCpWCzGKI02mV6ROO_PkwEn3yo&callback=initMap">

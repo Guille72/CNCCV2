@@ -37,7 +37,7 @@ class Parametres_prix
      * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Evenement")
      * @ORM\JoinColumn()
      */
-    private $base_prix;
+    private $evenement;
 
     /**
      * @var int
@@ -522,5 +522,29 @@ class Parametres_prix
     public function getVille()
     {
         return $this->ville;
+    }
+
+    /**
+     * Set evenement
+     *
+     * @param \Cnccv\HouseBundle\Entity\Evenement $evenement
+     *
+     * @return Parametres_prix
+     */
+    public function setEvenement(\Cnccv\HouseBundle\Entity\Evenement $evenement = null)
+    {
+        $this->evenement = $evenement;
+
+        return $this;
+    }
+
+    /**
+     * Get evenement
+     *
+     * @return \Cnccv\HouseBundle\Entity\Evenement
+     */
+    public function getEvenement()
+    {
+        return $this->evenement;
     }
 }

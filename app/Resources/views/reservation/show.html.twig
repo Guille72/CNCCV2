@@ -8,56 +8,52 @@
             <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ booking.id }}</td>
+                <td>{{ reservation.id }}</td>
             </tr>
             <tr>
             <tr>
                 <th>Créé le</th>
-                <td>{% if booking.created %}{{ booking.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if reservation.created %}{{ reservation.created|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Modifié le</th>
-                <td>{% if booking.updated %}{{ booking.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if reservation.updated %}{{ reservation.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Arrivee</th>
-                <td>{% if booking.start_date %}{{ booking.start_date|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if reservation.start_date %}{{ reservation.start_date|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Depart</th>
-                <td>{% if booking.end_date %}{{ booking.end_date|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if reservation.end_date %}{{ reservation.end_date|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Nbpersonne</th>
-                <td>{{ booking.nbPersonne }}</td>
+                <td>{{ reservation.nbPersonne }}</td>
             </tr>
             <tr>
                 <th>Nbnuit</th>
-                <td>{{ booking.nbNuit }}</td>
+                <td>{{ reservation.nbNuit }}</td>
             </tr>
             <tr>
                 <th>Annulation</th>
-                <td>{% if booking.annulation %}{{ booking.annulation|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if reservation.annulation %}{{ reservation.annulation|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Supplement</th>
-                <td>{{ booking.supplement }}</td>
+                <td>{{ reservation.supplement }}</td>
             </tr>
             <tr>
                 <th>Avoir</th>
-                <td>{{ booking.avoir }}</td>
+                <td>{{ reservation.avoir }}</td>
             </tr>
             <tr>
                 <th>Prix</th>
-                <td>{{ booking.prix }}</td>
+                <td>Configurer prix</td>
             </tr>
             <tr>
                 <th>Calendrierext</th>
-                <td>{{ booking.calendrierExt }}</td>
-            </tr>
-            <tr>
-                <th>Numreservation</th>
-                <td>{{ booking.numReservation }}</td>
+                <td>{{ reservation.calendrierExt }}</td>
             </tr>
             </tbody>
         </table>
@@ -67,7 +63,7 @@
                 <a href="{{ path('reservation_index') }}">Retour à la liste</a>
             </li>
             <li>
-                <a href="{{ path('reservation_edit', { 'id': booking.id }) }}">Modifier</a>
+                <a href="{{ path('reservation_edit', { 'id': reservation.id }) }}">Modifier</a>
             </li>
             <li>
                 {{ form_start(delete_form) }}

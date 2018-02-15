@@ -13,7 +13,18 @@ class Parametres_prixType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('jourAnnulable')->add('jourNonAnnulable')->add('penaliteAnnulationTardive')->add('remiseSemaine')->add('remiseMois')->add('minimumFacture')->add('coefPersoSupp')->add('forfaitMenageTtc')->add('joursMenage')->add('taxeSejour')->add('prixDef')->add('tva');
+        $builder->add('jourAnnulable')
+            ->add('jourNonAnnulable')
+            ->add('penaliteAnnulationTardive')
+            ->add('remiseSemaine')
+            ->add('remiseMois')
+            ->add('minimumFacture')
+            ->add('coefPersoSupp')
+            ->add('forfaitMenageTtc')
+            ->add('joursMenage')
+            ->add('taxeSejour')
+            ->add('prixDef')
+            ->add('tva');
     }
     
     /**

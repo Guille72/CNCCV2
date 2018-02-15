@@ -1,8 +1,11 @@
 <div class="row">
+    <!--Partie connexion-->
     <div class="col s4">
         <h5>{{ 'modalConnexion.connexion.title'|trans }}</h5>
         {{ render(controller('FOSUserBundle:Security:login')) }}
     </div>
+
+    <!--Partie inscription-->
     <div class="col s4">
         <h5>{{ 'modalConnexion.inscription.title'|trans }}</h5>
         <p>{{ 'modalConnexion.inscription.text'|trans }}</p>
@@ -12,6 +15,8 @@
             </a>
         </div>
     </div>
+
+    <!--Partie premium-->
     <div class="col s4">
         <h5>{{ 'modalConnexion.partners.title'|trans }}</h5>
     </div>

@@ -4,11 +4,12 @@ namespace Cnccv\HouseBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Booking
  *
- * @ORM\Table(name="reservation")
+ * @ORM\Table(name="booking")
  * @ORM\Entity(repositoryClass="Cnccv\HouseBundle\Repository\BookingRepository")
  */
 class Booking
@@ -20,21 +21,56 @@ class Booking
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
+
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Logement")
+     * @ORM\JoinColumn(name="logement_id", referencedColumnName="id")
+     */
+    protected $logement_id;
+
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\User")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    protected $user_id;
+
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Parametres_prix")
+     * @ORM\JoinColumn(name="parametres_prix_id", referencedColumnName="id")
+     */
+    protected $parametres_prix_id;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="start_date", type="datetime", unique=true)
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime")
      */
-    private $start_date;
+    private $created;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="end_date", type="datetime", unique=true)
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
      */
-    private $end_date;
+    private $updated;
+
+    /*
+     * @var \DateTime
+     * @ORM\Column(name="start_date" type="date")
+     */
+    public $start_date;
+
+    /*
+     * @var \DateTime
+     * @ORM\Column(name="end_date" type="date")
+     */
+    public $end_date;
 
     /**
      * @var int
@@ -233,50 +269,147 @@ class Booking
     }
 
     /**
-     * Set startDate
+     * Set created
      *
-     * @param \DateTime $startDate
+     * @param \DateTime $created
      *
      * @return Booking
      */
-    public function setStartDate($startDate)
+    public function setCreated($created)
     {
-        $this->start_date = $startDate;
+        $this->created = $created;
 
         return $this;
     }
 
     /**
-     * Get startDate
+     * Get created
      *
      * @return \DateTime
      */
-    public function getStartDate()
+    public function getCreated()
     {
-        return $this->start_date;
+        return $this->created;
     }
 
     /**
-     * Set endDate
+     * Set updated
      *
-     * @param \DateTime $endDate
+     * @param \DateTime $updated
      *
      * @return Booking
      */
-    public function setEndDate($endDate)
+    public function setUpdated($updated)
     {
-        $this->end_date = $endDate;
+        $this->updated = $updated;
 
         return $this;
     }
 
     /**
-     * Get endDate
+     * Get updated
+     *
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->updated;
+    }
+
+    /**
+     * Set start_date
+     *
+     * @param \DateTime $start_date
+     *
+     * @return Booking
+     */
+    public function setStartDate($start_date)
+    {
+        $this->start_date = $start_date;
+
+        return $this;
+    }
+
+    /**
+     * Get end_date
      *
      * @return \DateTime
      */
     public function getEndDate()
     {
         return $this->end_date;
+    }
+
+
+    /**
+     * Set logementId
+     *
+     * @param \Cnccv\HouseBundle\Entity\Logement $logementId
+     *
+     * @return Booking
+     */
+    public function setLogementId(\Cnccv\HouseBundle\Entity\Logement $logementId = null)
+    {
+        $this->logement_id = $logementId;
+
+        return $this;
+    }
+
+    /**
+     * Get logementId
+     *
+     * @return \Cnccv\HouseBundle\Entity\Logement
+     */
+    public function getLogementId()
+    {
+        return $this->logement_id;
+    }
+
+    /**
+     * Set userId
+     *
+     * @param \Cnccv\HouseBundle\Entity\User $userId
+     *
+     * @return Booking
+     */
+    public function setUserId(\Cnccv\HouseBundle\Entity\User $userId = null)
+    {
+        $this->user_id = $userId;
+
+        return $this;
+    }
+
+    /**
+     * Get userId
+     *
+     * @return \Cnccv\HouseBundle\Entity\User
+     */
+    public function getUserId()
+    {
+        return $this->user_id;
+    }
+
+    /**
+     * Set parametresPrixId
+     *
+     * @param \Cnccv\HouseBundle\Entity\Parametres_prix $parametresPrixId
+     *
+     * @return Booking
+     */
+    public function setParametresPrixId(\Cnccv\HouseBundle\Entity\Parametres_prix $parametresPrixId = null)
+    {
+        $this->parametres_prix_id = $parametresPrixId;
+
+        return $this;
+    }
+
+    /**
+     * Get parametresPrixId
+     *
+     * @return \Cnccv\HouseBundle\Entity\Parametres_prix
+     */
+    public function getParametresPrixId()
+    {
+        return $this->parametres_prix_id;
     }
 }

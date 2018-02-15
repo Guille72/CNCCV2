@@ -21,6 +21,11 @@ global.$ = global.jQuery = $;
         $('#' + $('.modal').data('id')).modal();
     });
 
+    // Selecteur
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+
     // materialize
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month

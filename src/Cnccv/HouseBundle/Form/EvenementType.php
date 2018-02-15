@@ -13,7 +13,10 @@ class EvenementType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('evenement')->add('prix')->add('dateDebut')->add('dateFin');
+        $builder->add('evenement')
+            ->add('prix')
+            ->add('dateDebut')
+            ->add('dateFin');
     }
 
     /**

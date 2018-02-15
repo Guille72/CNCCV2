@@ -19,6 +19,8 @@ class DefaultController extends Controller
 
         $logements = $em->getRepository('CnccvHouseBundle:Logement')->findAll();
 
-        return $this->render('CnccvHouseBundle:Default:index.html.twig', array('logements' => $logements));
+        return $this->render('CnccvHouseBundle:Default:index.html.twig', array(
+            'logements' => $logements
+        ));
     }
 }

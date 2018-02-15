@@ -7,7 +7,6 @@
     "@symfony/webpack-encore": "^0.15.1",
     "jquery": "^3.2.1",
     "jquery-ui": "^1.12.1",
-    "magnific-popup": "^1.1.0",
     "materialize-css": "^0.100.2",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6"

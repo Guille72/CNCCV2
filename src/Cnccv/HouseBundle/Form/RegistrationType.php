@@ -76,7 +76,7 @@ class RegistrationType extends AbstractType
                 'label' => 'form.inscription.birthdate.label',
                 'required' => true,
                 'attr' => array(
-                    'class' => '',
+                    'class' => 'validate',
                 ),
             ))
             ->add('tel', TextType::class, array(
@@ -87,10 +87,10 @@ class RegistrationType extends AbstractType
                 ),
             ))
             ->add('imageFile', VichFileType::class, array(
+                'label' => 'form.inscription.imageFile.label',
                 'required' => true,
                 'allow_delete' => true,
-            ))
-;
+            ));
     }
 
     public function getParent()
