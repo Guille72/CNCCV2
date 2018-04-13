@@ -3,7 +3,7 @@
 {% block body %}
     <div class="container">
         <h1>Liste des utilisateurs</h1>
-        <table>
+        <table class="highlight">
             <thead>
             <tr>
                 <th>Id</th>
@@ -59,7 +59,7 @@
 
         <ul>
             <li>
-                <a href="{{ path('user_new') }}">Création d'un utilisateur</a>
+                <a class="waves-effect waves-light btn" href="{{ path('user_new') }}">Création d'un utilisateur</a>
             </li>
         </ul>
     </div>

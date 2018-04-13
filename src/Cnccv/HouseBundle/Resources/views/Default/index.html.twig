@@ -3,7 +3,7 @@
 {% block section %}
     <!--Menu des dates/voyageurs-->
     <div class="row">
-        <form action="" class="menuliste2">
+        <form action="" method="post" class="menuliste2">
             <div class="input-field col s2"></div>
             <div class="input-field col s2">
                 <input type="text" class="datepicker" id="from" name="from">
@@ -17,6 +17,9 @@
                 <input id="voyageur" type="number" class="validate" min="1" max="6" step="1"
                        id="nombre_personne" name="nombre_personne">
                 <label for="nombre_personne">Voyageur(s)</label>
+            </div>
+            <div>
+                <input id="demandeCiblee" type="number" value="1" hidden>
             </div>
             <div class="col s2 btn-align">
                 <button class="btn waves-effect waves-light bleuLogo" type="submit" name="action" id="verifier">

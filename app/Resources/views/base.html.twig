@@ -46,7 +46,7 @@
                 map: map,
             });
 
-            var contentString = '<div id="content">' +
+            var rousseauInfo = '<div id="content">' +
                 '<div id="siteNotice">' +
                 '</div>' +
                 '<h1 id="firstHeading" class="firstHeading">Rousseau</h1>' +
@@ -55,12 +55,46 @@
                 '</div>' +
                 '</div>';
 
+            var championInfo = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Champion</h1>' +
+                '<div id="bodyContent">' +
+                '<p>Salut</p>' +
+                '</div>' +
+                '</div>';
+
+            var painInfo = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Painlevé/h1>' +
+                '<div id="bodyContent">' +
+                '<p>Salut</p>' +
+                '</div>' +
+                '</div>';
+
             var infowindow = new google.maps.InfoWindow({
-                content: contentString
+                content: rousseauInfo
+            });
+
+            var infowindow2 = new google.maps.InfoWindow({
+                content: championInfo
+            });
+
+            var infowindow3 = new google.maps.InfoWindow({
+                content: painInfo
             });
 
             marker.addListener('click', function () {
-                infowindow.open(map, marker, marker2, marker3);
+                infowindow.open(map, marker);
+            });
+
+            marker2.addListener('click', function () {
+                infowindow2.open(map, marker2);
+            });
+
+            marker3.addListener('click', function () {
+                infowindow3.open(map, marker3);
             });
         }
     </script>

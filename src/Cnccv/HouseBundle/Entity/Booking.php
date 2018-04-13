@@ -2,6 +2,10 @@
 
 namespace Cnccv\HouseBundle\Entity;
 
+use Kami\BookingBundle\Entity\Booking as BaseClass;
+
+use Carbon\Carbon;
+use Cnccv\HouseBundle\CnccvHouseBundle;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -12,7 +16,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  * @ORM\Table(name="booking")
  * @ORM\Entity(repositoryClass="Cnccv\HouseBundle\Repository\BookingRepository")
  */
-class Booking
+class Booking extends BaseClass
 {
     /**
      * @var int
@@ -24,11 +28,11 @@ class Booking
     protected $id;
 
     /**
-     *
-     * @ORM\ManyToOne(targetEntity="Cnccv\HouseBundle\Entity\Logement")
+     * @var \Cnccv\HouseBundle\Entity\Logement
+     * @ORM\ManyToOne(targetEntity="Logement", inversedBy="bookings")
      * @ORM\JoinColumn(name="logement_id", referencedColumnName="id")
      */
-    protected $logement_id;
+    protected $logementId;
 
     /**
      *
@@ -62,15 +66,15 @@ class Booking
 
     /*
      * @var \DateTime
-     * @ORM\Column(name="start_date" type="date")
+     * @ORM\Column(name="arrivee" type="date")
      */
-    public $start_date;
+    protected $arrivee;
 
     /*
      * @var \DateTime
-     * @ORM\Column(name="end_date" type="date")
+     * @ORM\Column(name="depart" type="date")
      */
-    public $end_date;
+    protected $depart;
 
     /**
      * @var int
@@ -317,29 +321,48 @@ class Booking
     }
 
     /**
-     * Set start_date
-     *
-     * @param \DateTime $start_date
-     *
-     * @return Booking
-     */
-    public function setStartDate($start_date)
-    {
-        $this->start_date = $start_date;
-
-        return $this;
-    }
-
-    /**
-     * Get end_date
+     * Get arrivee
      *
      * @return \DateTime
      */
-    public function getEndDate()
+    public function getArrivee()
     {
-        return $this->end_date;
+        return $this->arrivee;
     }
 
+    /**
+     * Set arrivee
+     *
+     * @param \DateTime $arrivee
+     *
+     * @return Booking
+     */
+    public function setArrivee($arrivee)
+    {
+        $this->arrivee = $arrivee;
+    }
+
+    /**
+     * Get depart
+     *
+     * @return \DateTime
+     */
+    public function getDepart()
+    {
+        return $this->depart;
+    }
+
+    /**
+     * Set depart
+     *
+     * @param \DateTime $depart
+     *
+     * @return Booking
+     */
+    public function setDepart($depart)
+    {
+        $this->depart = $depart;
+    }
 
     /**
      * Set logementId
@@ -348,7 +371,7 @@ class Booking
      *
      * @return Booking
      */
-    public function setLogementId(\Cnccv\HouseBundle\Entity\Logement $logementId = null)
+    public function setLogementId($logementId)
     {
         $this->logement_id = $logementId;
 
@@ -362,7 +385,7 @@ class Booking
      */
     public function getLogementId()
     {
-        return $this->logement_id;
+        return $this->logementId;
     }
 
     /**

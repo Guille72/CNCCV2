@@ -2,12 +2,17 @@
 
 namespace Cnccv\HouseBundle\Controller;
 
-use Cnccv\HouseBundle\Entity\Booking;
+use DateInterval;
+use DatePeriod;
+use Doctrine\ORM\Query\AST\SelectExpression;
+use Doctrine\ORM\Query\Expr\Select;
 use Doctrine\ORM\QueryBuilder;
+use Gedmo\Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  * Booking controller.
@@ -104,6 +109,9 @@ class BookingController extends Controller
      *
      * @Route("/reservation/delete/{id}", name="reservation_delete")
      * @Method("DELETE")
+     * @param Request $request
+     * @param Booking $reservation
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function deleteAction(Request $request, Booking $reservation)
     {
@@ -124,7 +132,7 @@ class BookingController extends Controller
      *
      * @param Booking $reservation The reservation entity
      *
-     * @return \Symfony\Component\Form\Form The form
+     * @return \Symfony\Component\Form\Form|\Symfony\Component\Form\FormInterface
      */
     private function createDeleteForm(Booking $reservation)
     {
@@ -139,50 +147,9 @@ class BookingController extends Controller
      */
     private $repository;
 
-    /**
-     * @param $logement_id
-     * @param  \DateTime $start_date
-     * @param  \DateTime $end_date
-     * @return bool
-     */
-    public function dispoAction($logement_id, $start_date, $end_date)
+    /** @var \Kami\BookingBundle\Helper\Booker */
+    public function bookingAction()
     {
-        $qb = $this->repository->createQueryBuilder('reservation');
-        $query = $qb->select('reservation.id')
-            ->where('reservation.start_date <= :start_date AND reservation.end_date >= :end_date')
-            ->orWhere('reservation.start_date >= :start_date AND reservation.end_date <= :end_date')
-            ->orWhere('reservation.start_date >= :start_date AND reservation.end_date >= :end_date AND reservation.start_date <= :end_date')
-            ->orWhere('reservation.start_date <= :start_date AND reservation.end_date <= :end_date AND reservation.end_date >= :start_date')
-            ->andWhere('reservation.logement_id = :logement_id')
-            ->setParameters(array(
-                'start_date' => $start_date,
-                'end_date' => $end_date,
-                'logement_id' => $logement_id
-            ));
-
-        $results = $query->getQuery()->getResult();
-
-        return count($results) === 0;
-    }
-
-    /**
-     * @param QueryBuilder $queryBuilder
-     * @param $join array(field, alias)
-     * @param \DateTime $start_date
-     * @param \DateTime $end_date
-     */
-    public function siDispoAction(QueryBuilder $queryBuilder, $join, \DateTime $start_date, \DateTime $end_date)
-    {
-        $queryBuilder->leftJoin($join['field'], $join['alias'])
-            ->where($join['alias'] . '.start_date >= :start_date AND ' . $join['alias'] . '.end_date <= :end_date')
-            ->orWhere($join['alias'] . '.start_date <= :start_date AND ' . $join['alias'] . '.end_date >= :end_date')
-            ->orWhere($join['alias'] . '.start_date <= :start_date AND ' . $join['alias'] . '.end_date >= :end_date AND ' .
-                $join['alias'] . '.start_date <= :end_date')
-            ->orWhere($join['alias'] . '.star_datet >= :start_date AND ' . $join['alias'] . '.end_date <= :end_date AND ' .
-                $join['alias'] . '.end_date >= :start_date')
-            ->setParameters(array(
-                'start_date' => $start_date,
-                'end_date' => $end_date,
-            ));
+        $this->get('booker');
     }
 }

@@ -4,7 +4,7 @@
     <div class="container">
         <h1>Paramètre de prix</h1>
 
-        <table>
+        <table class="highlight">
             <tbody>
             <tr>
                 <th>Id</th>
@@ -67,15 +67,15 @@
 
         <ul>
             <li>
-                <a href="{{ path('parametres_prix_index') }}">Retour à la liste</a>
-            </li>
-            <li>
-                <a href="{{ path('parametres_prix_edit', { 'id': parametres_prix.id }) }}">Modifier</a>
+                <a class="waves-effect waves-light btn btn-align" href="{{ path('parametres_prix_edit', { 'id': parametres_prix.id }) }}">Modifier</a>
             </li>
             <li>
                 {{ form_start(delete_form) }}
-                <input class="waves-effect waves-light btn red" type="submit" value="Supprimer">
+                <input class="waves-effect waves-light btn red btn-align" type="submit" value="Supprimer">
                 {{ form_end(delete_form) }}
+            </li>
+            <li>
+                <a class="waves-effect waves-light btn green btn-align" href="{{ path('parametres_prix_index') }}">Retour à la liste</a>
             </li>
         </ul>
     </div>

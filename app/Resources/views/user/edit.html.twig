@@ -11,12 +11,12 @@
 
         <ul>
             <li>
-                <a href="{{ path('user_index') }}">Retour à la liste</a>
-            </li>
-            <li>
                 {{ form_start(delete_form) }}
                 <input class="waves-effect waves-light btn red" type="submit" value="Supprimer">
                 {{ form_end(delete_form) }}
+            </li>
+            <li>
+                <a class="waves-effect waves-light btn green btn-align" href="{{ path('user_index') }}">Retour à la liste</a>
             </li>
         </ul>
     </div>

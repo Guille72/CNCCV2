@@ -4,7 +4,7 @@
     <div class="container">
         <h1>Reservation</h1>
 
-        <table>
+        <table class="highlight">
             <tbody>
             <tr>
                 <th>Id</th>
@@ -21,11 +21,11 @@
             </tr>
             <tr>
                 <th>Arrivee</th>
-                <td>{% if reservation.start_date %}{{ reservation.start_date|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if reservation.arrivee %}{{ reservation.arrivee|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Depart</th>
-                <td>{% if reservation.end_date %}{{ reservation.end_date|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if reservation.depart %}{{ reservation.depart|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Nbpersonne</th>
@@ -60,15 +60,15 @@
 
         <ul>
             <li>
-                <a href="{{ path('reservation_index') }}">Retour à la liste</a>
-            </li>
-            <li>
-                <a href="{{ path('reservation_edit', { 'id': reservation.id }) }}">Modifier</a>
+                <a class="waves-effect waves-light btn btn-align" href="{{ path('reservation_edit', { 'id': reservation.id }) }}">Modifier</a>
             </li>
             <li>
                 {{ form_start(delete_form) }}
-                <input class="waves-effect waves-light btn red" type="submit" value="Supprimer">
+                <input class="waves-effect waves-light btn red btn-align" type="submit" value="Supprimer">
                 {{ form_end(delete_form) }}
+            </li>
+            <li>
+                <a class="waves-effect waves-light btn green btn-align" href="{{ path('reservation_index') }}">Retour à la liste</a>
             </li>
         </ul>
     </div>

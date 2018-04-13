@@ -14,6 +14,21 @@ logout:
 #    path: le nom de la route
 #    defaults: {_controller: LeBundle:LeController:NomDeLaction}
 
+#Dispo
+dispo:
+    path: /
+    defaults: {_controller: CnccvHouseBundle:Default:dispoLogement}
+
+#PageDemarrage
+page:
+    path: /
+    defaults: {_controller: CnccvHouseBundle:Default:pageDemarrage}
+
+#PrixLogement
+prix:
+    path: /
+    defaults: {_controller: CnccvHouseBundle:Default:prixLogement}
+
 #Cards
 cards:
     path: /

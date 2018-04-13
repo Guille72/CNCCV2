@@ -4,7 +4,7 @@
     <div class="container">
         <h1>Réservations</h1>
 
-        <table>
+        <table class="highlight">
             <thead>
             <tr>
                 <th>Id</th>
@@ -28,8 +28,8 @@
                 <td><a href="{{ path('reservation_show', { 'id': reservation.id }) }}">{{ reservation.id }}</a></td>
                 <td>{% if reservation.created %}{{ reservation.created|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if reservation.updated %}{{ reservation.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{% if reservation.start_date %}{{ reservation.start_date|date('Y-m-d') }}{% endif %}</td>
-                <td>{% if reservation.end_date %}{{ reservation.end_date|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if reservation.arrivee %}{{ reservation.arrivee|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if reservation.depart %}{{ reservation.depart|date('Y-m-d') }}{% endif %}</td>
                 <td>{% if reservation.annulation %}{{ reservation.annulation|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ reservation.nbPersonne }}</td>
                 <td>{{ reservation.nbNuit }}</td>
@@ -54,7 +54,7 @@
 
         <ul>
             <li>
-                <a href="{{ path('reservation_new') }}">Créer une nouvelle réservation</a>
+                <a class="waves-effect waves-light btn" href="{{ path('reservation_new') }}">Créer une nouvelle réservation</a>
             </li>
         </ul>
     </div>

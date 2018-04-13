@@ -44,4 +44,5 @@ class CardController extends Controller
             'delete_form' => $deleteForm->createView(),
         ));
     }
+
 }
