@@ -1,4 +1,0 @@
-services:
-#    cnccv_house.example:
-#        class: Cnccv\HouseBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
