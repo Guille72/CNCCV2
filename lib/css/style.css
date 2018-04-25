@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti');
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
+*{
+
+
+
+
+
+    margin: 0;
+    padding: 0;
+
+
+}
+.row{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.card{
+    box-shadow: none;
+    min-height: 250px;
+}
+
+body{
+    background-color: #e1e8f0;
+}
+.nav1{
+
+    -webkit-box-shadow: 1px 1px 3px 4px #EA0B4D;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    1px 1px 3px 4px #EA0B4D;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         1px 1px 3px 4px #EA0B4D;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+
+
+}
+
+.cardall{
+    background-color: white !important;
+    border: 2px solid #EA0B4D;
+    color: #EA0B4D !important;
+}
+.align_ul{
+    justify-content: center;
+    display: flex;
+}
+.li{
+    border: 2px solid #EA0B4D;
+    padding-left: 10px !important;
+}
+.li1{
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+.li3{
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.colortext{
+    color: #EA0B4D  !important;
+}
+.sticky {
+    position: fixed;
+    bottom: 0;
+    width: 100%
+}
+.marginTop{
+    margin-top: 5%;
+}
+
+#mapGG{
+    height: 10%;
+    width: 100%;
+}
+.displayNone{
+    display: none;
+}
+
+@keyframes animRightTop {
+
+    0%   {border: 0px solid #EA0B4D;opacity: 0.1; right: 600px;}
+    100% {border: 3px solid #EA0B4D;opacity: 1; right:0px;}
+
+}
+#cardImg{
+
+    animation-name: animRightTop;
+    animation-duration: 1s;
+    border: 3px solid #EA0B4D;
+    animation-timing-function: linear;
+
+}
+@keyframes cardLongHaut{
+    0%   {border: 0px solid #EA0B4D;opacity: 0.1; left: 600px; bottom: 150px;}
+    50%  {border: 1px solid #EA0B4D;opacity: 0.3; left: 0px; bottom: 150px;}
+    100% {border: 3px solid #EA0B4D;opacity: 1; left:0px; bottom: 0px;}
+}
+
+.animCardL{
+    animation-name: cardLongHaut;
+    animation-duration: 1s;
+    border: 3px solid  #EA0B4D;
+    animation-timing-function: linear;
+}
+@keyframes cardLongBas{
+    0%   {border: 0px solid #EA0B4D;opacity: 0.1; left: 600px; top: 150px;}
+    50%  {border: 1px solid #EA0B4D;opacity: 0.3; left: 0px; top: 150px;}
+    100% {border: 3px solid #EA0B4D;opacity: 1; left:0px; top: 0px;}
+
+}
+.animCardL2{
+    animation-name: cardLongBas;
+    animation-duration: 1s;
+    border: 3px solid  #EA0B4D;
+    animation-timing-function: linear;
+}
+
+@keyframes animInfo1 {
+    0%    {top: 270px; opacity: 0.1;right: 68%; border: 0px solid #EA0B4D;}
+    50%  {top: 0px; opacity: 0.3;right: 68%; border: 1px solid #EA0B4D;}
+    100% {top: 0px; opacity: 1; right: 0%; border: 3px solid #EA0B4D;}
+}
+.animInfo1{
+    animation-name: animInfo1;
+    animation-duration: 1s;
+    border: 3px solid #EA0B4D;
+    animation-timing-function: linear;
+}
+
+@keyframes animInfo2 {
+    0%    {bottom: 270px; opacity: 0.1;left: 68%; border: 0px solid #EA0B4D;}
+    50%  {bottom: 0px; opacity: 0.3;left: 68%; border: 1px solid #EA0B4D;}
+    100% {bottom: 0px; opacity: 1; left: 0%; border: 3px solid #EA0B4D;}
+}
+.animInfo2{
+    animation-name: animInfo2;
+    animation-duration: 1s;
+    border: 3px solid #EA0B4D;
+    animation-timing-function: linear;
+}
