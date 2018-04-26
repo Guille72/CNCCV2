@@ -48,7 +48,11 @@
 
     </div>
 
-    <div style="height: 600px" onmouseover="serieAnim()">
+</div>
+
+    <div style="height: 600px" onmouseover="serieAnim()" onfocus="serieAnim()">
+
+<div class="container">
 
     <div class="row">
 
@@ -91,7 +95,7 @@
 </div>
 
 
-<div class="marginTop"></div>
+<div class="marginTop2"></div>
 
 
 

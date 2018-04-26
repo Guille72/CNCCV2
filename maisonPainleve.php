@@ -2,7 +2,7 @@
 
 <?php require("navbar.php") ?>
 
-<?php require("carousel.php") ?>
+<?php require("card.php") ?>
 
 <?php require("footer.php") ?>
 

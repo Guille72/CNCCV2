@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Calligraffitti');
 @import url('https://fonts.googleapis.com/css?family=Titan+One');
 *{
-
-
-
-
-
     margin: 0;
     padding: 0;
 
 
+}
+@media screen and (max-width: 364px){
+        .sidenavBig{
+            width: 80% !important;
+        }
+
+}
+.sideNavText{
+    color: #7BBECB !important
 }
 .row{
     margin: 0 !important;
@@ -20,18 +24,11 @@
     min-height: 250px;
 }
 
+.displayNScroll::-webkit-scrollbar{
+display: none}
 body{
-    background-color: #e1e8f0;
+    background-color: white;
 }
-.nav1{
-
-    -webkit-box-shadow: 1px 1px 3px 4px #EA0B4D;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    1px 1px 3px 4px #EA0B4D;  /* Firefox 3.5 - 3.6 */
-    box-shadow:         1px 1px 3px 4px #EA0B4D;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-
-
-}
-
 .cardall{
     background-color: white !important;
     border: 2px solid #EA0B4D;
@@ -41,27 +38,49 @@ body{
     justify-content: center;
     display: flex;
 }
-.li{
-    border: 2px solid #EA0B4D;
-    padding-left: 10px !important;
+.li:hover{
+    background: rgba(0,0,0,0.1);
 }
-.li1{
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
-}
-.li3{
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
+.centreETC{
+    text-align: center;
+    line-height: 80px;
+    height: 48px;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    padding: 0 24px;
+    font-size: 14px;
+    text-overflow: ellipsis;
 }
 .colortext{
     color: #EA0B4D  !important;
 }
-.sticky {
-    position: fixed;
-    bottom: 0;
-    width: 100%
+.colortext1:hover{
+    background-color: transparent !important;
 }
+.stickyNav {
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 1;
+}
+.stickyNav:hover{
+
+    animation-duration: 0.5s;
+    -moz-box-shadow: 0 0 3px 3px #888;
+    -webkit-box-shadow: 0 0 3px 3px#888;
+    box-shadow: 0 0 3px 3px #888;
+    transition: box-shadow 0.5s ease-out;
+}
+
+
 .marginTop{
+    margin-top: 15%;
+}
+.marginTop2{
     margin-top: 5%;
 }
 
