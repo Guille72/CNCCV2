@@ -101,7 +101,17 @@ body{
 .colortext1:hover{
     background-color: transparent !important;
 }
-.stickyNav {
+.nav {
+    padding:0;
+    margin: 0;
+
+    position: -webkit-sticky;
+}
+.toastSend{
+    background-color: #0f9d58;
+    color: white;
+}
+.sticky {
     position: fixed;
     top:0;
     width: 100%;
@@ -148,7 +158,6 @@ body{
 }
 @keyframes cardLongHaut{
     0%   {border: 0px solid #EA0B4D;opacity: 0.1; left: 600px; bottom: 150px;}
-    50%  {border: 1px solid #EA0B4D;opacity: 0.3; left: 0px; bottom: 150px;}
     100% {border: 3px solid #EA0B4D;opacity: 1; left:0px; bottom: 0px;}
 }
 
@@ -160,7 +169,6 @@ body{
 }
 @keyframes cardLongBas{
     0%   {border: 0px solid #EA0B4D;opacity: 0.1; left: 600px; top: 150px;}
-    50%  {border: 1px solid #EA0B4D;opacity: 0.3; left: 0px; top: 150px;}
     100% {border: 3px solid #EA0B4D;opacity: 1; left:0px; top: 0px;}
 
 }

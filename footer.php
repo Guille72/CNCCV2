@@ -9,8 +9,8 @@
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Lien</h5>
                 <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Conditions d'utilisation</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Qui sommes nous</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#">Conditions d'utilisation</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#">Qui sommes nous</a></li>
                 </ul>
             </div>
         </div>

@@ -102,10 +102,10 @@
 <script>
 
     function serieAnim() {
-        document.getElementById("animInfo1").classList.add("animInfo1");
         document.getElementById("animInfo1").classList.remove("displayNone");
-        document.getElementById("animInfo2").classList.add("animInfo2");
+        document.getElementById("animInfo1").classList.add("animInfo1");
         document.getElementById("animInfo2").classList.remove("displayNone");
+        document.getElementById("animInfo2").classList.add("animInfo2");
     }
 
 </script>
