@@ -3,14 +3,31 @@
 *{
     margin: 0;
     padding: 0;
-
-
+}
+textarea:focus {
+    border: none !important;
+    background-color: transparent!important;
+    resize: none !important;
+    outline: none !important;
 }
 @media screen and (max-width: 364px){
         .sidenavBig{
             width: 80% !important;
         }
 
+}
+.DivContact{
+    background-color: #EA0B4D ;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    height: auto;
+}
+.margin30px{
+    margin: 30px;
+    padding: 30px;
+}
+.white-text > label {
+    font-weight: bold;
 }
 .sideNavText{
     color: #7BBECB !important
@@ -33,6 +50,29 @@ body{
     background-color: white !important;
     border: 2px solid #EA0B4D;
     color: #EA0B4D !important;
+}
+.input_form{
+    border-bottom: 1px solid white !important;
+    color: white;
+}
+.input_form:focus{
+    border-bottom: 1px solid gray!important;
+    box-shadow: 0 1px 0 0 gray !important;
+}
+.textarea_form{
+    color: white;
+    height: 90px;
+    border: 1px solid white!important;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 5px;
+    resize: none;
+}
+.textarea_form:focus{
+    border: 1px solid gray!important;
+    border-bottom-right-radius: 20px !important;
+    border-top-left-radius: 20px !important;
+
 }
 .align_ul{
     justify-content: center;

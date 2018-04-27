@@ -5,7 +5,7 @@
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style="color: #7BBECB">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a class="colortext" href="index.php">Toutes les maisons</a></li>
-            <li><a class="colortext" href="#">Contact</a></li>
+            <li><a class="colortext" href="contact.php">Contact</a></li>
             <li><a href="#"></a></li>
         </ul>
     </div>
@@ -31,8 +31,7 @@
 
 <ul class="sidenav sidenavBig sidenavWidth" id="mobile-demo">
     <li><a class="sideNavText" href="index.php"><span class="badge new">3</span>Toutes les maisons</a></li>
-    <li><a class="sideNavText" href="">Contact</a></li>
+    <li><a class="sideNavText" href="contact.php">Contact</a></li>
     <li><a class="sideNavText" href="">Conditions d'utilisation</a></li>
     <li><a class="sideNavText" href="#!">Qui sommes nous</a></li>
 </ul>
-
