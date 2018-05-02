@@ -26,6 +26,6 @@ class Event extends Model
 
 	public function parametrePrix()
 	{
-		return $this->hasMany(ParametrePrix::class);
+		return $this->hasMany(Parametre::class);
 	}
 }

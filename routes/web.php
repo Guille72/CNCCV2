@@ -11,63 +11,65 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get( '/', function () {
+	return view( 'welcome' );
+} );
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get( '/home', 'HomeController@index' )->name( 'home' );
+
+Route::get( '/admin/dashboard', 'Admin\DashboardController@index' )->name('admin')->middleware( 'can:admin' );
 
 // Booking
-Route::get('/bookings', 'BookingController@index')->name('bookings')->middleware('auth');
-Route::get('/bookings/create', 'BookingController@create')->name('bookingCreate')->middleware('auth');
-Route::post('/bookings/create', 'BookingController@store')->name('bookingStore')->middleware('auth');
-Route::get('/bookings/edit/{id}', 'BookingController@edit')->name('bookingEdit')->middleware('auth');
-Route::put('/bookings/edit/{id}', 'BookingController@update')->name('bookingUpdate')->middleware('auth');
-Route::get('/bookings/show/{id}/', 'BookingController@show')->name('bookingShow')->middleware('auth');
-Route::delete('/bookings/delete/{id}', 'BookingController@destroy')->name('bookingDestroy')->middleware('auth');
+Route::get( '/bookings', 'BookingController@index' )->name( 'bookings' )->middleware( 'can:admin' );
+Route::get( '/bookings/create', 'BookingController@create' )->name( 'bookingCreate' )->middleware( 'can:admin' );
+Route::post( '/bookings/create', 'BookingController@store', ['before' => 'csrf'] )->name( 'bookingStore' )->middleware( 'can:admin' );
+Route::get( '/bookings/edit/{id}', 'BookingController@edit' )->name( 'bookingEdit' )->middleware( 'can:admin' );
+Route::put( '/bookings/edit/{id}', 'BookingController@update', ['before' => 'csrf'] )->name( 'bookingUpdate' )->middleware( 'can:admin' );
+Route::get( '/bookings/show/{id}/', 'BookingController@show' )->name( 'bookingShow' )->middleware( 'can:admin' );
+Route::delete( '/bookings/delete/{id}', 'BookingController@destroy', ['before' => 'csrf'] )->name( 'bookingDestroy' )->middleware( 'can:admin' );
 
 // Event
-Route::get('/events', 'EventController@index')->name('events')->middleware('auth');
-Route::get('/events/create', 'EventController@create')->name('eventCreate')->middleware('auth');
-Route::post('/events/create', 'EventController@store')->name('eventStore')->middleware('auth');
-Route::get('/events/edit/{id}', 'EventController@edit')->name('eventEdit')->middleware('auth');
-Route::put('/events/edit/{id}', 'EventController@update')->name('eventUpdate')->middleware('auth');
-Route::get('/events/show/{id}/', 'EventController@show')->name('eventShow')->middleware('auth');
-Route::delete('/events/delete/{id}', 'EventController@destroy')->name('eventDestroy')->middleware('auth');
+Route::get( '/events', 'EventController@index' )->name( 'events' )->middleware( 'can:admin' );
+Route::get( '/events/create', 'EventController@create' )->name( 'eventCreate' )->middleware( 'can:admin' );
+Route::post( '/events/create', 'EventController@store', ['before' => 'csrf'] )->name( 'eventStore' )->middleware( 'can:admin' );
+Route::get( '/events/edit/{id}', 'EventController@edit' )->name( 'eventEdit' )->middleware( 'can:admin' );
+Route::put( '/events/edit/{id}', 'EventController@update', ['before' => 'csrf'] )->name( 'eventUpdate' )->middleware( 'can:admin' );
+Route::get( '/events/show/{id}/', 'EventController@show' )->name( 'eventShow' )->middleware( 'can:admin' );
+Route::delete( '/events/delete/{id}', 'EventController@destroy', ['before' => 'csrf'] )->name( 'eventDestroy' )->middleware( 'can:admin' );
 
 // Logement
-Route::get('/logements', 'LogementController@index')->name('logements')->middleware('auth');
-Route::get('/logements/create', 'LogementController@create')->name('logementCreate')->middleware('auth');
-Route::post('/logements/create', 'LogementController@store')->name('logementStore')->middleware('auth');
-Route::get('/logements/edit/{id}', 'LogementController@edit')->name('logementEdit')->middleware('auth');
-Route::put('/logements/edit/{id}', 'LogementController@update')->name('logementUpdate')->middleware('auth');
-Route::get('/logements/show/{id}/', 'LogementController@show')->name('logementShow')->middleware('auth');
-Route::delete('/logements/delete/{id}', 'LogementController@destroy')->name('logementDestroy')->middleware('auth');
+Route::get( '/logements', 'LogementController@index' )->name( 'logements' )->middleware( 'can:admin' );
+Route::get( '/logements/create', 'LogementController@create' )->name( 'logementCreate' )->middleware( 'can:admin' );
+Route::post( '/logements/create', 'LogementController@store', ['before' => 'csrf'] )->name( 'logementStore' )->middleware( 'can:admin' );
+Route::get( '/logements/edit/{id}', 'LogementController@edit' )->name( 'logementEdit' )->middleware( 'can:admin' );
+Route::put( '/logements/edit/{id}', 'LogementController@update', ['before' => 'csrf'] )->name( 'logementUpdate' )->middleware( 'can:admin' );
+Route::get( '/logements/show/{id}/', 'LogementController@show' )->name( 'logementShow' )->middleware( 'can:admin' );
+Route::delete( '/logements/delete/{id}', 'LogementController@destroy', ['before' => 'csrf'] )->name( 'logementDestroy' )->middleware( 'can:admin' );
 
 // Note
-Route::get('/notes', 'NoteController@index')->name('notes')->middleware('auth');
-Route::get('/notes/create', 'NoteController@create')->name('noteCreate')->middleware('auth');
-Route::post('/notes/create', 'NoteController@store')->name('noteStore')->middleware('auth');
-Route::get('/notes/edit/{id}', 'NoteController@edit')->name('noteEdit')->middleware('auth');
-Route::put('/notes/edit/{id}', 'NoteController@update')->name('noteUpdate')->middleware('auth');
-Route::get('/notes/show/{id}/', 'NoteController@show')->name('noteShow')->middleware('auth');
-Route::delete('/notes/delete/{id}', 'NoteController@destroy')->name('noteDestroy')->middleware('auth');
+Route::get( '/notes', 'NoteController@index' )->name( 'notes' )->middleware( 'can:admin' );
+Route::get( '/notes/create', 'NoteController@create' )->name( 'noteCreate' )->middleware( 'can:admin' );
+Route::post( '/notes/create', 'NoteController@store', ['before' => 'csrf'] )->name( 'noteStore' )->middleware( 'can:admin' );
+Route::get( '/notes/edit/{id}', 'NoteController@edit' )->name( 'noteEdit' )->middleware( 'can:admin' );
+Route::put( '/notes/edit/{id}', 'NoteController@update', ['before' => 'csrf'] )->name( 'noteUpdate' )->middleware( 'can:admin' );
+Route::get( '/notes/show/{id}/', 'NoteController@show' )->name( 'noteShow' )->middleware( 'can:admin' );
+Route::delete( '/notes/delete/{id}', 'NoteController@destroy', ['before' => 'csrf'] )->name( 'noteDestroy' )->middleware( 'can:admin' );
 
 // ParametrePrix
-Route::get('/parametres-prix', 'ParametrePrixController@index')->name('parametresPrix')->middleware('auth');
-Route::get('/parametres-prix/create', 'ParametrePrixController@create')->name('parametrePrixCreate')->middleware('auth');
-Route::post('/parametres-prix/create', 'ParametrePrixController@store')->name('parametrePrixStore')->middleware('auth');
-Route::get('/parametres-prix/edit/{id}', 'ParametrePrixController@edit')->name('parametrePrixEdit')->middleware('auth');
-Route::put('/parametres-prix/edit/{id}', 'ParametrePrixController@update')->name('parametrePrixUpdate')->middleware('auth');
-Route::get('/parametres-prix/show/{id}/', 'ParametrePrixController@show')->name('parametrePrixShow')->middleware('auth');
-Route::delete('/parametres-prix/delete/{id}', 'ParametrePrixController@destroy')->name('parametrePrixDestroy')->middleware('auth');
+Route::get( '/parametres', 'ParametreController@index' )->name( 'parametres' )->middleware( 'can:admin' );
+Route::get( '/parametres/create', 'ParametreController@create' )->name( 'parametreCreate' )->middleware( 'can:admin' );
+Route::post( '/parametres/create', 'ParametreController@store', ['before' => 'csrf'] )->name( 'parametreStore' )->middleware( 'can:admin' );
+Route::get( '/parametres/edit/{id}', 'ParametreController@edit' )->name( 'parametreEdit' )->middleware( 'can:admin' );
+Route::put( '/parametres/edit/{id}', 'ParametreController@update', ['before' => 'csrf'] )->name( 'parametreUpdate' )->middleware( 'can:admin' );
+Route::get( '/parametres/show/{id}/', 'ParametreController@show' )->name( 'parametreShow' )->middleware( 'can:admin' );
+Route::delete( '/parametres/delete/{id}', 'ParametreController@destroy', ['before' => 'csrf'] )->name( 'parametreDestroy' )->middleware( 'can:admin' );
 
 // User
-Route::get('/users', 'UserController@index')->name('users')->middleware('auth');
-Route::get('/users/create', 'UserController@create')->name('userCreate')->middleware('auth');
-Route::post('/users/create', 'UserController@store')->name('userStore')->middleware('auth');
-Route::get('/users/edit/{id}', 'UserController@edit')->name('userEdit')->middleware('auth');
-Route::put('/users/edit/{id}', 'UserController@update')->name('userUpdate')->middleware('auth');
-Route::get('/users/show/{id}/', 'UserController@show')->name('userShow')->middleware('auth');
-Route::delete('/users/delete/{id}', 'UserController@destroy')->name('userDestroy')->middleware('auth');
+Route::get( '/users', 'UserController@index' )->name( 'users' )->middleware( 'can:admin' );
+Route::get( '/users/create', 'UserController@create' )->name( 'userCreate' )->middleware( 'can:admin' );
+Route::post( '/users/create', 'UserController@store' , ['before' => 'csrf'] )->name( 'userStore' )->middleware( 'can:admin' );
+Route::get( '/users/edit/{id}', 'UserController@edit' )->name( 'userEdit' )->middleware( 'can:admin' );
+Route::put( '/users/edit/{id}', 'UserController@update', ['before' => 'csrf'] )->name( 'userUpdate' )->middleware( 'can:admin' );
+Route::get( '/users/show/{id}/', 'UserController@show' )->name( 'userShow' )->middleware( 'can:admin' );
+Route::delete( '/users/delete/{id}', 'UserController@destroy', ['before' => 'csrf'])->name( 'userDestroy' )->middleware( 'can:admin' );

@@ -43,6 +43,7 @@
                 <td>{{$note->updated_at}}</td>
                 <td><a class="btn btn-success" href="{{route('noteEdit', ['id'=>$note->id])}}">Edition</a></td>
                 <td>{!! Form::open(['method' => 'DELETE','route' => ['noteDestroy', $note->id]]) !!}
+                    {!! Form::token(); !!}
                     {!! Form::submit('Suppression', ['class' => 'btn btn-danger']) !!}
                     {!! Form::close() !!}</td>
                 <td><a class="btn btn-info" href="{{route('noteShow', ['id'=>$note->id])}}">Afficher</a></td>

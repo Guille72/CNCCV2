@@ -7,70 +7,76 @@
 
             <div class="form-group">
                 {!! Form::label('name', 'Nom') !!}
-                {!! Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Nom']) !!}
+                {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Nom']) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('firstname', 'Prénom') !!}
-                {!! Form::text('firstname', '', ['class' => 'form-control', 'placeholder' => 'Prénom']) !!}
+                {!! Form::text('firstname', null, ['class' => 'form-control', 'placeholder' => 'Prénom']) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('email', 'Mail') !!}
-                {!! Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'Mail']) !!}
+                {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'Mail']) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('birthdate', 'Naissance') !!}
-                {!! Form::date('birthdate', '', ['class' => 'form-control', 'placeholder' => 'Naissance']) !!}
+                {!! Form::date('birthdate', \Carbon\Carbon::class, ['class' => 'form-control', 'placeholder' => 'Naissance']) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('address', 'Adresse') !!}
-                {!! Form::text('address', '', ['class' => 'form-control', 'placeholder' => 'Adresse']) !!}
+                {!! Form::text('address', null, ['class' => 'form-control', 'placeholder' => 'Adresse']) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('zip', 'Code postal') !!}
-                {!! Form::text('zip', '', ['class' => 'form-control', 'placeholder' => 'Code postal']) !!}
+                {!! Form::text('zip', null, ['class' => 'form-control', 'placeholder' => 'Code postal']) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('city', 'Ville') !!}
-                {!! Form::text('city', '', ['class' => 'form-control', 'placeholder' => 'Ville']) !!}
+                {!! Form::text('city', null, ['class' => 'form-control', 'placeholder' => 'Ville']) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('tel', 'Téléphone') !!}
-                {!! Form::text('tel', '', ['class' => 'form-control', 'placeholder' => 'Téléphone']) !!}
+                {!! Form::text('tel', null, ['class' => 'form-control', 'placeholder' => 'Téléphone']) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('company', 'Entreprise (pour les professionnels)') !!}
-                {!! Form::text('company', '', ['class' => 'form-control', 'placeholder' => 'Entreprise']) !!}
+                {!! Form::text('company', null, ['class' => 'form-control', 'placeholder' => 'Entreprise']) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('siren', 'SIREN (pour les professionnels)') !!}
-                {!! Form::text('siren', '', ['class' => 'form-control', 'placeholder' => 'SIREN']) !!}
+                {!! Form::text('siren', null, ['class' => 'form-control', 'placeholder' => 'SIREN']) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('image', 'Carte d\'identité (jpg/png/pdf)') !!}
-                {!! Form::file('image', '', ['class' => 'form-control', 'placeholder' => 'Carte d\'identité']) !!}
+                {!! Form::file('image', null, ['class' => 'form-control', 'placeholder' => 'Carte d\'identité']) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('tvaInt', 'TVA Int.') !!}
-                {!! Form::text('tvaInt', '', ['class' => 'form-control', 'placeholder' => 'TVA Int.']) !!}
+                {!! Form::text('tvaInt', null, ['class' => 'form-control', 'placeholder' => 'TVA Int.']) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('password', 'Mot de passe') !!}
-                {!! Form::password('password', '', ['class' => 'form-control', 'placeholder' => 'Mot de passe']) !!}
+                {!! Form::password('password', null, ['class' => 'form-control', 'placeholder' => 'Mot de passe']) !!}
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('role', 'Rôle') !!}
+                {!! Form::select('role', ['member' => 'member', 'admin' => 'admin']) !!}
             </div>
 
             {!! Form::open(['method' => 'PUT', 'route'=> ['userEdit', $user]]) !!}
+            {!! Form::token(); !!}
             {{ Form::submit('Edition', ['class' => 'btn btn-info'])}}
             {!! Form::close() !!}
         </div>

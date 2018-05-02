@@ -56,4 +56,14 @@ class User extends Authenticatable
 	{
 		return $this->hasOne(User::class);
 	}
+
+	/**
+	 * checks if the user belongs to a particular group
+	 * @param string|array $role
+	 * @return bool
+	 */
+	public function role($role) {
+		$role = (array)$role;
+		return in_array($this->role, $role);
+	}
 }

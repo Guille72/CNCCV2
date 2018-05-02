@@ -31,6 +31,7 @@
                 <td><a class="btn btn-success" href="{{route('eventEdit', ['id'=>$event->id])}}">Edition</a></td>
                 <td>{!! Form::open(['method' => 'DELETE','route' => ['eventDestroy', $event->id]]) !!}
                     {!! Form::submit('Suppression', ['class' => 'btn btn-danger']) !!}
+                    {!! Form::token(); !!}
                     {!! Form::close() !!}</td>
                 <td><a class="btn btn-info" href="{{route('eventShow', ['id'=>$event->id])}}">Afficher</a></td>
                 </tbody>

@@ -59,6 +59,7 @@
                 <td>{{$booking->updated_at}}</td>
                 <td><a class="btn btn-success" href="{{route('bookingEdit', ['id'=>$booking->id])}}">Edition</a></td>
                 <td>{!! Form::open(['method' => 'DELETE','route' => ['bookingDestroy', $booking->id]]) !!}
+                    {!! Form::token(); !!}
                     {!! Form::submit('Suppression', ['class' => 'btn btn-danger']) !!}
                     {!! Form::close() !!}</td>
                 <td><a class="btn btn-info" href="{{route('bookingShow', ['id'=>$booking->id])}}">Afficher</a></td>

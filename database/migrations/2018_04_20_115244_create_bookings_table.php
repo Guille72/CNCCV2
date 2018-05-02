@@ -35,10 +35,10 @@ class CreateBookingsTable extends Migration
 	              ->references('id')
 	              ->on('logements');
 
-	        $table->integer('parametre_prix_id')->unsigned()->nullable();
-	        $table->foreign('parametre_prix_id')
+	        $table->integer('parametre_id')->unsigned()->nullable();
+	        $table->foreign('parametre_id')
 	              ->references('id')
-	              ->on('parametres_prix');
+	              ->on('parametres');
 
 	        $table->integer('event_dateDebut')->unsigned()->nullable();
 	        $table->foreign('event_dateDebut')

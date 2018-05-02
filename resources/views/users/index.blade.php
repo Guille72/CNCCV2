@@ -20,6 +20,7 @@
         <td>SIREN</td>
         <td>Image</td>
         <td>TVA Int.</td>
+        <td>Rôle</td>
         <td>Création</td>
         <td>Edition</td>
         <td>Action Editer</td>
@@ -42,10 +43,12 @@
         <td>{{$user->siren}}</td>
         <td>{{$user->image}}</td>
         <td>{{$user->tvaInt}}</td>
+        <td>{{$user->role}}</td>
         <td>{{$user->created_at}}</td>
         <td>{{$user->updated_at}}</td>
         <td><a class="btn btn-success" href="{{route('userEdit', ['id'=>$user->id])}}">Edition</a></td>
         <td>{!! Form::open(['method' => 'DELETE','route' => ['userDestroy', $user->id]]) !!}
+            {!! Form::token(); !!}
             {!! Form::submit('Suppression', ['class' => 'btn btn-danger']) !!}
             {!! Form::close() !!}</td>
         <td><a class="btn btn-info" href="{{route('userShow', ['id'=>$user->id])}}">Afficher</a></td>

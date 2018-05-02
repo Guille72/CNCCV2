@@ -21,10 +21,18 @@ class AuthServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
-        $this->registerPolicies();
+	public function boot()
+	{
+		$this->registerPolicies();
 
-        //
-    }
+		// the gate checks if the user is an admin or a superadmin
+		Gate::define('admin', function($user) {
+			return $user->role(['admin']);
+		});
+
+		// the gate checks if the user is a member
+		Gate::define('member', function($user) {
+			return $user->role('member');
+		});
+	}
 }

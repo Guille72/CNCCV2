@@ -17,6 +17,7 @@
             <td>SIREN</td>
             <td>Image</td>
             <td>TVA Int.</td>
+            <td>Rôle</td>
             <td>Création</td>
             <td>Edition</td>
         </tr>
@@ -35,6 +36,7 @@
             <td>{{$user->siren}}</td>
             <td>{{$user->image}}</td>
             <td>{{$user->tvaInt}}</td>
+            <td>{{$user->role}}</td>
             <td>{{$user->created_at}}</td>
             <td>{{$user->updated_at}}</td>
             </tbody>

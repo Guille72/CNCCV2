@@ -44,9 +44,9 @@ class Booking extends Model
 		return $this->belongsTo(Event::class);
 	}
 
-	public function parametrePrix()
+	public function parametre()
 	{
-		return $this->belongsTo(ParametrePrix::class);
+		return $this->belongsTo(Parametre::class);
 	}
 
 }

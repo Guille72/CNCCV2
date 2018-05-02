@@ -50,6 +50,7 @@
                 <td>{{$logement->updated_at}}</td>
                 <td><a class="btn btn-success" href="{{route('logementEdit', ['id'=>$logement->id])}}">Edition</a></td>
                 <td>{!! Form::open(['method' => 'DELETE','route' => ['logementDestroy', $logement->id]]) !!}
+                    {!! Form::token(); !!}
                     {!! Form::submit('Suppression', ['class' => 'btn btn-danger']) !!}
                     {!! Form::close() !!}</td>
                 <td><a class="btn btn-info" href="{{route('logementShow', ['id'=>$logement->id])}}">Afficher</a></td>
