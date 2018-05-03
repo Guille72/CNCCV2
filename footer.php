@@ -24,7 +24,7 @@
 
 <footer class="page-footer hide-on-large-only" id="footer" style="background-color: #EA0C4D ">
     <div class="container">
-            <div class="col s12" style="text-align: center">
+            <div class="col s12" style="text-align: center;">
                 <h5 class="white-text">Chez Nous comme Chez Vous</h5>
                 <p class="grey-text text-lighten-4">Location de maison sur courte et moyenne durée au Mans</p>
             </div>

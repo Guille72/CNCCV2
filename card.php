@@ -90,12 +90,8 @@
 
 
 
-<div class="col s12 m12 l12">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2670.9009980940655!2d0.20100161608140754!3d47.97697237921103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e28f1ebc58718b%3A0x7f35452087f12043!2s193+Boulevard+Jean+Jacques+Rousseau%2C+72100+Le+Mans!5e0!3m2!1sfr!2sfr!4v1524660292178" width="100%" height="15% !important;" frameborder="0" style="border:0; height: 250px !important;" allowfullscreen></iframe>
-</div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2670.9009980940655!2d0.20100161608140754!3d47.97697237921103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e28f1ebc58718b%3A0x7f35452087f12043!2s193+Boulevard+Jean+Jacques+Rousseau%2C+72100+Le+Mans!5e0!3m2!1sfr!2sfr!4v1524660292178" width="100%" !important;" frameborder="0" style="border:0; height: 250px !important;" allowfullscreen></iframe>
 
-
-<div class="marginTop2"></div>
 
 
 

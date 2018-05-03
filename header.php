@@ -10,6 +10,7 @@
     <title>Chez Nous comme Chez Vous</title>
     <link type="text/css" href="lib/css/materialize.css" rel="stylesheet">
     <link type="text/css" href="lib/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 </head>
 <body>
 

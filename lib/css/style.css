@@ -3,6 +3,8 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+
 }
 textarea:focus {
     border: none !important;
@@ -16,11 +18,21 @@ textarea:focus {
         }
 
 }
+footer{
+    padding: 0!important;
+}
 .DivContact{
     background-color: #EA0B4D ;
     border-bottom-right-radius: 50px;
     border-top-left-radius: 50px;
     height: auto;
+}
+.divBorder1 {
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+.div_action{
+    background-color: transparent !important;
 }
 .margin30px{
     margin: 30px;
@@ -201,4 +213,46 @@ body{
     animation-duration: 1s;
     border: 3px solid #EA0B4D;
     animation-timing-function: linear;
+}
+.iconAlign{
+    vertical-align: sub;
+}
+.align{
+    text-align: center;
+}
+.colorCyan{
+    color: #7BBECB !important;
+}
+.cardpresen{
+    height: 400px;
+    width: 90%;
+    box-shadow: 0 15px 32px rgba(0,0,0,0.30), 0 12px 10px rgba(0,0,0,0.22);
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px;
+}
+.bgRouge{
+    background-color: #EA0B4D !important;
+}
+.bgBleu{
+    background-color: #348C9E !important;
+}
+.bgOrange{
+    background-color: #FA9E05 !important;
+}
+.bgRougeC{
+    background-color: #F69DB7 !important;
+}
+.bgBleuC{
+    background-color: #7BBECB !important;
+}
+.bgOrangeC{
+    background-color: #F2C57A !important;
+}
+.LittleOpa{
+    opacity: 0.8;
+}
+.cardShadow{
+    box-shadow: 0 8px 22px rgba(0,0,0,0.30), 0 7px 8px rgba(0,0,0,0.22);
+
 }

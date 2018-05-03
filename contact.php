@@ -4,7 +4,6 @@
 
 <div class="marginTop hide-on-large-only"></div>
 
-<div class="hide-on-large-only"><br><br><br><br><br></div>
 
 <h5 class="colortext center-align">Envie de donner votre avis ?</h5>
 
@@ -25,7 +24,8 @@
                     <div class="col s1 m1 l1" style="height: 50px">
                         <i class="material-icons small white-text" style="margin-top: 20px">account_circle</i>
                     </div>
-                    <div class="col s11 m11 l11">
+                    <div class="col s1 m1 hide-on-large-only"></div>
+                    <div class="col s10 m10 l11">
                         <input type="text" id="name" name="name" class="input_form form-control"/>
                     </div>
                 </div>
@@ -44,7 +44,8 @@
                     <div class="col s1 m1 l1" style="height: 50px">
                         <i class="material-icons small white-text" style="margin-top: 20px">mail</i>
                     </div>
-                    <div class="col s11 m11 l11">
+                    <div class="col s1 m1 hide-on-large-only"></div>
+                    <div class="col s10 m10 l11">
                         <input type="text" id="email" name="email" class="form-control input_form"/>
                     </div>
                 </div>

@@ -7,7 +7,7 @@
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"
                                                                          style="color: #7BBECB">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="colortext" href="index.php">Toutes les maisons</a></li>
+            <li><a class="colortext" href="index.php#AllMaison">Toutes les maisons</a></li>
             <li><a class="colortext" href="contact.php">Contact</a></li>
             <li><a href="#"></a></li>
         </ul>
@@ -26,12 +26,12 @@
     </div>
     <div class="nav-content displayNScroll" id="cc">
         <ul class="centreETC tabs-transparent hide-on-large-only displayNScroll align_ul">
-            <li class="tab li1 li"><a class="active colortext colortext1 waves-green" href="maisonRousseau.php"><h6>Chez
-                        Rousseau</h6></a></li>
-            <li class="tab li"><a href="maisonChampion.php" class="colortext colortext1 waves-green"><h6>Chez
-                        Champion</h6></a></li>
-            <li class="tab li li3"><a href="maisonPainleve.php" class="colortext colortext1 waves-green"><h6>Chez
-                        Painlevé</h6></a></li>
+            <li class="tab li1 li"><a class="active colortext colortext1 waves-green" href="maisonRousseau.php"><h7>Chez
+                        Rousseau</h7></a></li>
+            <li class="tab li"><a href="maisonChampion.php" class="colortext colortext1 waves-green"><h7>Chez
+                        Champion</h7></a></li>
+            <li class="tab li li3"><a href="maisonPainleve.php" class="colortext colortext1 waves-green"><h7>Chez
+                        Painlevé</h7></a></li>
         </ul>
         <br>
     </div>

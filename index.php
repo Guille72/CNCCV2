@@ -4,6 +4,8 @@
 
 <?php require("navbar.php") ?>
 
+<?php require("presentation.php") ?>
+
 <?php require("cardPage.php") ?>
 
 <?php require("footer.php") ?>

@@ -6,3 +6,19 @@
     <a class="carousel-item" href="#three"><img class="responsive-img" src="lib/img/IMG_1765.JPG"></a>
     <a class="carousel-item" href="#four"><img class="responsive-img" src="lib/img/IMG_1760.JPG"></a>
 </div>
+
+<script>
+
+    M.AutoInit();
+
+    $('.carousel.carousel-slider').carousel({
+        indicators:true,
+        interval:500,
+        transition:300
+    });
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+    });
+
+
+</script>

@@ -14,11 +14,6 @@
 
     M.AutoInit();
 
-    $('.carousel.carousel-slider').carousel({
-        indicators:true,
-        interval:500,
-        transition:300
-    });
     $(document).ready(function(){
         $('.sidenav').sidenav();
     });
