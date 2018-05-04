@@ -23,13 +23,13 @@
                             </div>
                             <div class="col l5 hide-on-med-and-down">
                                 <p> &nbsp;
-                                    <b style="color: #EA0B4D; font-size: 25px">40</b><i
+                                    <b style="color: #EA0B4D; font-size: 25px">50</b><i
                                             style="margin-top: 15px; color: #EA0B4D" class="material-icons iconAlign">euro_symbol</i>
                                 </p>
                             </div>
                             <div class="col s5 m4 hide-on-large-only">
                                 <p> &nbsp;
-                                    <b style="color: #EA0B4D; font-size: 25px">40</b><i
+                                    <b style="color: #EA0B4D; font-size: 25px">50</b><i
                                             style="margin-top: 15px; color: #EA0B4D" class="material-icons iconAlign">euro_symbol</i>
                                 </p>
                             </div>
@@ -75,7 +75,7 @@
                             Painlevé 72100 LE
                             MANS </p>
                         <p class="align"><i class="material-icons iconAlign"
-                                            style="margin-top: 15px">supervisor_account</i>&nbsp; 6
+                                            style="margin-top: 15px">supervisor_account</i>&nbsp; 8
                             personnes
                         </p>
                     </div>

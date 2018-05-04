@@ -3,7 +3,8 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans', serif;
+    font-size: large;
 
 }
 textarea:focus {
@@ -119,15 +120,16 @@ body{
 
     position: -webkit-sticky;
 }
-.toastSend{
-    background-color: #0f9d58;
-    color: white;
+#navbar{
+
+    font-size: 30px !important;
+    z-index: 1 !important;
 }
+
 .sticky {
     position: fixed;
     top:0;
     width: 100%;
-    z-index: 1;
 }
 .stickyNav:hover{
 
@@ -138,7 +140,9 @@ body{
     transition: box-shadow 0.5s ease-out;
 }
 
-
+.marginTop3{
+    margin-top: 20%;
+}
 .marginTop{
     margin-top: 15%;
 }
@@ -253,6 +257,6 @@ body{
     opacity: 0.8;
 }
 .cardShadow{
-    box-shadow: 0 8px 22px rgba(0,0,0,0.30), 0 7px 8px rgba(0,0,0,0.22);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15), 0 7px 8px rgba(0,0,0,0.20);
 
 }

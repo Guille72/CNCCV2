@@ -26,12 +26,12 @@
     </div>
     <div class="nav-content displayNScroll" id="cc">
         <ul class="centreETC tabs-transparent hide-on-large-only displayNScroll align_ul">
-            <li class="tab li1 li"><a class="active colortext colortext1 waves-green" href="maisonRousseau.php"><h7>Chez
-                        Rousseau</h7></a></li>
-            <li class="tab li"><a href="maisonChampion.php" class="colortext colortext1 waves-green"><h7>Chez
-                        Champion</h7></a></li>
-            <li class="tab li li3"><a href="maisonPainleve.php" class="colortext colortext1 waves-green"><h7>Chez
-                        Painlevé</h7></a></li>
+            <li class="tab li1 li"><a class="active colortext colortext1 waves-green" href="maisonRousseau.php" style="font-size: 14px !important;">Chez
+                        Rousseau</a></li>
+            <li class="tab li"><a href="maisonChampion.php" class="colortext colortext1 waves-green" style="font-size: 14px !important;">Chez
+                        Champion</a></li>
+            <li class="tab li li3"><a href="maisonPainleve.php" class="colortext colortext1 waves-green" style="font-size: 14px !important;">Chez
+                        Painlevé</a></li>
         </ul>
         <br>
     </div>
@@ -39,8 +39,11 @@
 
 
 <ul class="sidenav sidenavBig sidenavWidth" id="mobile-demo">
+    <div class="bgBleuC" style="padding: 10px !important;"><h6 style="margin: 0 !important;" class="white-text align colortext1">Menu</h6></div>
+
     <li><a class="sideNavText" href="index.php"><span class="badge new">3</span>Toutes les maisons</a></li>
     <li><a class="sideNavText" href="contact.php">Contact</a></li>
-    <li><a class="sideNavText" href="">Conditions d'utilisation</a></li>
+    <li><a class="sideNavText" href="ml.php">Mentions légales</a></li>
+    <li><a class="sideNavText" href="cu.php">Conditions d'utilisation</a></li>
     <li><a class="sideNavText" href="#">Qui sommes nous</a></li>
 </ul>

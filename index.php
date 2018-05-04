@@ -1,6 +1,8 @@
 <?php require("header.php") ?>
 
-<?php require("carousel.php") ?>
+
+<img class="responsive-img" src="lib/img/PanoramaLeMans.JPG">
+
 
 <?php require("navbar.php") ?>
 

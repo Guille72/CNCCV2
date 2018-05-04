@@ -2,6 +2,9 @@
 
 <?php require("navbar.php") ?>
 
+<div style="height: 150px;"></div>
+
+
 <div class="marginTop hide-on-large-only"></div>
 
 
@@ -75,10 +78,21 @@
 
         <br>
 
+        <div class="row">
+            <div class="col s6 m6 l6 white-text">
+                Accepter nos <a target="_blank" href="cu.php">Conditions d'utilisations</a>
+                <label class="white-text">
+                    <input class="white white-text" id="indeterminate-checkbox" name="checkCU"
+                           type="checkbox" style="background-color: white !important;"/>
+                    <span class="white-text"></span>
+                </label>
+            </div>
+            <div class="form-group col s4 m4 l4" align="center">
 
-        <div class="form-group col s10 m10 l10" align="center">
-            <input type="submit" onclick="M.toast({html: 'Message envoyé. Merci!',classes: 'rounded toastSend'})" id="submit" name="submit" value="Envoyer" class="btn col s10 m10 l10 white colortext"
-                   style="width: 60%"/>
+                <input type="submit" onclick="M.toast({html: 'Message envoyé. Merci!',classes: 'rounded toastSend'})"
+                       id="submit" name="submit" value="Envoyer" class="btn white colortext"
+                       style="width: 100%"/>
+            </div>
         </div>
     </form>
 </div>
@@ -160,3 +174,8 @@ if (isset($_POST['email'])) {
 
 ?>
 
+<script>
+
+    document.getElementById("navbar").classList.add("sticky");
+
+</script>

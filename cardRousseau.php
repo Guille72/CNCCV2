@@ -1,5 +1,17 @@
 
-<div style="height: 500px; background-color: #0f9d58;"></div>
+<div style="height: 500px; border-bottom: 0.5px solid black">
+
+    <div class="carousel col m12 s12 l12">
+        <a class="carousel-item" href="#one"><img class="responsive-img materialboxed" src="lib/img/IMG_2739.JPG"></a>
+        <a class="carousel-item" href="#two"><img class="responsive-img materialboxed" src="lib/img/IMG_1769.JPG"></a>
+        <a class="carousel-item" href="#three"><img class="responsive-img materialboxed" src="lib/img/IMG_1760_2.jpg.png"></a>
+        <a class="carousel-item" href="#four"><img class="responsive-img materialboxed" src="lib/img/IMG_1757.JPG"></a>
+        <a class="carousel-item" href="#five"><img class="responsive-img materialboxed" src="lib/img/both2.png"></a>
+    </div>
+
+
+
+</div>
 <div style="height: 600px" class="marginTop2" >
 
     <div class="container">
@@ -59,6 +71,21 @@
             document.getElementById("animInfo2").classList.add("animInfo2");
         }
     }
+
+
+    M.AutoInit();
+
+    $('.carousel.carousel-slider').carousel({
+        indicators:true,
+        interval:500,
+        transition:300,
+        fullWidth:true
+    });
+
+
+    var instance = M.Carousel.getInstance(elem);
+
+    instance.next(3);
 </script>
 
 

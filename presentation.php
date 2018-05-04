@@ -1,4 +1,4 @@
-<div class="marginTop2"></div>
+<div class="marginTop2">
 
 <div class="row align aligncard">
 
@@ -9,7 +9,7 @@
         <span class="white-text">
             <b>
                 <h4>
-                Location immobilière pour particulier sur Le Mans
+                Location immobilière sur courte & moyenne durée au Mans
                 </h4>
             </b>
         </span>
@@ -23,7 +23,7 @@
             <span class="white-text">
             <b>
                 <h4>
-                    Deux nouvelles maisons arrivent bientot
+                    Bientôt de nouvelles adresses
                 </h4>
             </b>
         </span>
@@ -38,7 +38,7 @@
             <b>
                 <h4>
                     Mise a jour du site,
-                    vous pourrez bientot reserver en ligne
+                    vous pourrez bientôt réserver en ligne
                 </h4>
             </b>
         </span>
@@ -49,6 +49,6 @@
 </div>
 <div class="container">
 
-<div class="marginTop2 divider" style="border: 1px solid lightgrey"></div>
+<div class="marginTop2 divider" style="border: 0.5px solid #C1C1C1"></div>
 
 </div>
