@@ -18,11 +18,7 @@
         $('.sidenav').sidenav();
     });
 
-
 </script>
-
-
-
 
 </body>
 </html>

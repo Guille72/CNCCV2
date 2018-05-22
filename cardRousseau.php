@@ -1,45 +1,79 @@
+<div class="hide-on-large-only" style="margin-top: 200px"></div>
 
-<div style="height: 500px; border-bottom: 0.5px solid black">
+<div class="container">
 
-    <div class="carousel col m12 s12 l12">
-        <a class="carousel-item" href="#one"><img class="responsive-img materialboxed" src="lib/img/IMG_2739.JPG"></a>
-        <a class="carousel-item" href="#two"><img class="responsive-img materialboxed" src="lib/img/IMG_1769.JPG"></a>
-        <a class="carousel-item" href="#three"><img class="responsive-img materialboxed" src="lib/img/IMG_1760_2.jpg.png"></a>
-        <a class="carousel-item" href="#four"><img class="responsive-img materialboxed" src="lib/img/IMG_1757.JPG"></a>
-        <a class="carousel-item" href="#five"><img class="responsive-img materialboxed" src="lib/img/both2.png"></a>
+    <h2 class="align colortext">Chez Rousseau</h2>
+
+    <div class="col s8 m8 l8 offset-l2 offset-s2 offset-m2">
+        <br>
+    </div>
+    <div class="divBorder1" style="border: 3px solid #EA0B4D;padding-bottom: 20px !important; padding-top: 5px !important;">
+    <div class="row" style="margin-top: 20px !important;">
+
+        <div class="col s4 m4 l4">
+            <a class="" href="#one"><img class="responsive-img materialboxed" src="lib/img/IMG_2739.JPG"></a>
+        </div>
+
+        <div class="col s4 m4 l4">
+            <a class="" href="#two"><img class="responsive-img materialboxed" src="lib/img/IMG_1769.JPG"></a>
+        </div>
+
+        <div class="col s4 m4 l4">
+        <a class="" href="#three"><img class="responsive-img materialboxed" src="lib/img/IMG_1757.JPG"></a>
+        </div>
+
     </div>
 
+    <div style="margin-top: 20px !important;" class="row">
 
+        <div class="col s6 m6 l6">
+            <a class="" href="#four"><img class="responsive-img materialboxed" src="lib/img/IMG_1760_2.jpg.png"></a>
+        </div>
 
-</div>
+        <div class="col s6 m6 l6">
+            <a class="" href="#five"><img style="width: 100% !important;" class="materialboxed" src="lib/img/both2.png"></a>
+        </div>
+
+    </div>
+    </div>
+
 <div style="height: 600px" class="marginTop2" >
 
-    <div class="container">
 
-        <div class="row">
+    <div class="row">
 
-            <div class="col m9 s12 offset-m3">
-                <div class="card displayNone divBorder1" id="animInfo1">
-                    <div class="card-content">
+        <div class="col m9 s12 offset-m3">
+            <div class="card displayNone divBorder1" id="animInfo1">
+                <div class="card-content">
 
-                    </div>
-                    <div class="card-action div_action">
-                        <a href="#">Info1</a>
-                    </div>
+                    <span class="card-title">Équipements </span>
+
+                    <i class="material-icons">wifi</i> Wifi <br>
+                    <i class="material-icons">tv</i> Télévision <br>
+                    <i class="material-icons">computer</i> Espace de travail pour ordinateur portable <br>
+                    <i class="material-icons">local_dining</i> Cuisine tout équipée <br>
+                    <i class="material-icons">time_to_leave</i> Place de parking dans la rue <br>
+                    <i class="material-icons">directions_bike</i> Garage sur place pour vélo et moto
+
                 </div>
             </div>
-
         </div>
+
+    </div>
 
         <div class="row">
 
             <div class="col m9 s12">
                 <div class="card displayNone divBorder1" id="animInfo2">
                     <div class="card-content">
+                        <span class="card-title">À quelques pas..</span>
 
-                    </div>
-                    <div class="card-action div_action">
-                        <a href="#">Info2</a>
+                        <i class="material-icons">location_on</i> Circuit des 24h du Mans / Centre des expositions <br>
+                        <i class="material-icons">location_on</i> Bar / tabac <br>
+                        <i class="material-icons">location_on</i> Boulangerie <br>
+                        <i class="material-icons">location_on</i> Leclerc Drive / ALDI / Carrefour / Centre commerciale <br>
+                        <i class="material-icons">location_on</i> Pizzeria / Restaurant Marocain
+
                     </div>
                 </div>
             </div>
@@ -76,17 +110,11 @@
     M.AutoInit();
 
     $('.carousel.carousel-slider').carousel({
-        indicators:true,
-        interval:500,
-        transition:300,
-        fullWidth:true
+
     });
 
 
-    var instance = M.Carousel.getInstance(elem);
-
-    instance.next(3);
-</script>
+    </script>
 
 
 

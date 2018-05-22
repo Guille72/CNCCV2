@@ -17,7 +17,9 @@ textarea:focus {
         .sidenavBig{
             width: 80% !important;
         }
-
+}
+.carousel{
+    height: 250px !important;
 }
 footer{
     padding: 0!important;
@@ -170,7 +172,6 @@ body{
     animation-duration: 1s;
     border: 3px solid #EA0B4D;
     animation-timing-function: linear;
-
 }
 @keyframes cardLongHaut{
     0%   {border: 0px solid #EA0B4D;opacity: 0.1; left: 600px; bottom: 150px;}

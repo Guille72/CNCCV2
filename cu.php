@@ -27,8 +27,16 @@
     </p><br>
 
     <p><b>« Utilisateur »</b> : l'internaute visitant et utilisant les Services du Site.</p>
-    <br><br>
+    <br>
 
+    <p><b>« Chez Champion »</b> : désigne le bien a loué situé 17 impasse Henri Champion, 72100 Le Mans.</p>
+    <br>
+
+    <p><b>« Chez Rousseau »</b> : désigne le bien a loué situé 193 Boulevard Jean-Jacques Rousseau, 72100 Le Mans. </p>
+    <br>
+
+    <p><b>« Chez Painlevé »</b> : désigne le bien a loué situé 12 square Paul Painlevé, 72100 Le Mans. </p>
+    <br><br>
 
     <h5 class="colortext">&#149; Article 1 - Introduction et rôle de la charte</h5>
     <br>

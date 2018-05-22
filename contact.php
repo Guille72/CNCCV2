@@ -89,7 +89,7 @@
             </div>
             <div class="form-group col s4 m4 l4" align="center">
 
-                <input type="submit" onclick="M.toast({html: 'Message envoyé. Merci!',classes: 'rounded toastSend'})"
+                <input type="submit"
                        id="submit" name="submit" value="Envoyer" class="btn white colortext"
                        style="width: 100%"/>
             </div>
