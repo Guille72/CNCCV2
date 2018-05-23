@@ -12,7 +12,7 @@
 
 <div class="container DivContact">
     <!--Formulaire de contact-->
-    <form class="margin30px" method="post" action="">
+    <form class="margin30px" method="post">
 
         <div class="row">
 
@@ -79,14 +79,7 @@
         <br>
 
         <div class="row">
-            <div class="col s6 m6 l6 white-text">
-                Accepter nos <a target="_blank" href="cu.php">Conditions d'utilisations</a>
-                <label class="white-text">
-                    <input class="white white-text" id="indeterminate-checkbox" name="checkCU"
-                           type="checkbox" style="background-color: white !important;"/>
-                    <span class="white-text"></span>
-                </label>
-            </div>
+
             <div class="form-group col s4 m4 l4" align="center">
 
                 <input type="submit"
@@ -145,10 +138,9 @@ function envoieMail($name, $subject, $message, $email, $file)
 
         $mail->send();
 
-        $msgEnvoyer = "M.toast({html: 'Message envoyé'});";
-
     } catch (Exception $e) {
-        $msgEnvoyer = "M.toast({html: 'Erreur, message non envoyé'})";
+        echo 'Message non envoyé !';
+        echo 'Erreur : '.$mail->ErrorInfo;
     }
 }
 
