@@ -14,5 +14,4 @@ class AccueilController extends Controller {
 	public function contact() {
 		return view( 'layouts/contact' );
 	}
-
 }

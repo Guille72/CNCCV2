@@ -80,8 +80,6 @@
 
     <div class="marginTop2"></div>
 
-    @include('layouts.footer')
-
 	<?php
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;

@@ -10,7 +10,7 @@
                 <ul>
                     <li><a class="grey-text text-lighten-3" href="{{route('ml')}}">Mentions légales</a></li>
                     <li><a class="grey-text text-lighten-3" href="{{route('cu')}}">Conditions d'utilisations</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#">Qui sommes nous</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#">Qui sommes nous ?</a></li>
                     <br>
                 </ul>
             </div>
