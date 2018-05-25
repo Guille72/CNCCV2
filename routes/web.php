@@ -11,14 +11,28 @@
 |
 */
 
-Route::get( '/', function () {
+/*Route::get( '/', function () {
 	return view( 'welcome' );
 } );
 
-Auth::routes();
 Route::get( '/home', 'HomeController@index' )->name( 'home' );
+*/
 
+Auth::routes();
 Route::get( '/admin/dashboard', 'Admin\DashboardController@index' )->name('admin')->middleware( 'can:admin' );
+
+Route::get('/', 'AccueilController@index')->name('accueil');
+Route::get('/contact', 'AccueilController@contact')->name('contact');
+
+Route::get('/champion', 'LogementController@champion')->name('champion');
+Route::get('/rousseau', 'LogementController@rousseau')->name('rousseau');
+Route::get('/painLeve', 'LogementController@painLeve')->name('painLeve');
+
+Route::get('/mentions', 'DroitController@mention')->name('ml');
+Route::get('/conditions', 'DroitController@condition')->name('cu');
+
+Route::get('/Dispo', 'BookingController@Dispo')->name('Dispo');
+Route::post('/Dispo', 'BookingController@Dispo')->name('Dispo');
 
 // Booking
 Route::get( '/bookings', 'BookingController@index' )->name( 'bookings' )->middleware( 'can:admin' );

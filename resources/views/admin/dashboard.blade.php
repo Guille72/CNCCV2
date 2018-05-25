@@ -16,7 +16,7 @@
     <a href="{{route('logements')}}">Liste des logements</a>
     <a href="{{route('logementCreate')}}">Créer un logement</a>
 
-    <a href="{{route('parametresPrix')}}">Liste des paramètres de prix</a>
-    <a href="{{route('parametrePrixCreate')}}">Créer un paramètre de prix</a>
+    <a href="{{route('parametres')}}">Liste des paramètres de prix</a>
+    <a href="{{route('parametreCreate')}}">Créer un paramètre de prix</a>
 
 @endsection

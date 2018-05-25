@@ -75,4 +75,16 @@ class LogementController extends Controller
 		$logement->delete();
 		return redirect(route('logements'));
 	}
+
+	public function champion(){
+		return view('logements/maisonChampion');
+	}
+
+	public function painLeve(){
+		return view('logements/maisonPainLeve');
+	}
+
+	public function rousseau(){
+		return view('logements/maisonRousseau');
+	}
 }

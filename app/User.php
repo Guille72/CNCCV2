@@ -54,7 +54,7 @@ class User extends Authenticatable
 
 	public function note()
 	{
-		return $this->hasOne(User::class);
+		return $this->hasOne(Note::class);
 	}
 
 	/**

@@ -26,8 +26,8 @@
                 <td>{{$event->dateFin}}</td>
                 <td>{{$event->prix}}</td>
                 <td>{{$event->evenement}}</td>
-                <td>{{$booking->created_at}}</td>
-                <td>{{$booking->updated_at}}</td>
+                <td>{{$event->created_at}}</td>
+                <td>{{$event->updated_at}}</td>
                 <td><a class="btn btn-success" href="{{route('eventEdit', ['id'=>$event->id])}}">Edition</a></td>
                 <td>{!! Form::open(['method' => 'DELETE','route' => ['eventDestroy', $event->id]]) !!}
                     {!! Form::submit('Suppression', ['class' => 'btn btn-danger']) !!}

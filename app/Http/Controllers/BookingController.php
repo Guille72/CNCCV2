@@ -3,19 +3,35 @@
 namespace App\Http\Controllers;
 
 use App\Booking;
+use DateInterval;
 use Illuminate\Http\Request;
 
+/**
+ * Class BookingController
+ * @package App\Http\Controllers
+ */
 class BookingController extends Controller {
+	/**
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+	 */
 	public function index() {
 		$bookings = Booking::all();
 
 		return view( 'bookings/index', [ 'bookings' => $bookings ] );
 	}
 
+	/**
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+	 */
 	public function create() {
 		return view( 'bookings/create' );
 	}
 
+	/**
+	 * @param Request $request
+	 *
+	 * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+	 */
 	public function store( Request $request ) {
 		Booking::create( [
 			'id'            => $request->id,
@@ -33,18 +49,34 @@ class BookingController extends Controller {
 		return redirect( route( 'bookings' ) );
 	}
 
+	/**
+	 * @param $id
+	 *
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+	 */
 	public function show( $id ) {
 		$booking = Booking::findOrFail( $id );
 
 		return view( 'bookings/show', [ 'booking' => $booking ] );
 	}
 
+	/**
+	 * @param $id
+	 *
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+	 */
 	public function edit( $id ) {
 		$booking = Booking::findOrFail( $id );
 
 		return view( 'bookings/edit', [ 'booking' => $booking ] );
 	}
 
+	/**
+	 * @param Request $request
+	 * @param $id
+	 *
+	 * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+	 */
 	public function update( Request $request, $id ) {
 		$booking = Booking::findOrFail( $id );
 
@@ -63,10 +95,24 @@ class BookingController extends Controller {
 		return redirect( route( 'bookings' ) );
 	}
 
+	/**
+	 * @param $id
+	 *
+	 * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+	 */
 	public function destroy( $id ) {
 		$booking = Booking::findOrFail( $id );
 		$booking->delete();
 
 		return redirect( route( 'bookings' ) );
+	}
+
+
+	public function Dispo() {
+
+		Booking::testDispo( );
+
+		$bookings = Booking::all( [ 'id', 'arrivee', 'depart' ] );
+		return view( 'testDispo', [ 'bookings' => $bookings ] );
 	}
 }

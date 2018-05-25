@@ -56,7 +56,7 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label('image', 'Carte d\'identité (jpg/png/pdf)') !!}
+                {!! Form::label('image', 'Carte d\'identité (jpg/png)') !!}
                 {!! Form::file('image', null, ['class' => 'form-control', 'placeholder' => 'Carte d\'identité']) !!}
             </div>
 

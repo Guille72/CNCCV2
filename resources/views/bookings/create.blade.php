@@ -29,7 +29,7 @@
 
             <div class="form-group">
                 {!! Form::label('annulation', 'Annulation') !!}
-                {!! Form::text('annulation', null, ['class' => 'form-control', 'placeholder' => 'Annulation']) !!}
+                {!! Form::date('annulation', \Carbon\Carbon::now(), ['class' => 'form-control', 'placeholder' => 'Annulation']) !!}
             </div>
 
             <div class="form-group">

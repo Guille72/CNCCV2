@@ -2,7 +2,7 @@
 @section('content')
     <div class="container-fluid">
 
-        <a href="{{route('userCreate')}}">Ajout d'une réservation</a>
+        <a href="{{route('bookingCreate')}}">Ajout d'une réservation</a>
 
         <table class="table">
             <thead>

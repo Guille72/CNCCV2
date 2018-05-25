@@ -6,7 +6,13 @@
 @import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+//@import '~bootstrap/scss/bootstrap';
+
+// Materialize
+@import "materialize.css";
+
+// Mon css
+@import "style.css";
 
 .navbar-laravel {
   background-color: #fff;

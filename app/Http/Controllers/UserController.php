@@ -31,7 +31,7 @@ class UserController extends Controller
 			'tel' => $request->tel,
 			'company' => $request->company,
 			'siren' => $request->siren,
-			'image' => $request->image,
+			'image' => $request->file('image'),
 			'tvaInt' => $request->tvaInt,
 			'commPriv' => $request->commPriv,
 			'email' => $request->email,
