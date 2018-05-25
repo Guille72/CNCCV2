@@ -1,8 +1,6 @@
 @extends('layouts.layout')
 @section('contenu')
 
-    @include('layouts.navbar')
-
     <div class="container">
         <div class=" hide-on-large-only" STYLE="margin-top: 60% !important;"></div>
         <div class="marginTop3 hide-on-med-and-down"></div>
@@ -34,8 +32,6 @@
     </div>
 
     <div class="marginTop2"></div>
-
-    @include('layouts.footer')
 
     <script>
         document.getElementById("navbar").classList.add("sticky");

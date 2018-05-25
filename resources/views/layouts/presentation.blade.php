@@ -5,9 +5,11 @@
         <div class="card-panel bgRouge LittleOpa cardpresen">
             <img src="{{asset('img/home.png')}}">
             <span class="white-text">
+                <b>
                 <h4>
-                    <b>Location immobilière sur courte & moyenne durée au Mans</b>
+                    Location immobilière sur courte & moyenne durée au Mans
                 </h4>
+                </b>
         </span>
         </div>
     </div>
@@ -16,9 +18,11 @@
         <div class="card-panel bgBleu LittleOpa cardpresen">
             <img src="{{asset('img/bed.png')}}">
             <span class="white-text">
+                <b>
                 <h4>
-                    <b>Bientôt de nouvelles adresses</b>
+                    Bientôt de nouvelles adresses
                 </h4>
+                </b>
         </span>
         </div>
     </div>
@@ -27,9 +31,11 @@
         <div class="card-panel bgOrange LittleOpa cardpresen">
             <img src="{{asset('img/Table-Lamp.png')}}">
             <span class="white-text">
+                <b>
                 <h4>
-                    <b>Mise a jour du site, vous pourrez bientôt réserver en ligne</b>
+                    Mise a jour du site, vous pourrez bientôt réserver en ligne
                 </h4>
+                </b>
         </span>
         </div>
     </div>

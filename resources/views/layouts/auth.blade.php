@@ -13,9 +13,7 @@
 </head>
 <body>
 
-@include('layouts.navbar')
 @yield('contenu')
-@include('layouts.footer')
 
 <script src="{{ asset('js/app.js') }}" defer></script>
 
