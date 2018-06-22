@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti');
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
+*{
+
+
+
+
+
+    margin: 0;
+    padding: 0;
+
+
+}
+.row{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.card{
+    box-shadow: none;
+    min-height: 250px;
+}
+
+body{
+    background-color: #e1e8f0;
+}
+.nav1{
+
+    -webkit-box-shadow: 1px 1px 3px 4px #EA0B4D;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    1px 1px 3px 4px #EA0B4D;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         1px 1px 3px 4px #EA0B4D;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+
+
+}
+
+.cardall{
+    background-color: white !important;
+    border: 2px solid #EA0B4D;
+    color: #EA0B4D !important;
+}
+.align_ul{
+    justify-content: center;
+    display: flex;
+}
+.li{
+    border: 2px solid #EA0B4D;
+    padding-left: 10px !important;
+}
+.li1{
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+.li3{
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.colortext{
+    color: #EA0B4D  !important;
+}
+.sticky {
+    position: fixed;
+    bottom: 0;
+    width: 100%
+}

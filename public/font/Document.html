@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html id="carte" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" href="Document_fichiers/materialize.css" rel="stylesheet">
+    <link type="text/css" href="Document_fichiers/style.css" rel="stylesheet">
+</head>
+<body>
+
+
+<nav class="nav-extended nav1" style="background-color: white">
+    <div class="nav-wrapper">
+        <img src="Document_fichiers/logo_cnccv6_155x155.png" class="brand-logo" style="height: 130px; width: auto;">
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="colortext" href="http://localhost/cnccv_temp/badges.html">Toutes les maisons</a></li>
+            <li><a class="colortext" href="http://localhost/cnccv_temp/collapsible.html">Contact</a></li>
+            <li><a href="http://localhost/cnccv_temp/collapsible.html"></a></li>
+        </ul>
+    </div>
+    <div class="hide-on-med-and-up"><br><br></div>
+    <div class="nav-content" id="cc">
+        <ul class="tabs tabs-transparent align_ul">
+            <li class="tab li1 li"><a class="active colortext" href="#test1">Maison 1</a></li>
+            <li class="tab li"><a href="#test2" class="colortext">Maison 2</a></li>
+            <li class="tab li li3"><a href="#test3" class="colortext">Maison 3</a></li>
+        </ul>
+        <br>
+    </div>
+</nav>
+
+<div style="height:150px;"></div>
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="">Toutes les maisons</a></li>
+    <li><a href="">Contact</a></li>
+</ul>
+
+
+<script>
+    M.AutoInit();
+
+    var elem = document.querySelector('.sidenav');
+    var instance = M.Sidenav.init(elem, options);
+
+</script>
+<div class="col m12" style="height: 200px; background-color: #0D47A1" id="navbar">
+
+
+
+</div>
+
+
+<div class="container">
+
+    <div style="height: 1000px;"></div>
+
+
+
+
+</div>
+
+
+
+
+
+<div style="height: 150px;"></div>
+
+<footer class="page-footer" id="footer" style="background-color: #EA0C4D ">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Chez Nous comme Chez Vous</h5>
+                <p class="grey-text text-lighten-4">Location de maison sur courte et moyenne durée au Mans</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Lien</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Conditions d'utilisation</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Qui sommes nous</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright" style="background-color:#CE003E">
+        <div class="container">
+            © 2018 Copyright CNcCV
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script type="text/javascript" src="Document_fichiers/materialize.js"></script>
+
+
+
+<script>
+
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+
+    // Get the offset position of the navbar
+    var NbPxTop = navbar.offsetTop
+
+    var footer = document.getElementById("fotter");
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (footer.offsetTop < NbPxTop) {
+            navbar.classList.remove("sticky")
+        } else {
+            navbar.classList.add("sticky");
+        }
+    }
+
+
+</script>
+
+</body></html>
