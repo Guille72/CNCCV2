@@ -97,7 +97,7 @@ class App
     {
         header("HTTP/1.0 403 Forbidden");
         die('Accès interdit');
-        header('location:index.php?p=404');
+        header('location:index.php?p=403');
     }
 
 

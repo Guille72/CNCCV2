@@ -5,7 +5,7 @@
     <div class="col s12 m4 l4">
         <div class="card-panel bgRouge LittleOpa cardpresen">
 
-            <img src="../pages/img/Home.png">
+            <img src="../public/img/Home.png">
             <span class="white-text">
             <b>
                 <h4>

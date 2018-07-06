@@ -44,28 +44,28 @@ ob_start();
 
 if ($p==='contact'){
 
-    require ROOT.'/Pages/Admin/contact.php';
+    require ROOT . '/Pages/admin/contact.php';
 }
 
 elseif ($p==='profil'){
 
-    require ROOT.'/Pages/Admin/profil.php';
+    require ROOT . '/Pages/admin/profil.php';
 }
 
 elseif ($p==='rousseau' or $p==='champion' or $p==='painleve'){
     $carrousel=\App\Logements\Logements::getCarrousel($p);
     $parametres=$app->getParametreLogement($p);
-    require ROOT.'/Pages/Admin/maison.php';
+    require ROOT . '/Pages/admin/maison.php';
 }
 
 else {
-    require ROOT.'/Pages/Admin/accueil.php';
+    require ROOT . '/Pages/admin/accueil.php';
 }
 
 
 $content=ob_get_clean();
 
-require ROOT.'/Pages/Templates/default.php';
+require ROOT . '/Pages/templates/default.php';
 
 
 ?><?php

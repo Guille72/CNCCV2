@@ -61,7 +61,7 @@ else {
 
 $content=ob_get_clean();
 
-require ROOT.'/Pages/Templates/default.php';
+require ROOT . '/Pages/templates/default.php';
 
 
 ?>

@@ -172,8 +172,6 @@ class Sejour {
             $PrixSejourHT= ($PrixBaseClient-$TaxeSejour)/(1+$parametres['tva'])-$PrixMenageHT;
             $TvaSejour= $PrixSejourHT*$parametres['tva'];
 
-
-
             $PrixSejour = array( "PrixSejourTotalTTC"=> $PrixBaseClient,
                                  "TaxeSejour"=> $TaxeSejour,
                                  "PrixSejourHT"=> $PrixSejourHT,
