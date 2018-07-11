@@ -270,3 +270,80 @@ body{
     flex-direction: column;
     /*margin-top: 2%;*/
 }
+
+#resaForm{
+    position: fixed;
+    top: 30%;
+    left: 0;
+    width: 25%;
+    background-color: #FF0048;
+    border-top-right-radius: 27px;
+    border-bottom-right-radius: 27px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+}
+#titleForm{
+    color: white;
+    text-align: center;
+}
+#lieu{
+    margin-top: 30px;
+}
+#nbPersonne{
+    margin-top: 20px;
+}
+#dataPickerForm{
+    margin-top: 20px;
+}
+#submitResaForm{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.bgBlueForm{
+    background-color: #62BFCB!important;
+}
+
+/* MODIF des parametres "par defaut" de materialize */
+
+/* modif Couleur text choix lieu */
+li>a, .dropdown-content li>span{
+    color:#62BFCB !important;
+}
+
+/* modif Couleur bar choix lieu */
+.select-wrapper input.select-dropdown{
+    border-bottom: 1px solid white!important;
+}
+
+/* modif couleur svg (fleche) */
+.select-wrapper .caret{
+    fill:white!important;
+}
+
+/* modif couleur label */
+label{
+    color: white!important;
+}
+
+/* modif indicator / selecteur nb personne (goutte) */
+input[type=range]+.thumb{
+    background-color: #62BFCB !important;
+    z-index: 999 !important;
+}
+
+/* modif cercle selecteur nb personne */
+input[type=range]::-webkit-slider-thumb {
+    background-color: #62BFCB!important;
+}
+input[type=range]::-moz-range-thumb {
+    background-color: #62BFCB!important;
+}
+input[type=range]::-ms-thumb {
+    background-color: #62BFCB!important;
+}
+
+/* modif border white dataPicker */
+input[type=text]:not(.browser-default){
+    border-bottom: 2px solid white !important;
+}

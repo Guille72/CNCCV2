@@ -65,9 +65,16 @@ class Sejour {
      * @return string
      */
     private function input($type, $name, $label) {
-        return $this->surround('
-        <label>'.$label.'</label>
-        <input type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '" required >');
+
+      //  if ($type==='range'){
+            return $this->surround('
+                <label>'.$label.'</label>
+                <input type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '" min="0" max="8" required >');
+     //   }else{
+        //return $this->surround('
+      //      <label>'.$label.'</label>
+     //       <input type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '" required >');
+      //  }
     }
 
     /**
@@ -85,14 +92,52 @@ class Sejour {
      */
     public function formulaireSejour(){
 
-        $content='<div class="Formulaire" >
-                    <Form method="post" action="">';
-        $content.= $this->input('date','arrivee', 'Arrivée');
-        $content.= $this->input('date','depart', 'Départ');
-        $content.= $this->input('number','NombrePersonne', 'Nombre de personnes');
-        $content.= $this->submit();
-        $content.=' </form>
-                    </div>';
+        $content='<Form method="post" action="">
+                    <div id="resaForm" >
+                          <!-- Titre -->
+                      <div id="titleForm">
+                        <h5>Reservez dès maintenant</h5>
+                      </div>
+                    ';
+
+        $content.=' <!-- Selection du nb de personnes -->
+                  <div id="nbPersonne">
+                    <p class="range-field">'.
+                      $this->input('range','NombrePersonne', 'Nombre de personnes').'
+                    </p>
+                  </div>';
+
+        $content.='   <!-- Choix de la date -->
+                  <div id="dataPickerForm" class="row">
+            
+                    <div class="col s6">
+                    '.$this->input('date','arrivee', 'Arrivée').'
+                  </div>
+            
+                    <div class="col s6">
+                    '.$this->input('date','depart', 'Départ').'
+                  </div>
+            
+                  </div>';
+
+
+
+        $content.= '      <!-- Button submit -->
+                  <div id="submitResaForm" class="row">
+            
+                    <div class="col s12">
+                    <button class="btn waves-effect waves-light bgBlueForm" type="submit" name="action">Poursuivre ma réservation
+                      <i class="material-icons right">send</i>
+                    </button>
+                    </div>
+            
+                  </div>
+            
+            
+            
+                </div>
+              </form>';
+
 
         return $content;
     }
@@ -135,9 +180,8 @@ class Sejour {
     {
         if (is_null($this->parametres)) {
             $this->parametres = $this->db->querySMEF('SELECT * FROM parametres WHERE id=1');
-            var_dump('parametres appelés');
+
         }
-        var_dump('parametres utilisés');
         return $this->parametres;
     }
 
