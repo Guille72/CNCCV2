@@ -16,13 +16,8 @@
 
 </head>
 <body>
-<!--intégration de la barre de navigation -->
 
-<?php
-require '../pages/navbar.php';
-?>
-
-<!--intégration de la page proprement dite depuis index.php et méthode get -->
+<!--intégration des pages depuis index.php et méthode get -->
 
 <div>
     <?= $content; ?>
@@ -90,7 +85,7 @@ require '../pages/navbar.php';
         var elems = document.querySelectorAll('.datepicker');
         var instances = M.Datepicker.init(elems, options);
 
-        
+
 
 
     });

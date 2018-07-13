@@ -1,24 +1,30 @@
 <?php
+require '../pages/navbarHaut.php';
 
+// instanciation de Sejour
 $Sejour=$app->getSejour($_POST);
+//Affichage du formulaire
 $Formulaire= $Sejour->formulaireSejour();
 echo $Formulaire;
 
+//Traitement des résultats du formulaire
 if ($_POST!=null) {
-    $dispo = $Sejour->disponibilite($_GET['p']);
-    $dispoChampion = $Sejour->disponibilite('champion');
-    $dispoPainleve = $Sejour->disponibilite('painleve');
-    if ($dispo === true) {
-        echo $dispoChampion;
-        echo $dispoPainleve;
-        echo 'logement Dispo';
-        $Prix = $Sejour->PrixDuSejour($_GET['p']);
-        $PrixChampion = $Sejour->PrixDuSejour('champion');
-        echo $Prix['PrixSejourTotalTTC'];
-        echo $PrixChampion['PrixSejourTotalTTC'];
-    } elseif ($dispo === false) {
-        echo 'Pas Dispo';
+    $dispoPrix = $Sejour->dispoPrix();
+
+    $_SESSION['arrivee']= date("d/m/Y", strtotime($_POST['arrivee']));
+    $_SESSION['depart']= date("d/m/Y",strtotime($_POST['depart']));
+    $_SESSION['NombrePersonne']=$_POST['NombrePersonne'];
+    require ROOT.'/settings/maisons.php';
+    foreach ($maisons as $maison) {
+        $_SESSION[$maison]=$dispoPrix[$maison];
     }
+}
+
+//Affichage de la Barre de navigation selon résultats (ou non) du formulaire
+if ($_SESSION['arrivee']!=null) {
+    require 'navbarBasAvecPost.php';
+}else {
+    require 'navbarBas.php';
 }
 
 ?>

@@ -1,3 +1,26 @@
+<!--intégration de la barre de navigation -->
+<img class="responsive-img" src="../public/img/PanoramaLeMans.JPG" >
+
+<?php
+require '../pages/navbarHaut.php';
+require '../pages/navbarBas.php';
+$_SESSION['arrivee']=null;
+$_SESSION['depart']=null;
+$_SESSION['nombrePersonne']=null;
+?>
+
+<ul class="sidenav sidenavBig sidenavWidth" id="mobile-demo">
+    <div class="bgBleuC" style="padding: 10px !important;"><h6 style="margin: 0 !important;" class="white-text align colortext1">Menu</h6></div>
+
+    <li><a class="sideNavText" href="../Public/index.php"><span class="badge new">3</span>Toutes les maisons</a></li>
+    <li><a class="sideNavText" href="contact.php">Contact</a></li>
+    <li><a class="sideNavText" href="Kelvin/ml.php">Mentions légales</a></li>
+    <li><a class="sideNavText" href="Kelvin/cu.php">Conditions d'utilisation</a></li>
+    <li><a class="sideNavText" href="#">Qui sommes nous</a></li>
+</ul>
+
+
+
 <div class="marginTop2"></div>
 
 <div class="row align aligncard">

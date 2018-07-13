@@ -65,16 +65,9 @@ class Sejour {
      * @return string
      */
     private function input($type, $name, $label) {
-
-      //  if ($type==='range'){
             return $this->surround('
                 <label>'.$label.'</label>
-                <input type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '" min="0" max="8" required >');
-     //   }else{
-        //return $this->surround('
-      //      <label>'.$label.'</label>
-     //       <input type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '" required >');
-      //  }
+                <input type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '" min="1" max="8" required >');
     }
 
     /**
@@ -91,53 +84,120 @@ class Sejour {
      * @return string
      */
     public function formulaireSejour(){
+        /*
+       $content='  <form>
+      <div id="resaForm">
 
-        $content='<Form method="post" action="">
-                    <div id="resaForm" >
-                          <!-- Titre -->
-                      <div id="titleForm">
-                        <h5>Reservez dès maintenant</h5>
-                      </div>
-                    ';
 
-        $content.=' <!-- Selection du nb de personnes -->
-                  <div id="nbPersonne">
-                    <p class="range-field">'.
-                      $this->input('range','NombrePersonne', 'Nombre de personnes').'
-                    </p>
-                  </div>';
+        <!-- Titre -->
+        <div id="titleForm">
+          <h5>Reservez dès maintenant</h5>
+        </div>
 
-        $content.='   <!-- Choix de la date -->
-                  <div id="dataPickerForm" class="row">
-            
-                    <div class="col s6">
-                    '.$this->input('date','arrivee', 'Arrivée').'
-                  </div>
-            
-                    <div class="col s6">
-                    '.$this->input('date','depart', 'Départ').'
-                  </div>
-            
-                  </div>';
+
+        <!-- Selection du lieu -->
+        <div id="lieu">
+          <div class="input-field col m10">
+            <select required>
+              <option disabled selected>Choississez une maison</option>
+              <option value="1">Chez Rousseau</option>
+              <option value="2">Chez Painlevé</option>
+              <option value="3">Chez Champion</option>
+            </select>
+            <label>Lieu</label>
+          </div>
+        </div>
 
 
 
-        $content.= '      <!-- Button submit -->
-                  <div id="submitResaForm" class="row">
-            
-                    <div class="col s12">
-                    <button class="btn waves-effect waves-light bgBlueForm" type="submit" name="action">Poursuivre ma réservation
-                      <i class="material-icons right">send</i>
-                    </button>
+        <!-- Selection du nb de personnes -->
+        <div id="nbPersonne">
+          <p class="range-field">
+            <label>Nombres de personnes</label>
+            <input type="range" id="test5" min="0" max="12"/>
+          </p>
+        </div>
+
+
+        <!-- Choix de la date -->
+        <div id="dataPickerForm" class="row">
+
+          <div class="col s6">
+          <label>Date d\'arrivé</label>
+          <input type="text" class="datepicker" required>
+        </div>
+
+          <div class="col s6">
+          <label>Date de départ</label>
+          <input type="text" class="datepicker" required>
+        </div>
+
+        </div>
+
+
+
+        <!-- Button submit -->
+        <div id="submitResaForm" class="row">
+
+          <div class="col s12">
+          <button class="btn waves-effect waves-light bgBlueForm" type="submit" name="action">Poursuivre ma réservation
+            <i class="material-icons right">send</i>
+          </button>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </form>';
+
+
+   */
+
+
+
+          $content='<Form method="post" action="">
+                      <div id="resaForm" >
+                            <!-- Titre -->
+                        <div id="titleForm">
+                          <h5>Reservez dès maintenant</h5>
+                        </div>
+                      
+          <!-- Selection du nb de personnes -->
+                    <div id="nbPersonne">
+                      <p class="range-field">'.
+                        $this->input('range','NombrePersonne', 'Nombre de personnes').'
+                      </p>
                     </div>
+  
+          <!-- Choix de la date -->
+                    <div id="dataPickerForm" class="row">
+              
+                      <div class="col s6">
+                      '.$this->input('date','arrivee', 'Arrivée').'
+                    </div>
+              
+                      <div class="col s6">
+                      '.$this->input('date','depart', 'Départ').'
+                    </div>
+              
+                    </div>
+  
             
+              <!-- Button submit -->
+                    <div id="submitResaForm" class="row">
+              
+                      <div class="col s12">
+                      <button class="btn waves-effect waves-light bgBlueForm" type="submit" name="action">Poursuivre ma réservation
+                        <i class="material-icons right">send</i>
+                      </button>
+                      </div>
+              
+                    </div>
+              
                   </div>
-            
-            
-            
-                </div>
-              </form>';
-
+                </form>';
 
         return $content;
     }
@@ -148,6 +208,7 @@ class Sejour {
      * @return boolean
      *
      */
+
 
     public function disponibilite($maison){
 
@@ -167,6 +228,30 @@ class Sejour {
         return $dispo;
     }
 
+
+
+    public function dispoPrix(){
+
+        require ROOT.'/settings/maisons.php';
+        $result=array();
+
+        foreach ($maisons as $maison) {
+            $persMax=$this->db->prepareSMEF('SELECT persMax FROM logements WHERE nomMaison= ?',[$maison]);
+            $result['dispo'.$maison]=$this->disponibilite($maison);
+
+            if ($this->data['NombrePersonne']>$persMax){ $result[$maison] = 'limité à '.$persMax.' personnes';
+            }elseif ($result['dispo_'.$maison]= true) {
+                $prix=$this->PrixDuSejour($maison);
+                $result[$maison]=$prix['PrixSejourTotalTTC'].' euros';
+            }else {
+                $result[$maison]='Pas dispo';
+            }
+
+        }
+
+        return $result;
+    }
+
     /**
      *A AMELIORER
      *Permet de charger l'ensemble des paramêtres tarifaires disposés ensuite dans un array
@@ -180,7 +265,6 @@ class Sejour {
     {
         if (is_null($this->parametres)) {
             $this->parametres = $this->db->querySMEF('SELECT * FROM parametres WHERE id=1');
-
         }
         return $this->parametres;
     }
@@ -198,32 +282,33 @@ class Sejour {
      */
     public function PrixDuSejour($maison){
 
-            $parametres=$this->chargementParametre();
 
-            $coef = $this->db->prepareSMEF('SELECT coefPrixMaison FROM coefprixlogement WHERE nomMaison= ?',[$maison]);
+                $parametres = $this->chargementParametre();
 
-            $coefNombrePersonne = ($this->data['NombrePersonne'] > 2) ? 1+($parametres['coefPersSupp']*($this->data['NombrePersonne']-2)) : 1 ;
+                $coef = $this->db->prepareSMEF('SELECT coefPrixMaison FROM coefprixlogement WHERE nomMaison= ?', [$maison]);
 
-            $PrixBaseHT = $this->PrixBaseSeJour()*floatval($coef['coefPrixMaison'])*$coefNombrePersonne;
+                $coefNombrePersonne = ($this->data['NombrePersonne'] > 2) ? 1 + ($parametres['coefPersSupp'] * ($this->data['NombrePersonne'] - 2)) : 1;
 
-            $PrixMenageHT= $this->NombreMenageSejour()*floatval($parametres['forfaitMenage']);
-            $TvaMenage= $PrixMenageHT*$parametres['tva'];
+                $PrixBaseHT = $this->PrixBaseSeJour() * floatval($coef['coefPrixMaison']) * $coefNombrePersonne;
 
-            $TaxeSejour = $this->NombreNuit()*$this->data['NombrePersonne']*$parametres['taxeSejour'];
+                $PrixMenageHT = $this->NombreMenageSejour() * floatval($parametres['forfaitMenage']);
+                $TvaMenage = $PrixMenageHT * $parametres['tva'];
 
-            $PrixBaseClient =  ceil(($PrixBaseHT +  $PrixMenageHT)*(1+$parametres['tva']) + $TaxeSejour);
+                $TaxeSejour = $this->NombreNuit() * $this->data['NombrePersonne'] * $parametres['taxeSejour'];
 
-            $PrixSejourHT= ($PrixBaseClient-$TaxeSejour)/(1+$parametres['tva'])-$PrixMenageHT;
-            $TvaSejour= $PrixSejourHT*$parametres['tva'];
+                $PrixBaseClient = ceil(($PrixBaseHT + $PrixMenageHT) * (1 + $parametres['tva']) + $TaxeSejour);
 
-            $PrixSejour = array( "PrixSejourTotalTTC"=> $PrixBaseClient,
-                                 "TaxeSejour"=> $TaxeSejour,
-                                 "PrixSejourHT"=> $PrixSejourHT,
-                                 "TvaSejour"=> $TvaSejour,
-                                 "NombreMenage"=> $this->NombreMenageSejour(),
-                                 "PrixMenageHT"=> $PrixMenageHT,
-                                 "TvaMenage"=> $TvaMenage
-                               );
+                $PrixSejourHT = ($PrixBaseClient - $TaxeSejour) / (1 + $parametres['tva']) - $PrixMenageHT;
+                $TvaSejour = $PrixSejourHT * $parametres['tva'];
+
+                $PrixSejour = array("PrixSejourTotalTTC" => $PrixBaseClient,
+                    "TaxeSejour" => $TaxeSejour,
+                    "PrixSejourHT" => $PrixSejourHT,
+                    "TvaSejour" => $TvaSejour,
+                    "NombreMenage" => $this->NombreMenageSejour(),
+                    "PrixMenageHT" => $PrixMenageHT,
+                    "TvaMenage" => $TvaMenage
+                );
 
         return $PrixSejour;
     }

@@ -1,5 +1,5 @@
 <?php require("header.php") ?>
-<?php require("navbar.php") ?>
+<?php require("navbarHaut.php") ?>
 
 <div class="container">
 
