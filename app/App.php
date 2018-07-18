@@ -46,7 +46,7 @@ class App
             require_once ROOT.'/core/Autoloader.php';
             Core\Autoloader::register();
         }
-*/
+    */
 
 
     /**
@@ -68,6 +68,16 @@ class App
             return new Sejour($this->getDb(),$data);
 
         }
+
+    /**
+     * @param $data
+     * @return Sejour
+     */
+     public function getCalendrier($data){
+
+       return new Calendrier($this->getDb(),$data);
+
+     }
 
     /**
      * @param $maison

@@ -6,4 +6,4 @@
  * Time: 09:03
  */
 
-$maisons=$maisons = array('rousseau','champion','painleve');
+$maisons= array('rousseau','champion','painleve');

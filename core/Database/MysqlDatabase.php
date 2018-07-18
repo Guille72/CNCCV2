@@ -80,6 +80,12 @@ Class MysqlDatabase extends Database {
         return $datas;
     }
 
+    public function queryAllSMEF($statement){
+        $req = $this->getPDO()->query($statement);
+        $datas = $req->fetchAll();
+        return $datas;
+    }
+
     public function prepareSMEF($statement, $values){
         $req=$this->getPDO()->prepare($statement);
         $req->execute($values);

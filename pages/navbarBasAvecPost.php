@@ -10,11 +10,11 @@
         foreach ($maisons as $maison):
         ?>
              <li class="tab li1 li"><a class="active colortext colortext1 waves-green" href="index.php?p=<?= $maison ?>"><h6>Chez <?= ucfirst($maison) ?>
-                    <br> <?php $dispo=(isset($_SESSION[$maison]))? $_SESSION[$maison] : 'Pas dispo'; echo $dispo ?>  </h6></a></li>
+                    <br> <?= $_SESSION[$maison] ?>  </h6></a></li>
         <?php endforeach; ?>
     </ul>
     <br>
-    <div class="centreETC colortext colortext1 waves-green"><h6>Pour la période du <?= $_SESSION['arrivee'] ?> au <?= $_SESSION['depart'] ?> et pour <?= $_SESSION['NombrePersonne'] ?> personnes</h6></div>
+    <div class="centreETC colortext colortext1 waves-green"><h6>Pour la période du <?=  date("d/m/Y", strtotime($_SESSION['arrivee'])) ?> au <?= date("d/m/Y", strtotime($_SESSION['depart'])) ?> et pour <?= $_SESSION['NombrePersonne'] ?> personnes</h6></div>
 </div>
 <div class="nav-content displayNScroll" id="cc">
     <ul class="centreETC tabs-transparent hide-on-large-only displayNScroll align_ul">
@@ -23,7 +23,7 @@
         foreach ($maisons as $maison):
             ?>
             <li class="tab li1 li"><a class="active colortext colortext1 waves-green" href="index.php?p=<?= $maison ?>"><h6>Chez <?= ucfirst($maison) ?>
-                        <br> <?php $dispo=(isset($_SESSION[$maison]))? $_SESSION[$maison] : 'Pas dispo'; echo $dispo ?>  </h6></a></li>
+                        <br> <?= $_SESSION[$maison] ?>  </h6></a></li>
         <?php endforeach; ?>
     </ul>
     <br>
