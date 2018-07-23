@@ -382,7 +382,10 @@ li{ list-style: none; }
 
 /*.ligne li a:hover{ list-style: none; text-decoration: none;background-color:#ff6959; } */
 
-li.itemCurrentItem { font-weight:bold; font-style: italic; background-color: #3E849E;}
+li.itemCurrentPickableItem { cursor: pointer;font-weight:bold; font-style: italic; background-color: #3E849E;}
+li.itemCurrentPickableItem:hover {background-color: rgb(255,170,89);}
+
+li.itemCurrentExistingItem { font-weight:bold; font-style: italic; color:blue;text-decoration:line-through;}
 
 li.itemSelectedItem { /* A vous de configurer l'apparence du jour sélectionné */ }
 

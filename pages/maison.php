@@ -1,12 +1,8 @@
 <?php
 require '../pages/navbarHaut.php';
 
-// instanciation de Sejour
-$Sejour=$app->getSejour($_POST);
-
-
 //Traitement des résultats du formulaire
-if ($_POST!=null) {$dispoPrix = $Sejour->dispoPrix();}
+if ($_POST!=null) {$Sejour=$app->getSejour($_POST);$dispoPrix = $Sejour->dispoPrix();}
 
 //Affichage de la Barre de navigation selon résultats (ou non) du formulaire
 if ($_SESSION['arrivee']!=null) {
@@ -18,7 +14,7 @@ if ($_SESSION['arrivee']!=null) {
 
 //Instanciation du calendrier
 $Calendrier=$app->getCalendrier($_SESSION);
-$Calendar=$Calendrier->afficherCalendrier($_GET['p']);
+$Calendar=$Calendrier->afficherCalendrier($_GET['p'],2);
 
 //Instanciation des fonctionnalités du formulaire
 $Form=new \App\Formulaire($_SESSION);

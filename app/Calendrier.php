@@ -28,7 +28,7 @@ class Calendrier
     }
 
 
-    public function afficherCalendrier($maison) {
+    public function afficherCalendrier($maison, $nbCaldendrier) {
 
         if ($this->data['arrivee']!=null) {
             $moisCourant= date("m",strtotime($this->data['arrivee']));
@@ -43,7 +43,7 @@ class Calendrier
         $content="";
 
         //ici peut être défini le nombre de mois que l'on affiche "while ($pas<x) où x représente le nombre de mois affichés
-        while ($pas<3)
+        while ($pas<$nbCaldendrier)
         {
             $periode=$anneeCourante."-".$moisCourant;
 
@@ -91,42 +91,38 @@ class Calendrier
             // Si le jour calendrier == jour de la semaine en cours
             if (Date("w", mktime(0, 0, 0, $this->getMonth($periode),
                     1 + $pas, $this->getYear($periode))) == $tableau[$indexe]) {
-                // Si jour calendrier == aujourd'hui
-                $afficheJour = Date("j", mktime(0, 0, 0,
-                    $this->getMonth($periode), 1 + $pas, $this->getYear($periode)));
+                $afficheJour = Date("j", mktime(0, 0, 0, $this->getMonth($periode), 1 + $pas, $this->getYear($periode)));
+                $jour = Date("Y-m-d",mktime(0, 0, 0, $this->getMonth($periode), 1 + $pas, $this->getYear($periode))) ;
+                $num_id=strtotime($jour)/86400;
 
                 if (Date("Y-m-d", mktime(0, 0, 0, $this->getMonth($periode),
-                        1 + $pas, $this->getYear($periode))) <= Date("Y-m-d")) {
-                    $class = " class=\"itemPastItem\""; if (Date("Y-m-d", mktime(0, 0, 0, $this->getMonth($periode),
-                            1 + $pas, $this->getYear($periode))) == Date("Y-m-d")) {
-                        $class = " class=\"itemCurrentItem\""; }}
-
+                        1 + $pas, $this->getYear($periode))) < Date("Y-m-d")) {
+                    $class = " class=\"itemPastItem\"";}
 
                 else {
-                    $jour = Date("Y-m-d",mktime(0, 0, 0, $this->getMonth($periode), 1 + $pas, $this->getYear($periode))) ;
                     $rep = $this->db->prepareSMEF('SELECT * FROM bookings WHERE bookings.annulation IS NULL AND ? BETWEEN arrivee AND date_sub(depart, interval 1 day) AND nomMaison = ?',[$jour, $maison]);
 
-                    // 1 est toujours vrai => on affiche un lien à chaque fois
-                    // A vous de faire les tests nécessaire si vous gérer un agenda par exemple
-                    if ($rep!=false) {
-                        $class = 'class="itemExistingItem"';
-                        $afficheJour=Date("j",
-                            mktime(0, 0, 0, $this->getMonth($periode), 1 +
-                                $pas, $this->getYear($periode)));
+                    // Si $rep est false c'est que le jour est dispo à la location donc "Pickable" sinon il est "Existing"
 
+                    if ($rep!=false) {
+                        if ($jour == Date("Y-m-d")) {
+                            $class = " class=\"itemCurrentExistingItem\" id=\"".$num_id."\"   onclick=\" \"";
+                        }  else{
+                            $class = " class=\"itemExistingItem\" id=\"".$num_id."\"   onclick=\" \"";
+                        }
+                       // $afficheJour=Date("j",  mktime(0, 0, 0, $this->getMonth($periode), 1 + $pas, $this->getYear($periode)));
                     }
                     else {
-                        //$jour =strtotime($jour);
-                        $class = 'class="itemPickableItem"';
-                        $afficheJour=Date("j",
-                            mktime(0, 0, 0, $this->getMonth($periode), 1 +
-                                $pas, $this->getYear($periode)));
-
+                        if ($jour == Date("Y-m-d")) {
+                            $class = " class=\"itemCurrentPickableItem\" id=\"".$num_id."\"   onclick=\" \"";
+                        }  else{
+                            $class = " class=\"itemPickableItem\" id=\"".$num_id."\"   onclick=\" \"";
+                        }
+                       // $afficheJour=Date("j", mktime(0, 0, 0, $this->getMonth($periode), 1 +  $pas, $this->getYear($periode)));
                     }
                 }
                 // Ajout de la case avec la date
-                $leCalendrier .= "\n\t\t<li $class>
-                     $afficheJour</li>";
+                $leCalendrier .= "\n\t\t<li $class> $afficheJour</li>";
                 $pas++;
             }
             //
