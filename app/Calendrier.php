@@ -98,9 +98,9 @@ class Calendrier
                     $num_id=strtotime($jour)/86400;
                 if (Date("Y-m-d", mktime(0, 0, 0, $this->getMonth($periode),
                         1 + $pas, $this->getYear($periode))) <= Date("Y-m-d")) {
-                    $class = " class=\"itemPastItem\" id=\"".$jour."\"   onclick=\" \""; if (Date("Y-m-d", mktime(0, 0, 0, $this->getMonth($periode),
+                    $class = " class=\"itemPastItem $afficheJour\" id=\"".$jour."\"   onclick=\" \""; if (Date("Y-m-d", mktime(0, 0, 0, $this->getMonth($periode),
                             1 + $pas, $this->getYear($periode))) == Date("Y-m-d")) {
-                        $class = " class=\"itemCurrentItem\" id=\"".$jour."\"   onclick=\"selectDay(this,dayList)\""; }}
+                        $class = " class=\"itemCurrentItem $afficheJour\" id=\"".$jour."\"   onclick=\"selectDay(this,dayList)\""; }}
 
 
                 else {
@@ -109,7 +109,7 @@ class Calendrier
                     // 1 est toujours vrai => on affiche un lien à chaque fois
                     // A vous de faire les tests nécessaire si vous gérer un agenda par exemple
                     if ($rep!=false) {
-                        $class = " class=\"itemExistingItem\" id=\"".$jour."\"   onclick=\" \"";
+                        $class = " class=\"itemExistingItem $afficheJour\" id=\"".$jour."\"   onclick=\" \"";
                         $afficheJour=Date("j",
                             mktime(0, 0, 0, $this->getMonth($periode), 1 +
                                 $pas, $this->getYear($periode)));
@@ -117,7 +117,7 @@ class Calendrier
                     }
                     else {
                         //$jour =strtotime($jour);
-                        $class = " class=\"itemPickableItem\" id=\"".$jour."\"   onclick=\"selectDay(this,dayList)\"";
+                        $class = " class=\"itemPickableItem $afficheJour\" id=\"".$jour."\"   onclick=\"selectDay(this,dayList)\"";
                         $afficheJour=Date("j",
                             mktime(0, 0, 0, $this->getMonth($periode), 1 +
                                 $pas, $this->getYear($periode)));

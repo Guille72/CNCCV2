@@ -165,10 +165,11 @@ $Form=new \App\Formulaire($_SESSION);
       var classListClickedItem = document.getElementsByClassName("clickedItem");
       console.log(classListClickedItem);
 
-      if (classListClickedItem.length == 2) {
-        for (var i = 0; i < classListClickedItem.length; i++) {
-          classListClickedItem[i].classList.remove("clickedItem");
-        }
+      if (classListClickedItem.length >= 2) {
+
+          classListClickedItem[0].classList.remove("clickedItem");
+          classListClickedItem[0].classList.remove("clickedItem");
+
       }
 
       elem.classList.add('clickedItem');
