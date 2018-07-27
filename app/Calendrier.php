@@ -47,10 +47,11 @@ class Calendrier
         {
             $periode=$anneeCourante."-".$moisCourant;
 
-            $content.="<div style=\"font-size:12px;border:1px solid;\">".$this->buildCalendar($periode,$maison)."</div>";
+            $content.="<div id=\"$pas\" style=\"font-size:12px;border:1px solid;\">".$this->buildCalendar($periode,$maison)."</div>";
 
             $moisCourant++;
             if ($moisCourant==13){$moisCourant=1;$anneeCourante++;}
+            If (strlen($moisCourant)==1) { $moisCourant = '0'.$moisCourant;}
             $pas++;
         }
 
