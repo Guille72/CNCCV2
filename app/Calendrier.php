@@ -43,7 +43,7 @@ class Calendrier
         $content="";
 
         //ici peut être défini le nombre de mois que l'on affiche "while ($pas<x) où x représente le nombre de mois affichés
-        while ($pas<1)
+        while ($pas<2)
         {
             $periode=$anneeCourante."-".$moisCourant;
 
@@ -94,22 +94,22 @@ class Calendrier
                 // Si jour calendrier == aujourd'hui
                 $afficheJour = Date("j", mktime(0, 0, 0,
                     $this->getMonth($periode), 1 + $pas, $this->getYear($periode)));
-
+                    $jour = Date("Y-m-d",mktime(0, 0, 0, $this->getMonth($periode), 1 + $pas, $this->getYear($periode))) ;
+                    $num_id=strtotime($jour)/86400;
                 if (Date("Y-m-d", mktime(0, 0, 0, $this->getMonth($periode),
                         1 + $pas, $this->getYear($periode))) <= Date("Y-m-d")) {
-                    $class = " class=\"itemPastItem\""; if (Date("Y-m-d", mktime(0, 0, 0, $this->getMonth($periode),
+                    $class = " class=\"itemPastItem\" id=\"".$jour."\"   onclick=\" \""; if (Date("Y-m-d", mktime(0, 0, 0, $this->getMonth($periode),
                             1 + $pas, $this->getYear($periode))) == Date("Y-m-d")) {
-                        $class = " class=\"itemCurrentItem\""; }}
+                        $class = " class=\"itemCurrentItem\" id=\"".$jour."\"   onclick=\"selectDay(this,dayList)\""; }}
 
 
                 else {
-                    $jour = Date("Y-m-d",mktime(0, 0, 0, $this->getMonth($periode), 1 + $pas, $this->getYear($periode))) ;
                     $rep = $this->db->prepareSMEF('SELECT * FROM bookings WHERE bookings.annulation IS NULL AND ? BETWEEN arrivee AND date_sub(depart, interval 1 day) AND nomMaison = ?',[$jour, $maison]);
 
                     // 1 est toujours vrai => on affiche un lien à chaque fois
                     // A vous de faire les tests nécessaire si vous gérer un agenda par exemple
                     if ($rep!=false) {
-                        $class = 'class="itemExistingItem"';
+                        $class = " class=\"itemExistingItem\" id=\"".$jour."\"   onclick=\" \"";
                         $afficheJour=Date("j",
                             mktime(0, 0, 0, $this->getMonth($periode), 1 +
                                 $pas, $this->getYear($periode)));
@@ -117,7 +117,7 @@ class Calendrier
                     }
                     else {
                         //$jour =strtotime($jour);
-                        $class = 'class="itemPickableItem"';
+                        $class = " class=\"itemPickableItem\" id=\"".$jour."\"   onclick=\"selectDay(this,dayList)\"";
                         $afficheJour=Date("j",
                             mktime(0, 0, 0, $this->getMonth($periode), 1 +
                                 $pas, $this->getYear($periode)));

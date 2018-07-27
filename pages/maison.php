@@ -1,6 +1,7 @@
 <?php
 require '../pages/navbarHaut.php';
 
+
 // instanciation de Sejour
 $Sejour=$app->getSejour($_POST);
 
@@ -25,6 +26,13 @@ $Form=new \App\Formulaire($_SESSION);
 
 
 ?>
+
+<style>
+.clickedItem{
+  background-color: blue!important;
+}
+</style>
+
 
 <div class="row">
 
@@ -58,12 +66,12 @@ $Form=new \App\Formulaire($_SESSION);
 
               <div class="col s6">
                   <label>Arrivée</label>
-                  <?= $Form->input('text','arrivee','datepicker','','') ?>
+                  <?= $Form->input('text','arrivee','datepicke','arriveInput','') ?>
               </div>
 
               <div class="col s6">
                   <label>Départ</label>
-                  <?= $Form->input('text','depart','datepicker','','') ?>
+                  <?= $Form->input('text','depart','datepicker','departInput','') ?>
               </div>
 
             </div>
@@ -146,30 +154,38 @@ $Form=new \App\Formulaire($_SESSION);
 
 
 <script>
-    // window.onscroll = function() {serieAnim()};
-    // function serieAnim() {
-    //     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    //         document.getElementById("animInfo1").classList.remove("displayNone");
-    //         document.getElementById("animInfo1").classList.add("animInfo1");
-    //     }
-    //
-    //     if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-    //         document.getElementById("animInfo2").classList.remove("displayNone");
-    //         document.getElementById("animInfo2").classList.add("animInfo2");
-    //     }
-    // }
     M.AutoInit();
 
-    $('.carousel.carousel-slider').carousel({
-        indicators:true,
-        interval:500,
-        transition:300,
-        fullWidth:true
-    });
+
+    function selectDay(elem,list){
+      console.log("INIT SD li elem = "+list+" elem selected : "+elem.id);
+
+      list.push(elem.id);
+
+      var classListClickedItem = document.getElementsByClassName("clickedItem");
+      console.log(classListClickedItem);
+
+      if (classListClickedItem.length == 2) {
+        for (var i = 0; i < classListClickedItem.length; i++) {
+          classListClickedItem[i].classList.remove("clickedItem");
+        }
+      }
+
+      elem.classList.add('clickedItem');
 
 
-    var instance = M.Carousel.getInstance(elem);
 
-    instance.next(3);
 
+      if (list.length >= 2) {
+        document.getElementById('arriveInput').value = list[0];
+        document.getElementById('departInput').value = list[1];
+
+        list.length = 0;
+
+        console.log("day clear and done");
+      }
+
+
+      console.log("END SD li elem = "+list+" elem selected : "+elem.id);
+    }
 </script>
