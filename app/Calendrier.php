@@ -28,7 +28,7 @@ class Calendrier
     }
 
 
-    public function afficherCalendrier($maison) {
+    public function afficherCalendrier($maison, $nbCalendrier) {
 
         if ($this->data['arrivee']!=null) {
             $moisCourant= date("m",strtotime($this->data['arrivee']));
@@ -43,7 +43,7 @@ class Calendrier
         $content="";
 
         //ici peut être défini le nombre de mois que l'on affiche "while ($pas<x) où x représente le nombre de mois affichés
-        while ($pas<2)
+        while ($pas<$nbCalendrier)
         {
             $periode=$anneeCourante."-".$moisCourant;
 
@@ -57,8 +57,6 @@ class Calendrier
         return $content;
 
     }
-
-
 
     private function buildCalendar($periode, $maison) {
         $leCalendrier = "";

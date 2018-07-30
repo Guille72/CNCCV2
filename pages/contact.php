@@ -4,6 +4,8 @@ if ($_SESSION['arrivee']!=null) {
 }else {
     require 'navbarBas.php';
 }
+
+
 ?>
 <!--
 <div style="height: 150px;"></div>

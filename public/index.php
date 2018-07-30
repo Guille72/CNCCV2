@@ -10,6 +10,9 @@ require ROOT.'/app/App.php';
 App::load();
 */
 session_start();
+
+require ROOT.'/vendor/autoload.php';
+
 require ROOT.'/app/Autoloader.php';
 App\Autoloader::register();
 require ROOT.'/core/Autoloader.php';

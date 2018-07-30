@@ -1,0 +1,15 @@
+{
+    "name": "guillaume/cnccv",
+    "description": "Projet CNcCV",
+    "type": "library",
+    "require": {
+        "phpmailer/phpmailer": "^6.0",
+        "softon/sms": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Guillaume Lavernhe",
+            "email": "guillaume.lavernhe@cnccv.fr"
+        }
+    ]
+}
