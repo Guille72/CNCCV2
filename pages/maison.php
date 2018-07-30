@@ -19,7 +19,7 @@ if ($_SESSION['arrivee']!=null) {
 
 //Instanciation du calendrier
 $Calendrier=$app->getCalendrier($_SESSION);
-$Calendar=$Calendrier->afficherCalendrier($_GET['p']);
+$Calendar=$Calendrier->afficherCalendrier($_GET['p'],2);
 
 //Instanciation des fonctionnalités du formulaire
 $Form=new \App\Formulaire($_SESSION);
