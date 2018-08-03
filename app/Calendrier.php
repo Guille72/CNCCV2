@@ -43,11 +43,11 @@ class Calendrier
         $content="";
 
         //ici peut être défini le nombre de mois que l'on affiche "while ($pas<x) où x représente le nombre de mois affichés
-        while ($pas<2)
+        while ($pas<3)
         {
             $periode=$anneeCourante."-".$moisCourant;
 
-            $content.="<div style=\"font-size:12px;border:1px solid;\">".$this->buildCalendar($periode,$maison)."</div>";
+            $content.="<div style=\"font-size:12px;border:1px solid;margin:5px;\">".$this->buildCalendar($periode,$maison)."</div>";
 
             $moisCourant++;
             if ($moisCourant==13){$moisCourant=1;$anneeCourante++;}
@@ -70,7 +70,7 @@ class Calendrier
         $indexe = 1;
 
         // Affichage du mois et de l'année
-        $leCalendrier .= "\n\t<div style=\"text-align:center;color:#62BFCB;font-size:15px;font-weight:bold;\">" . $this->monthNumToName($this->getMonth($periode)) . " " . $this->getYear($periode) . "</div>";
+        $leCalendrier .= "\n\t<div style=\"text-align:center;color:#FF0048;font-size:15px;font-weight:bold;\">" . $this->monthNumToName($this->getMonth($periode)) . " " . $this->getYear($periode) . "</div>";
 
         // Affichage des entêtes
         $leCalendrier .= "
@@ -98,9 +98,9 @@ class Calendrier
                     $num_id=strtotime($jour)/86400;
                 if (Date("Y-m-d", mktime(0, 0, 0, $this->getMonth($periode),
                         1 + $pas, $this->getYear($periode))) <= Date("Y-m-d")) {
-                    $class = " class=\"itemPastItem $afficheJour\" id=\"".$jour."\"   onclick=\" \""; if (Date("Y-m-d", mktime(0, 0, 0, $this->getMonth($periode),
+                    $class = " class=\"itemPastItem $num_id\" id=\"".$jour."\"   onclick=\" \""; if (Date("Y-m-d", mktime(0, 0, 0, $this->getMonth($periode),
                             1 + $pas, $this->getYear($periode))) == Date("Y-m-d")) {
-                        $class = " class=\"itemCurrentItem $afficheJour\" id=\"".$jour."\"   onclick=\"selectDay(this,dayList)\""; }}
+                        $class = " class=\"itemCurrentItem $num_id\" id=\"".$jour."\" onmouseover=\"showDay(this,dayList)\"   onclick=\"selectDay(this,dayList)\""; }}
 
 
                 else {
@@ -109,7 +109,7 @@ class Calendrier
                     // 1 est toujours vrai => on affiche un lien à chaque fois
                     // A vous de faire les tests nécessaire si vous gérer un agenda par exemple
                     if ($rep!=false) {
-                        $class = " class=\"itemExistingItem $afficheJour\" id=\"".$jour."\"   onclick=\" \"";
+                        $class = " class=\"itemExistingItem $num_id\" id=\"".$jour."\"   onclick=\" \"";
                         $afficheJour=Date("j",
                             mktime(0, 0, 0, $this->getMonth($periode), 1 +
                                 $pas, $this->getYear($periode)));
@@ -117,7 +117,7 @@ class Calendrier
                     }
                     else {
                         //$jour =strtotime($jour);
-                        $class = " class=\"itemPickableItem $afficheJour\" id=\"".$jour."\"   onclick=\"selectDay(this,dayList)\"";
+                        $class = " class=\"itemPickableItem $num_id\" id=\"".$jour."\" onmouseover=\"showDay(this,dayList)\"   onclick=\"selectDay(this,dayList)\"";
                         $afficheJour=Date("j",
                             mktime(0, 0, 0, $this->getMonth($periode), 1 +
                                 $pas, $this->getYear($periode)));

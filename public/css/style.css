@@ -20,6 +20,13 @@ textarea:focus {
 
 }
 
+.noMargin{
+  margin: 0!important;
+}
+.whiteColor{
+  color: white!important;
+}
+
 footer{
     padding: 0!important;
 }
@@ -272,34 +279,33 @@ body{
 
 
 #resaForm{
-    margin-left: 0 !important;
-    left: 0 !important;
     background-color: #FF0048;
-    border-top-right-radius: 27px;
-    border-bottom-right-radius: 27px;
-    padding-left: 20px;
-    padding-right: 20px;
     box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
-    z-index:2000;
-    height: 100%;
+    margin: 10px!important;
 }
 #titleForm{
     color: white;
     text-align: center;
+    margin: 0 !important;
 }
 #lieu{
-    margin-top: 30px;
 }
 #nbPersonne{
-    margin-top: 20px;
 }
 #dataPickerForm{
-    margin-top: 20px;
 }
 #submitResaForm{
-    margin-top: 20px;
-    margin-bottom: 30px;
-    width: 100%!important;
+  vertical-align: middle;
+}
+#departInput{
+  cursor: pointer;
+}
+#arriveInput{
+  cursor: pointer;
+}
+.btnSubmit{
+  background-color: white !important;
+  color: #FF0048 !important;
 }
 .bgBlueForm{
     background-color: #62BFCB!important;
@@ -445,18 +451,23 @@ li.itemPickableItem {
   font-style: normal;
   color:black;
 }
-li.itemPickableItem:hover {
-  background-color: rgb(255,170,89);
-}
+
 .titleCal{
   margin: 0 auto;
   font-size:25px;
   font-weight:bold;
-  color:#62BFCB;
+  color: #FF0048!important;
   margin-bottom:20px;
   text-align: center;
 }
 .contentCal{
-  display: flex;
+  display: none;
   flex-wrap: wrap;
+  align-items: center!important;
+  justify-content: center!important;
+  align-self: center !important;
+}
+
+.clickedItem{
+  background-color: blue!important;
 }
