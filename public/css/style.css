@@ -280,7 +280,7 @@ body{
 
 #resaForm{
     background-color: #FF0048;
-    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 10px!important;
 }
 #titleForm{
@@ -295,13 +295,14 @@ body{
 #dataPickerForm{
 }
 #submitResaForm{
-  vertical-align: middle;
 }
 #departInput{
   cursor: pointer;
+  color: white;
 }
 #arriveInput{
   cursor: pointer;
+  color: white;
 }
 .btnSubmit{
   background-color: white !important;
@@ -406,18 +407,21 @@ li{ list-style: none;
 .ligne {
   width: 220px;
   margin: 0 auto;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 2px!important;
+  padding-right: 2px!important;
+  margin-left: 2px!important;
+  margin-right: 2px!important;
   text-align: center;
 }
 
 .libelle li {
   float : left;
   width : 30px;
+  color: black;
 }
 
 .ligne li {
-  color: white;
+  color: black;
   float : left;
   width : 30px;
 }
@@ -427,8 +431,8 @@ li{ list-style: none;
 li.itemCurrentItem {
   font-weight:bold;
   font-style: italic;
-  background-color: #3E849E;
-  color: black;
+  /* background-color: #53d397; */
+  color: #7CBECB;
 }
 
 li.itemSelectedItem {
@@ -436,27 +440,29 @@ li.itemSelectedItem {
 }
 
 li.itemExistingItem {
-  background-color:#ff6959;
-  text-decoration:line-through;
+  background-color:#ff6473;
+  text-decoration: line-through;
 }
 
 
 li.itemPastItem {
-  color:grey;
-  background-color:white;
+  color:#757882;
 }
 
 li.itemPickableItem {
   cursor: pointer;
   font-style: normal;
   color:black;
+  padding: 1px!important;
 }
-
+.hoverItem{
+  background-color: #7CBECB;
+}
 .titleCal{
   margin: 0 auto;
   font-size:25px;
   font-weight:bold;
-  color: #FF0048!important;
+  color: #428FA2!important;
   margin-bottom:20px;
   text-align: center;
 }
@@ -468,6 +474,15 @@ li.itemPickableItem {
   align-self: center !important;
 }
 
+.calDiv{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .clickedItem{
-  background-color: blue!important;
+  background-color: #368E9E!important;
+}
+
+#maisonTitle{
+  border-left: 2px solid #FF0048;
+  border-bottom: 2px solid #FF0048;
 }

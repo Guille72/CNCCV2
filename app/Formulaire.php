@@ -14,8 +14,7 @@ Class Formulaire {
     /**
      * @var string
      */
-    public $surround ='p';
-
+    public $surround ='div';
     /**
      * Form constructor.
      * @param array $data

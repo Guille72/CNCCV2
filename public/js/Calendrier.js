@@ -1,4 +1,8 @@
 <script>
+var dayList = [];
+var liRed = [];
+
+
 function selectDay(elem,list){
 
   var classListClickedItem = document.getElementsByClassName("clickedItem");
@@ -14,6 +18,11 @@ function selectDay(elem,list){
   // si la liste d'elem est vide on push le premier elem et add la class clickeditem
   if (list.length == 0) {
 
+    for (var i = 0; i < liRed.length; i++) {
+      liRed[i].classList.remove('hoverItem');
+    }
+
+
     list.push(elem.id);
     elem.classList.add('clickedItem');
 
@@ -28,6 +37,7 @@ function selectDay(elem,list){
 
   // si la liste d'elem = 1, on verifie que l'elem en cours correspond a une date superieur a l'elem de la list
   if (list.length == 1) {
+
     var elemYear = elem.id.substring(0, 4);
     var list1Year = list[0].substring(0, 4);
 
@@ -77,21 +87,39 @@ var elem = document.getElementById('contentCalId');
 
 function showDay(elem,list){
 
+  if (list.length == 1) {
+
+    for (var i = 0; i < liRed.length; i++) {
+      liRed[i].classList.remove('hoverItem');
+    }
+
+  var selectVerif = document.getElementById(list[0]).className.substring(0,16);
   var selectedDate = document.getElementById(list[0]).className.substring(17,22);
   var hoverDate = get5LastChar(elem.className);
+  var count = hoverDate - selectedDate + 1;
+  var scan = selectedDate;
 
-  var scan = hoverDate - selectedDate;
+    for (var i = 0; i < count; i++) {
+      var e = document.getElementsByClassName('itemPickableItem '+scan);
+      e[0].classList.add('hoverItem');
+      liRed.push(e[0]);
 
-  for (var i = 0; i = scan; i++) {
-    console.log(i);
+      scan++;
+    }
   }
 }
-
-
 
 function get5LastChar(i){
   var x = i.substr(i.length - 5);
   return x;
 }
+
+
+// function refresh() {
+//   console.log('init');
+//         setTimeout(function () {
+//             document.getElementById('contentCalId').innerHTML = document.getElementById('contentCalId').innerHTML;
+//         } ,3000);
+//     }
 
 </script>
