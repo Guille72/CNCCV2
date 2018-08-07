@@ -38,14 +38,27 @@
     </div>
 
   </div>
-  <div class="row">
-    <div id="contentCalId" class="contentCal col s12 m8 l8 offset-m2 offset-l2 tooltipped" data-position="bottom" data-tooltip="Selectionnez une date d'arrivée et de départ">
-       <?= $Calendar; ?>
+  <div class="row" id="calRow">
+
+
+
+    <div id="contentCalId" class="contentCal col s12 m12 l12 tooltipped" data-position="bottom" data-tooltip="Selectionnez une date d'arrivée et de départ">
+      <div id="arrowLeft" onclick="previousM(allCal)" class="">
+
+          <i class="material-icons large arrow">keyboard_arrow_left</i>
+
+      </div>
+        <?= $Calendar; ?>
+        <div id="arrowRight" onclick="nextM(allCal)" class="">
+
+            <i class="material-icons large arrow">keyboard_arrow_right</i>
+
+        </div>
+    </div>
+
 
 
     </div>
-    </div>
-  </div>
 </form>
 
 <br>

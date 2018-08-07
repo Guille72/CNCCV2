@@ -38,16 +38,19 @@ class Calendrier
             $anneeCourante = date("Y");
         }
 
+
         $pas=0;
 
         $content="";
 
         //ici peut être défini le nombre de mois que l'on affiche "while ($pas<x) où x représente le nombre de mois affichés
-        while ($pas<3)
+        while ($pas<6)
         {
             $periode=$anneeCourante."-".$moisCourant;
 
-            $content.="<div class=\"calDiv\" style=\"font-size:12px;margin:10px;\">".$this->buildCalendar($periode,$maison)."</div>";
+            $moisInt = intval($moisCourant);
+
+            $content.="<div class=\"calDiv\" id=\"$moisInt\" style=\"font-size:12px;margin:10px;\">".$this->buildCalendar($periode,$maison)."</div>";
 
             $moisCourant++;
             if ($moisCourant==13){$moisCourant=1;$anneeCourante++;}

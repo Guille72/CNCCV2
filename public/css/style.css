@@ -467,15 +467,40 @@ li.itemPickableItem {
   text-align: center;
 }
 .contentCal{
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   align-items: center!important;
   justify-content: center!important;
   align-self: center !important;
 }
 
+#calRow{
+  display: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+#arrowLeft{
+}
+#arrowRight{
+}
+.arrow{
+  cursor:pointer;
+}
+
 .calDiv{
+  display: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.calDiv *{
+
+}
+.displayM{
+  display: block!important;
 }
 
 .clickedItem{
